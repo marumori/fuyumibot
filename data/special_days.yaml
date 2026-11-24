@@ -1,0 +1,16 @@
+# 今日のおすすめ: special days. rule = "MM-DD" or mothers_day / respect_aged_day / chushu.
+# tone: festive | gentle | memorial  (memorial titles always 「○○さんを偲んで」)
+# Dates other than the birthday, debut and 島倉千代子さん are reviewer suggestions: please confirm.
+- {rule: "03-04", title: "デビュー記念日", reason: "1987年3月4日「あばれ太鼓」でデビュー", tone: festive, songs: [abare-daiko]}
+- {rule: "03-30", title: "お誕生日おめでとうございます", reason: "冬美さんのお誕生日", tone: festive, songs: [yozakura-oshichi, mata-kimi-ni-koishiteru, iwaizake, abare-daiko, hirari]}
+- {rule: "01-01", title: "新しい年に", reason: "お正月", tone: gentle, songs: [iwaizake, noto-wa-iirankaine, shiawase-toiro]}
+- {rule: "12-31", title: "大みそかのうた", reason: "紅白・年忘れの季節", tone: festive, songs: [yozakura-oshichi, mata-kimi-ni-koishiteru, iwaizake], programs: [NHK紅白歌合戦, 年忘れにっぽんの歌]}
+- {rule: "11-08", title: "島倉千代子さんを偲んで", reason: "島倉千代子さんのご命日", tone: memorial, songs: [jinsei-iroiro, konoyo-no-hana, omoidesan-konnichiwa, tokyo-da-yo-okkasan]}
+- {rule: "06-10", title: "猪俣公章さんを偲んで", reason: "恩師・猪俣公章さんのご命日", tone: memorial, songs: [abare-daiko, iwaizake, otoko-no-jowa]}
+- {rule: "12-30", title: "八代亜紀さんを偲んで", reason: "八代亜紀さんのご命日", tone: memorial, songs: [], performers: [八代亜紀]}
+- {rule: "08-22", title: "「夜桜お七」発売記念日", reason: "1994年8月22日発売", tone: festive, songs: [yozakura-oshichi]}
+- {rule: "01-14", title: "「また君に恋してる」発売記念日", reason: "2009年1月14日発売", tone: festive, songs: [mata-kimi-ni-koishiteru]}
+- {rule: "02-06", title: "お燈まつりの日に", reason: "新宮・お燈まつり", tone: festive, songs: [otoko-no-himatsuri]}
+- {rule: mothers_day, title: "母の日に", reason: "母の日", tone: gentle, songs: [ganpeki-no-haha, okaasan, tokyo-da-yo-okkasan]}
+- {rule: respect_aged_day, title: "敬老の日に", reason: "敬老の日", tone: gentle, songs: [iwaizake]}
+- {rule: chushu, title: "中秋の名月に", reason: "お月見の夜に", tone: gentle, songs: [horoyoi-mangetsu, mangetsu]}
