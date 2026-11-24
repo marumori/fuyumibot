@@ -1,20 +1,23 @@
 /* 今日の冬美 — calm, large, high-contrast. 1rem = 20px. */
 :root {
-  --bg: #FAF7F2; --card: #FFFFFF; --text: #1F1A17; --muted: #5E5650; --line: #E6DED4;
-  --accent: #A3002B; --accent-ink: #FFFFFF; --accent-soft: #F6E7EA; --ok: #1E6B3A; --focus: #0B57D0;
+  --bg: #F4F9FD; --card: #FFFFFF; --text: #1C2733; --muted: #4E5D6C; --line: #D6E6F2;
+  --accent: #2C6DB4; --accent-ink: #FFFFFF; --accent-soft: #FFE9F0; --pink: #C2306A; --sky: #7FC6F2; --blush: #FFAEC5;
+  --ok: #2C6DB4; --focus: #C2306A;
   --radius: 16px; --gap: 1.2rem;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #141113; --card: #1F1B1D; --text: #F3EEE8; --muted: #C9BFB7; --line: #3A3336;
-    --accent: #FF6B8A; --accent-ink: #1A0A0F; --accent-soft: #3A1E26; --ok: #7CD39A; --focus: #8AB4F8;
+    --bg: #0E1823; --card: #16222F; --text: #EAF2FA; --muted: #A9BACB; --line: #2A3A4B;
+    --accent: #8CC8F5; --accent-ink: #0E1823; --accent-soft: #3A2230; --pink: #FF9DBB; --sky: #4F8FC0; --blush: #7A3A52;
+    --ok: #8CC8F5; --focus: #FF9DBB;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #141113; --card: #1F1B1D; --text: #F3EEE8; --muted: #C9BFB7; --line: #3A3336;
-  --accent: #FF6B8A; --accent-ink: #1A0A0F; --accent-soft: #3A1E26; --ok: #7CD39A; --focus: #8AB4F8;
+  --bg: #0E1823; --card: #16222F; --text: #EAF2FA; --muted: #A9BACB; --line: #2A3A4B;
+  --accent: #8CC8F5; --accent-ink: #0E1823; --accent-soft: #3A2230; --pink: #FF9DBB; --sky: #4F8FC0; --blush: #7A3A52;
+  --ok: #8CC8F5; --focus: #FF9DBB;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -29,19 +32,19 @@ main { max-width: 36rem; margin: 0 auto; padding: 0.8rem 0.8rem 2rem; }
 h1, h2, h3 { line-height: 1.4; margin: 0; font-weight: 700; }
 h1 { font-size: 1.4rem; }
 h2 { font-size: 1.25rem; margin: 0 0 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
-h2::before { content: ""; width: 0.3rem; height: 1.2em; background: var(--accent); border-radius: 4px; }
+h2::before { content: ""; width: 0.35rem; height: 1.2em; background: linear-gradient(var(--sky), var(--blush)); border-radius: 4px; }
 p { margin: 0.3rem 0; }
 a { color: var(--accent); }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .muted { color: var(--muted); font-size: 0.9rem; }
 .small { font-size: 0.85rem; }
 
-.top { padding: 0.6rem 0 1rem; }
-.site-name { color: var(--accent); font-weight: 700; font-size: 1rem; letter-spacing: 0.08em; margin: 0; }
+.top { padding: 0.6rem 0 1rem; border-bottom: 4px solid; border-image: linear-gradient(90deg, var(--sky), var(--blush)) 1; margin-bottom: 1rem; }
+.site-name { color: var(--pink); font-weight: 700; font-size: 1rem; letter-spacing: 0.08em; margin: 0; }
 .today { font-size: 1.6rem; font-weight: 700; margin: 0.1rem 0 0; }
 
 .section { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; margin: 0 0 var(--gap); }
-.section.accent { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.section.accent { border-color: var(--sky); box-shadow: 0 0 0 2px var(--sky) inset; }
 
 .btn {
   display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; min-height: 56px;
@@ -71,7 +74,7 @@ a { color: var(--accent); }
 .badge { display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--ok); border: 2px solid currentColor;
   border-radius: 999px; padding: 0 0.6rem; margin-top: 0.2rem; white-space: nowrap; }
 
-.year { font-weight: 700; font-size: 1.05rem; margin: 0.8rem 0 0.2rem; color: var(--accent); }
+.year { font-weight: 700; font-size: 1.05rem; margin: 0.8rem 0 0.2rem; color: var(--pink); }
 .list { list-style: none; padding: 0; margin: 0; }
 .list li { border-top: 1px solid var(--line); }
 .list li:first-child { border-top: 0; }
@@ -118,3 +121,11 @@ footer a { color: var(--muted); }
 .count { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 
 @media (max-width: 380px) { .card { grid-template-columns: 4.5rem 1fr; } }
+
+/* theme picker */
+.themes { margin: 0.8rem 0; }
+.themes .group { font-weight: 700; margin: 0.6rem 0 0.3rem; color: var(--pink); }
+.chips { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+.chips .btn { min-height: 56px; padding: 0.3rem; font-size: 0.95rem; margin: 0; }
+.chips .btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.empty { color: var(--muted); padding: 0.4rem 0; }

@@ -1,4 +1,33 @@
 /* Home 「今日の冬美」 */
+async function mountThemes(today, queue) {
+  const box = document.getElementById("themes");
+  let groups = [];
+  try { groups = await F.json("/data/themes.json"); } catch (e) { return; }
+  if (!groups.length) return;
+  const title = (g, th) => (g.label === "気持ち" ? th.label : `${th.label}のうた`);
+  box.innerHTML = `<h3>テーマを選ぶ</h3><p class="muted">押すと、そのテーマの曲に入れかわります。</p>` +
+    groups.map((g, gi) => `<p class="group">${F.esc(g.label)}</p><div class="chips">` +
+      g.themes.map((th, ti) => `<button class="btn" type="button" aria-pressed="false" data-g="${gi}" data-t="${ti}">${F.esc(title(g, th))}</button>`).join("") +
+      `</div>`).join("") +
+    `<button class="btn" type="button" id="theme-reset" hidden style="margin-top:.8rem">今日のおすすめに戻す</button>`;
+  const set = (name, reason, clips, pressed) => {
+    document.querySelector("#pick .theme").textContent = name;
+    document.getElementById("pick-reason").textContent = reason;
+    document.getElementById("pick-list").innerHTML = F.cards(clips);
+    F.mountQueue(queue, clips);
+    box.querySelectorAll("[data-g]").forEach((b) => b.setAttribute("aria-pressed", String(b === pressed)));
+    document.getElementById("theme-reset").hidden = !pressed;
+    document.getElementById("pick").scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  box.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    if (b.id === "theme-reset") return set(today.theme_title, today.reason, today.clips, null);
+    const g = groups[+b.dataset.g], th = g.themes[+b.dataset.t];
+    set(title(g, th), `テーマ：${g.label}`, th.clips, b);
+  });
+}
+
 (async function () {
   const main = document.getElementById("main");
   let t;
@@ -23,11 +52,13 @@
   }
 
   if (t.pick && t.pick.clips.length) {
-    out.push(`<section class="section"><h2>今日のおすすめ</h2><p class="theme">${F.esc(t.pick.theme_title)}</p>` +
-      `<p class="muted">${F.esc(t.pick.reason)}</p><div id="queue"></div><div>${F.cards(t.pick.clips)}</div></section>`);
+    out.push(`<section class="section" id="pick"><h2>今日のおすすめ</h2><p class="theme">${F.esc(t.pick.theme_title)}</p>` +
+      `<p class="muted" id="pick-reason">${F.esc(t.pick.reason)}</p><div id="queue"></div><div id="pick-list">${F.cards(t.pick.clips)}</div>` +
+      `<div class="themes" id="themes"></div></section>`);
   }
 
-  const sub = (exact, what) => `<p class="sub">${exact ? "あの年の今日" : "この頃（前後3日）"}の${what}</p>`;
+  const sub = (what) => `<p class="sub">あの年の今日（${F.esc(t.date_label.replace(/（.*$/, ""))}）の${what}</p>`;
+  const none = (what) => `<p class="empty">この日の${what}は、まだありません。</p>`;
   const byYear = (items, render) => {
     let last = "", html = "";
     for (const it of items) {
@@ -38,25 +69,30 @@
   };
 
   const otd = t.on_this_day;
-  if (otd && otd.years.length) {
-    const body = otd.years.map((y) => `<p class="year">${F.esc(y.year_label)}</p>${F.cards(y.clips)}`).join("");
-    out.push(`<section class="section"><h2>この頃の映像</h2>${sub(otd.exact, "映像")}${body}</section>`);
+  {
+    const body = otd && otd.years.length ? otd.years.map((y) => `<p class="year">${F.esc(y.year_label)}</p>${F.cards(y.clips)}`).join("") : none("映像");
+    out.push(`<section class="section"><h2>この頃の映像</h2>${sub("テレビの映像")}${body}</section>`);
   }
 
-  if (t.letters && t.letters.items.length) {
+  if (t.letters) {
     const body = byYear(t.letters.items, (l) => `<a class="card nothumb" href="${F.esc(F.goHref(l.url))}"><span><span class="t">${F.esc(l.title)}</span><br>` +
       `<span class="m">${F.esc(l.date_label)}・ファンクラブのページへ</span></span></a>` +
       (l.clips.length ? `<p class="muted">便りに出てくる曲の映像</p>${F.cards(l.clips)}` : ""));
-    out.push(`<section class="section"><h2>冬美便り</h2>${sub(t.letters.exact, "便り")}${body}</section>`);
+    out.push(`<section class="section"><h2>冬美便り</h2>${sub("便り")}${t.letters.items.length ? body : none("便り")}</section>`);
   }
 
-  if (t.flash && t.flash.items.length) {
-    out.push(`<section class="section" id="flash"><h2>週刊FLASH</h2>${sub(t.flash.exact, "記事")}${byYear(t.flash.items, F.flashItem)}</section>`);
+  if (t.flash) {
+    out.push(`<section class="section" id="flash"><h2>週刊FLASH</h2>${sub("記事")}` +
+      `${t.flash.items.length ? byYear(t.flash.items, F.flashItem) : none("記事")}</section>`);
   }
 
   out.push(`<nav class="nav" aria-label="ほかのページ"><a class="btn primary" href="/calendar.html">カレンダー</a>` +
     `<a class="btn" href="/songs.html">曲名でさがす</a><a class="btn" href="/usage.html">使い方</a></nav>`);
   main.innerHTML = out.join("");
-  if (t.pick) F.mountYouTubeQueue(document.getElementById("queue"), t.pick.clips);
+  if (t.pick) {
+    const queue = document.getElementById("queue");
+    F.mountQueue(queue, t.pick.clips);
+    mountThemes(t.pick, queue);
+  }
   F.lineBanner(main);
 })();

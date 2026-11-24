@@ -83,8 +83,8 @@ def pick(day: str, clips: list[Clip], appearances: list[Appearance], letters: li
         pool = [c for c in ok if any(season in d.song(s).get("season", []) for s in c.songs if s in d._song_by_id)]
         rules.append((f"{season}のうた", "季節のうた", pool))
     rules.append(("珍しい映像", "珍しい映像", [c for c in ok if c.broadcast_date[:4] <= "2005"]))
-    rules.append(("冬美、歌がある", "おすすめ", ok))
+    rules.append(("冬美、歌がある", "いろいろな年の冬美さん", ok))
     for title, reason, pool in rules:
         if len(pool) >= 3:
             return Pick(day, title, reason, _choose(day, pool))
-    return Pick(day, "冬美、歌がある", "おすすめ", _choose(day, ok) if ok else [])
+    return Pick(day, "冬美、歌がある", "いろいろな年の冬美さん", _choose(day, ok) if ok else [])

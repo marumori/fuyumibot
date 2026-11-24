@@ -31,7 +31,8 @@
       : `<li><span class="row">「${F.esc(s.title)}」<span class="muted">映像なし</span></span></li>`).join("");
     return `<a class="card nothumb" href="${F.esc(F.goHref(a.url))}"><span><span class="t">${F.esc(a.title)}</span><br>` +
       `<span class="m">${F.esc([a.date_label, a.issue].filter(Boolean).join("・"))}</span><br><span class="go">記事を読む</span></span></a>` +
-      (songs ? `<p class="muted">記事に出てくる曲</p><ul class="list">${songs}</ul>` : "");
+      (songs ? `<p class="muted">記事に出てくる曲</p><ul class="list">${songs}</ul>` : "") +
+      (a.with_people || []).map((w) => `<p class="muted">${F.esc(w.name)}さんとの共演映像</p>${F.cards(w.clips)}`).join("");
   };
 
   F.lineBanner = (root) => {

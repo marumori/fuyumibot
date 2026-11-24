@@ -55,7 +55,6 @@ def test_today_sections(site):
 def test_letters_on_this_day_past_years(site):
     out, cl = site
     t = J(out / "data/today.json")
-    assert t["letters"]["exact"] is True
     assert [l["title"] for l in t["letters"]["items"]] == ["大みそか"]
     assert t["letters"]["items"][0]["year_label"] == "2025年（令和7年）"
     assert t["letters"]["items"][0]["clips"][0]["id"] == cl["a"].id
@@ -64,12 +63,13 @@ def test_letters_on_this_day_past_years(site):
 def test_flash_on_this_day_with_song_links(site):
     out, cl = site
     f = J(out / "data/today.json")["flash"]
-    assert f["exact"] is True and len(f["items"]) == 1
+    assert len(f["items"]) == 1
     art = f["items"][0]
     assert art["title"] == "紅白の舞台裏" and art["issue"] == "週刊FLASH 2025年1月7日号"
     assert [s["title"] for s in art["songs"]] == ["夜桜お七", "千本桜"]
     assert art["songs"][0]["clip"]["id"] == cl["a"].id
     assert art["songs"][1]["clip"] is None
+    assert art["with_people"] == [{"name": "M!LK", "clips": [art["songs"][0]["clip"]]}]
 
 
 def test_hidden_excluded_everywhere(site):
@@ -97,11 +97,23 @@ def test_today_size_small(site):
     assert (out / "data/today.json").stat().st_size < 20000
 
 
-def test_empty_day_uses_nearby(site, tmp_path):
+def test_empty_day_is_empty_not_nearby(site, tmp_path):
     out, _ = site
     build.build_all(out.parent / "data", out, "2026-01-02", now="2026-01-02T08:00")
     t = J(out / "data/today.json")
-    assert t["on_this_day"]["exact"] is False and t["on_this_day"]["years"]
+    assert t["on_this_day"]["years"] == [] and t["letters"]["items"] == [] and t["flash"]["items"] == []
+
+
+def test_themes_playlists(site):
+    out, cl = site
+    th = J(out / "data/themes.json")
+    assert [g["label"] for g in th] == ["季節", "気持ち"]  # ふるさと hidden: no prefecture songs in this data
+    season = {t["label"]: t for t in th[0]["themes"]}
+    assert set(season) <= {"春", "夏", "秋", "冬"}
+    assert "春" in season and [c["id"] for c in season["春"]["clips"]] == [cl["a"].id]
+    mood = {t["label"]: t for t in th[1]["themes"]}
+    assert "お酒のうた" in mood and cl["b"].id in [c["id"] for c in mood["お酒のうた"]["clips"]]
+    assert all(t["clips"] for g in th for t in g["themes"])
 
 
 def test_appearance_states(site):

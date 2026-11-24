@@ -181,11 +181,10 @@ def daily(today: str | None = None) -> None:
     verify(clips, apps, d)
     pick_rows = status.guard("sheet_pick", lambda: read_sheet("SHEET_PICK_CSV", sheet.PICK_HEADERS), 0) or []
     overrides = sheet.overrides(pick_rows, clips)
-    have = {p.date for p in picks}
     for day in (today, (date.fromisoformat(today) + timedelta(days=1)).isoformat()):
-        if day not in have or day in overrides:
-            picks = [p for p in picks if p.date != day]
-            picks.append(picker.pick(day, clips, apps, letters, overrides, picks, d))
+        # always recompute (deterministic per day), so rule or name changes apply at once
+        picks = [p for p in picks if p.date != day]
+        picks.append(picker.pick(day, clips, apps, letters, overrides, picks, d))
     for s in d.songs:
         if not s.get("reviewed"):
             review.add("reading_unreviewed", s["id"], f"「{s['title']}」の読み方は「{s['yomi']}」で合っていますか")

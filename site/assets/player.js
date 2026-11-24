@@ -16,38 +16,58 @@
     return apiPromise;
   }
 
-  /* The first video is loaded (not started) on page load, so the tap can call playVideo()
-     synchronously — iOS only allows sound when play starts inside the tap itself. */
-  F.mountYouTubeQueue = (el, cards) => {
-    const list = cards.filter((c) => c.source && c.source.platform === "youtube");
+  /* A playlist of any platform. YouTube clips advance by themselves; for Bilibili/X the viewer taps 「次の曲へ」.
+     A YouTube first clip is loaded (not started) on page load so the tap can call playVideo() synchronously —
+     iOS only allows sound when play starts inside the tap itself. */
+  F.mountQueue = (el, cards) => {
+    const list = (cards || []).filter((c) => c.source);
+    el.innerHTML = "";
     if (!list.length) return;
-    let i = 0, player = null, ready = false, wantPlay = false;
-    el.innerHTML = `<div class="player"><div id="yt-queue"></div></div>` +
-      `<p class="now" aria-live="polite"></p>` +
-      `<button class="btn primary" type="button" id="queue-play">▶ ${list.length}曲つづけて聴く</button>` +
-      `<button class="btn" type="button" id="queue-next" hidden>次の曲へ ▶</button>`;
-    const now = el.querySelector(".now");
+    let i = 0, player = null, ready = false, wantPlay = false, started = false;
+    el.innerHTML = `<div class="stage"></div><p class="now" aria-live="polite"></p>` +
+      `<button class="btn primary" type="button" data-act="play">▶ ${list.length}曲つづけて聴く</button>` +
+      `<button class="btn" type="button" data-act="next" hidden>次の曲へ ▶</button>`;
+    const stage = el.querySelector(".stage"), now = el.querySelector(".now");
+    const isYT = (c) => c.source.platform === "youtube";
     const showNow = () => { now.textContent = `いま：${list[i].title_label}（${i + 1}/${list.length}）`; };
-    const next = () => {
-      if (i + 1 >= list.length) { now.textContent = "最後まで聴きました。"; return; }
-      i++; showNow(); player.loadVideoById(list[i].source.id);
-    };
-    loadYT().then(() => {
-      player = new YT.Player("yt-queue", {
-        videoId: list[0].source.id, playerVars: { playsinline: 1, rel: 0 },
-        events: {
-          onReady: () => { ready = true; if (wantPlay) player.playVideo(); },
-          onStateChange: (e) => { if (e.data === YT.PlayerState.ENDED) next(); },
-        },
+    const ytInto = (id, autoplay) => {
+      stage.innerHTML = `<div class="player"><div></div></div>`;
+      ready = false; wantPlay = autoplay;
+      return loadYT().then(() => {
+        player = new YT.Player(stage.querySelector(".player > div"), {
+          videoId: id, playerVars: { playsinline: 1, rel: 0 },
+          events: {
+            onReady: () => { ready = true; if (wantPlay) player.playVideo(); },
+            onStateChange: (e) => { if (e.data === YT.PlayerState.ENDED) next(); },
+          },
+        });
       });
-    });
-    el.querySelector("#queue-play").addEventListener("click", () => {
+    };
+    const show = (autoplay) => {
+      const c = list[i];
+      if (isYT(c)) {
+        if (player && ready && stage.querySelector(".player")) { player.loadVideoById(c.source.id); }
+        else ytInto(c.source.id, autoplay);
+      } else {
+        if (player && player.destroy) player.destroy();
+        player = null; ready = false;
+        F.mountSingle(stage, c.source);
+      }
+    };
+    function next() {
+      if (i + 1 >= list.length) { now.textContent = "最後まで聴きました。"; return; }
+      i++; showNow(); show(true);
+    }
+    show(false);
+    el.querySelector('[data-act="play"]').addEventListener("click", () => {
       showNow();
-      el.querySelector("#queue-next").hidden = false;
-      if (ready) player.playVideo(); else wantPlay = true;
+      el.querySelector('[data-act="next"]').hidden = false;
+      if (!started && isYT(list[i])) { if (ready) player.playVideo(); else wantPlay = true; }
+      started = true;
     });
-    el.querySelector("#queue-next").addEventListener("click", () => player && next());
+    el.querySelector('[data-act="next"]').addEventListener("click", next);
   };
+  F.mountYouTubeQueue = F.mountQueue;
 
   F.mountSingle = (el, src) => {
     if (src.platform === "youtube") {

@@ -9,6 +9,7 @@
   - 桜
   - 恋
   reviewed: true
+  places: []
 - id: mata-kimi-ni-koishiteru
   title: また君に恋してる
   yomi: またきみにこいしてる
@@ -19,6 +20,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: horoyoi-mangetsu
   title: ほろ酔い満月
   yomi: ほろよいまんげつ
@@ -30,6 +32,7 @@
   - 月
   - 酒
   reviewed: true
+  places: []
 - id: abare-daiko
   title: あばれ太鼓
   yomi: あばれだいこ
@@ -38,6 +41,7 @@
   themes:
   - 祭
   reviewed: true
+  places: []
 - id: tooi-mukashi-no-koi-no-uta
   title: 遠い昔の恋の歌
   yomi: とおいむかしのこいのうた
@@ -46,6 +50,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: saikai-sakaba
   title: 再会酒場
   yomi: さいかいさかば
@@ -55,6 +60,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: hirari
   title: ひらり
   yomi: ひらり
@@ -62,6 +68,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: noto-wa-iirankaine
   title: 能登はいらんかいね
   yomi: のとはいらんかいね
@@ -70,6 +77,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 石川
 - id: naniwa-damashii
   title: 浪花魂
   yomi: なにわだましい
@@ -78,6 +87,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 大阪
 - id: otoko-no-himatsuri
   title: 男の火祭り
   yomi: おとこのひまつり
@@ -86,6 +97,8 @@
   themes:
   - 祭
   reviewed: true
+  places:
+  - 和歌山
 - id: iwaizake
   title: 祝い酒
   yomi: いわいざけ
@@ -95,6 +108,7 @@
   - 祝
   - 酒
   reviewed: true
+  places: []
 - id: hi-no-kuni-no-onna
   title: 火の国の女
   yomi: ひのくにのおんな
@@ -103,6 +117,8 @@
   themes:
   - 恋
   reviewed: true
+  places:
+  - 熊本
 - id: omoide-zukuri
   title: 想い出づくり
   yomi: おもいでづくり
@@ -111,6 +127,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: kokoro-no-ito
   title: 心の糸
   yomi: こころのいと
@@ -118,6 +135,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: amagigoe
   title: 天城越え
   yomi: あまぎごえ
@@ -126,6 +144,8 @@
   themes:
   - 恋
   reviewed: true
+  places:
+  - 静岡
 - id: yuki-no-hana
   title: 雪の花
   yomi: ゆきのはな
@@ -135,6 +155,7 @@
   themes:
   - 雪
   reviewed: true
+  places: []
 - id: asia-no-kaizoku
   title: アジアの海賊
   yomi: あじあのかいぞく
@@ -142,6 +163,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: jinsei-iroiro
   title: 人生いろいろ
   yomi: じんせいいろいろ
@@ -149,6 +171,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: shiawase-toiro
   title: しあわせ十色
   yomi: しあわせといろ
@@ -157,6 +180,7 @@
   themes:
   - 祝
   reviewed: true
+  places: []
 - id: yuki-shinshin
   title: 雪深深
   yomi: ゆきしんしん
@@ -166,6 +190,7 @@
   themes:
   - 雪
   reviewed: true
+  places: []
 - id: kokorozake
   title: こころ酒
   yomi: こころざけ
@@ -174,6 +199,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: kaze-ni-tatsu
   title: 風に立つ
   yomi: かぜにたつ
@@ -182,6 +208,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: rashomon
   title: 羅生門
   yomi: らしょうもん
@@ -189,6 +216,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ganpeki-no-haha
   title: 岸壁の母
   yomi: がんぺきのはは
@@ -197,6 +225,7 @@
   themes:
   - 母
   reviewed: true
+  places: []
 - id: otoko-no-jowa
   title: 男の情話
   yomi: おとこのじょうわ
@@ -204,6 +233,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: mou-ichido-aitai
   title: もう一度逢いたい
   yomi: もういちどあいたい
@@ -212,6 +242,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: urizun-no-koro
   title: うりずんの頃
   yomi: うりずんのころ
@@ -220,6 +251,8 @@
   - 春
   themes: []
   reviewed: true
+  places:
+  - 沖縄
 - id: hyakunen-zakura
   title: 百年桜
   yomi: ひゃくねんざくら
@@ -229,6 +262,7 @@
   themes:
   - 桜
   reviewed: true
+  places: []
 - id: himawari-no-yakusoku
   title: ひまわりの約束
   yomi: ひまわりのやくそく
@@ -237,6 +271,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: lonely-chaplin
   title: ロンリー・チャップリン
   yomi: ろんりーちゃっぷりん
@@ -246,6 +281,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: koi-no-yokan
   title: 恋の予感
   yomi: こいのよかん
@@ -254,6 +290,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: itoshi-no-ellie
   title: いとしのエリー
   yomi: いとしのえりー
@@ -262,6 +299,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: suki-ni-natta-hito
   title: 好きになった人
   yomi: すきになったひと
@@ -270,6 +308,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: koi-wa-hi-no-mai
   title: 恋は火の舞剣の舞
   yomi: こいはひのまいけんのまい
@@ -279,6 +318,7 @@
   themes:
   - 祭
   reviewed: true
+  places: []
 - id: senbonzakura
   title: 千本桜
   yomi: せんぼんざくら
@@ -288,6 +328,7 @@
   themes:
   - 桜
   reviewed: true
+  places: []
 - id: omatsuri-mambo
   title: お祭りマンボ
   yomi: おまつりまんぼ
@@ -297,6 +338,7 @@
   themes:
   - 祭
   reviewed: true
+  places: []
 - id: mi-amore
   title: ミ・アモーレ
   yomi: みあもーれ
@@ -305,6 +347,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: laser-beam
   title: レーザービーム
   yomi: れーざーびーむ
@@ -313,6 +356,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: sake-to-namida
   title: 酒と泪と男と女
   yomi: さけとなみだとおとことおんな
@@ -321,6 +365,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: machi-no-akari
   title: 街の灯り
   yomi: まちのあかり
@@ -328,6 +373,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: zutto-anata-ga
   title: ずっとあなたが好きでした
   yomi: ずっとあなたがすきでした
@@ -336,6 +382,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: onna-ga-hitori
   title: 女がひとり
   yomi: おんながひとり
@@ -343,6 +390,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: suichuka
   title: 酔中花
   yomi: すいちゅうか
@@ -351,6 +399,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: kaze-uta
   title: 風うた
   yomi: かぜうた
@@ -358,6 +407,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: umineko
   title: 海猫
   yomi: うみねこ
@@ -365,6 +415,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: yoake-no-uta
   title: 夜明けのうた
   yomi: よあけのうた
@@ -372,6 +423,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: hana-wa-tada-saku
   title: 花はただ咲く
   yomi: はなはたださく
@@ -379,6 +431,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: meiji-ichidai-onna
   title: 明治一代女
   yomi: めいじいちだいおんな
@@ -386,6 +439,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: noren
   title: 暖簾
   yomi: のれん
@@ -393,6 +447,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: furimukanaide
   title: ふりむかないで
   yomi: ふりむかないで
@@ -400,6 +455,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: shiori-no-theme
   title: 栞のテーマ
   yomi: しおりのてーま
@@ -407,6 +463,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kumanoji-e
   title: 熊野路へ
   yomi: くまのじへ
@@ -415,6 +472,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 和歌山
 - id: moshimo-ashita-ga
   title: もしも明日が…
   yomi: もしもあしたが
@@ -423,6 +482,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: wakare-no-yokan
   title: 別れの予感
   yomi: わかれのよかん
@@ -431,6 +491,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: ichido-dake-nara
   title: 一度だけなら
   yomi: いちどだけなら
@@ -439,6 +500,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: karatachi-no-komichi
   title: からたちの小径
   yomi: からたちのこみち
@@ -446,6 +508,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: natsu-wo-akiramete
   title: 夏をあきらめて
   yomi: なつをあきらめて
@@ -454,6 +517,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: angel
   title: Angel
   yomi: Angel
@@ -461,6 +525,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: hadaka-no-kokoro
   title: 裸の心
   yomi: はだかのこころ
@@ -469,6 +534,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: daremo-inai-umi
   title: 誰もいない海
   yomi: だれもいないうみ
@@ -477,6 +543,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: tokyo-da-yo-okkasan
   title: 東京だョおっ母さん
   yomi: とうきょうだよおっかさん
@@ -485,6 +552,8 @@
   themes:
   - 母
   reviewed: true
+  places:
+  - 東京
 - id: izakaya
   title: 居酒屋
   yomi: いざかや
@@ -493,6 +562,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: meguloop
   title: 巡ループ
   yomi: めぐるーぷ
@@ -500,6 +570,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: aitakute
   title: 逢いたくて逢いたくて
   yomi: あいたくてあいたくて
@@ -508,6 +579,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: mangetsu
   title: 満月
   yomi: まんげつ
@@ -517,6 +589,7 @@
   themes:
   - 月
   reviewed: true
+  places: []
 - id: seto-no-hanayome
   title: 瀬戸の花嫁
   yomi: せとのはなよめ
@@ -526,6 +599,7 @@
   - 祝
   - 故郷
   reviewed: true
+  places: []
 - id: onna-minatomachi
   title: おんな港町
   yomi: おんなみなとまち
@@ -533,6 +607,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: my-heart-belongs-to-daddy
   title: My Heart Belongs to Daddy
   yomi: My Heart Belongs to Daddy
@@ -541,6 +616,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: hana-wa-saku
   title: 花は咲く
   yomi: はなはさく
@@ -548,6 +624,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: hana-no-waltz
   title: 花のワルツ
   yomi: はなのわるつ
@@ -555,6 +632,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: osaka-de-umareta-onna
   title: 大阪で生まれた女
   yomi: おおさかでうまれたおんな
@@ -563,6 +641,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 大阪
 - id: love-game
   title: 男と女のラブゲーム
   yomi: おとことおんなのらぶげーむ
@@ -570,6 +650,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: sannenme-no-uwaki
   title: 3年目の浮気
   yomi: さんねんめのうわき
@@ -577,6 +658,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: aitai
   title: 会いたい
   yomi: あいたい
@@ -585,6 +667,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: buddha-no-you-ni
   title: ブッダのように私は死んだ
   yomi: ぶっだのようにわたしはしんだ
@@ -592,6 +675,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: koi-wo-suru-nara
   title: 恋をするなら
   yomi: こいをするなら
@@ -600,6 +684,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: orion
   title: orion
   yomi: orion
@@ -607,6 +692,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: single-bed
   title: シングルベッド
   yomi: しんぐるべっど
@@ -614,6 +700,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: unaji-mise
   title: うなじ魅せ
   yomi: うなじみせ
@@ -621,6 +708,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ukigumo-futatsu
   title: 浮雲ふたつ
   yomi: うきぐもふたつ
@@ -628,6 +716,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kohan-no-yado
   title: 湖畔の宿
   yomi: こはんのやど
@@ -635,6 +724,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kaero-kana
   title: 帰ろかな
   yomi: かえろかな
@@ -643,6 +733,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: hanataba
   title: 花束
   yomi: はなたば
@@ -650,6 +741,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kazari-janai-noyo
   title: 飾りじゃないのよ涙は
   yomi: かざりじゃないのよなみだは
@@ -657,6 +749,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ame-no-midosuji
   title: 雨の御堂筋
   yomi: あめのみどうすじ
@@ -664,6 +757,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 大阪
 - id: sweet-memories
   title: SWEET MEMORIES
   yomi: SWEET MEMORIES
@@ -671,6 +766,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ginza-no-koi
   title: 銀座の恋の物語
   yomi: ぎんざのこいのものがたり
@@ -679,6 +775,8 @@
   themes:
   - 恋
   reviewed: true
+  places:
+  - 東京
 - id: tennessee-waltz
   title: テネシー・ワルツ
   yomi: てねしーわるつ
@@ -686,6 +784,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kassai
   title: 喝采
   yomi: かっさい
@@ -693,6 +792,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kamome-no-machi
   title: かもめの街
   yomi: かもめのまち
@@ -700,6 +800,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ryuji
   title: 竜二
   yomi: りゅうじ
@@ -707,6 +808,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: horoyoi-dance
   title: ほろ酔いダンス
   yomi: ほろよいだんす
@@ -715,6 +817,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: tattoo
   title: TATTOO
   yomi: TATTOO
@@ -722,6 +825,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: oborozukiyo
   title: 朧月夜に死にましょう
   yomi: おぼろづきよにしにましょう
@@ -730,6 +834,7 @@
   themes:
   - 月
   reviewed: true
+  places: []
 - id: love
   title: L-O-V-E
   yomi: L-O-V-E
@@ -738,6 +843,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: koibana
   title: 恋花
   yomi: れんか
@@ -746,6 +852,7 @@
   themes:
   - 恋
   reviewed: false
+  places: []
 - id: yakan-hiko
   title: 夜間飛行
   yomi: やかんひこう
@@ -753,6 +860,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: blue-light-yokohama
   title: ブルー・ライト・ヨコハマ
   yomi: ぶるーらいとよこはま
@@ -760,6 +868,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 神奈川
 - id: hanagatami
   title: 花筐
   yomi: はながたみ
@@ -767,6 +877,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: samishigari
   title: 淋しがり
   yomi: さみしがり
@@ -774,6 +885,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: sore-ga-daiji
   title: それが大事
   yomi: それがだいじ
@@ -781,6 +893,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: itsumo-soba-ni
   title: いつもそばにいるよ
   yomi: いつもそばにいるよ
@@ -788,6 +901,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: wakatte-kudasai
   title: わかって下さい
   yomi: わかってください
@@ -795,6 +909,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: chiki-chiki-bang-bang
   title: チキチキバンバン
   yomi: ちきちきばんばん
@@ -802,6 +917,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: otoko-bore
   title: 男惚れ
   yomi: おとこぼれ
@@ -809,6 +925,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: dancing-queen
   title: Dancing Queen
   yomi: Dancing Queen
@@ -816,6 +933,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: jonkara-onnabushi
   title: じょんから女節
   yomi: じょんからおんなぶし
@@ -824,6 +942,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 青森
 - id: marunouchi-sadistic
   title: 丸の内サディスティック
   yomi: まるのうちさでぃすてぃっく
@@ -832,6 +952,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 東京
 - id: nanbu-daikokumai
   title: 南部大黒舞
   yomi: なんぶだいこくまい
@@ -841,6 +963,8 @@
   - 祭
   - 故郷
   reviewed: true
+  places:
+  - 岩手
 - id: akita-daikokumai
   title: 秋田大黒舞
   yomi: あきただいこくまい
@@ -850,6 +974,8 @@
   - 祭
   - 故郷
   reviewed: true
+  places:
+  - 秋田
 - id: futari-michi
   title: ふたり道
   yomi: ふたりみち
@@ -857,6 +983,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: yozakura-oshichi-satsujin
   title: 夜桜お七殺人事件
   yomi: よざくらおしちさつじんじけん
@@ -864,6 +991,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: furusato
   title: ふるさと
   yomi: ふるさと
@@ -872,6 +1000,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: hana-suisen
   title: 花水仙
   yomi: はなすいせん
@@ -880,6 +1009,7 @@
   - 冬
   themes: []
   reviewed: true
+  places: []
 - id: tojinbo
   title: 東尋坊
   yomi: とうじんぼう
@@ -887,6 +1017,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 福井
 - id: jodan-janai
   title: 冗談じゃない
   yomi: じょうだんじゃない
@@ -894,6 +1026,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: koishikute
   title: 恋しくて
   yomi: こいしくて
@@ -902,6 +1035,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: onna
   title: 女
   yomi: おんな
@@ -909,6 +1043,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kokokara
   title: ここから
   yomi: ここから
@@ -916,6 +1051,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: meoto-zenzai
   title: 夫婦善哉
   yomi: めおとぜんざい
@@ -923,6 +1059,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 大阪
 - id: bara-hotel
   title: 薔薇ホテル
   yomi: ばらほてる
@@ -930,6 +1068,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: jealousy
   title: ジェラシー
   yomi: じぇらしー
@@ -937,6 +1076,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: okaasan
   title: おかあさん
   yomi: おかあさん
@@ -945,6 +1085,7 @@
   themes:
   - 母
   reviewed: true
+  places: []
 - id: shiki-no-uta
   title: 四季の歌
   yomi: しきのうた
@@ -952,6 +1093,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: showa-karesusuki
   title: 昭和枯れすすき
   yomi: しょうわかれすすき
@@ -960,6 +1102,7 @@
   - 秋
   themes: []
   reviewed: true
+  places: []
 - id: olivia
   title: オリビアを聴きながら
   yomi: おりびあをききながら
@@ -967,6 +1110,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: hibari-no-sado-jowa
   title: ひばりの佐渡情話
   yomi: ひばりのさどじょうわ
@@ -976,6 +1120,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 新潟
 - id: akai-ito
   title: 紅い糸
   yomi: あかいいと
@@ -984,6 +1130,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: kiiroi-sakuranbo
   title: 黄色いさくらんぼ
   yomi: きいろいさくらんぼ
@@ -992,6 +1139,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kimagure-dochu
   title: 気まぐれ道中
   yomi: きまぐれどうちゅう
@@ -999,6 +1147,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: sekaiju-no-dare-yori
   title: 世界中の誰よりきっと
   yomi: せかいじゅうのだれよりきっと
@@ -1007,6 +1156,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: isezakicho-blues
   title: 伊勢佐木町ブルース
   yomi: いせざきちょうぶるーす
@@ -1014,6 +1164,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 神奈川
 - id: hongkong-hongkong
   title: 香港香港
   yomi: ほんこんほんこん
@@ -1021,6 +1173,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: vagare
   title: Vagare
   yomi: Vagare
@@ -1028,6 +1181,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kamome-to-iu-na
   title: 鴎という名の酒場
   yomi: かもめというなのさかば
@@ -1036,6 +1190,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: hinageshi-no-hana
   title: ひなげしの花
   yomi: ひなげしのはな
@@ -1044,6 +1199,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: bokyo
   title: 望郷
   yomi: ぼうきょう
@@ -1052,6 +1208,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: osaka-rhapsody
   title: 大阪ラプソディー
   yomi: おおさからぷそでぃー
@@ -1060,6 +1217,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 大阪
 - id: jinsei-no-namikimichi
   title: 人生の並木路
   yomi: じんせいのなみきみち
@@ -1067,6 +1226,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: koisame
   title: 恋雨〜KOISAME〜
   yomi: こいさめ
@@ -1076,6 +1236,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: electro-world
   title: エレクトロ・ワールド
   yomi: えれくとろわーるど
@@ -1084,6 +1245,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: chocolate-disco
   title: チョコレイト・ディスコ
   yomi: ちょこれいとでぃすこ
@@ -1092,6 +1254,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: flash
   title: FLASH
   yomi: FLASH
@@ -1100,6 +1263,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kurodabushi
   title: 黒田節
   yomi: くろだぶし
@@ -1108,6 +1272,8 @@
   themes:
   - 酒
   reviewed: true
+  places:
+  - 福岡
 - id: muhomatsu
   title: 無法松の一生
   yomi: むほうまつのいっしょう
@@ -1115,6 +1281,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 福岡
 - id: meoto-shunju
   title: 夫婦春秋
   yomi: めおとしゅんじゅう
@@ -1122,6 +1290,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: rock-and-roll-music
   title: ロック・アンド・ロール・ミュージック
   yomi: ろっくあんどろーるみゅーじっく
@@ -1129,6 +1298,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: help
   title: ヘルプ！
   yomi: へるぷ
@@ -1136,6 +1306,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: and-i-love-her
   title: アンド・アイ・ラヴ・ハー
   yomi: あんどあいらゔはー
@@ -1143,6 +1314,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: natsuzakari-honojigumi
   title: 夏ざかりほの字組
   yomi: なつざかりほのじぐみ
@@ -1152,6 +1324,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: wakayama-blues
   title: 和歌山ブルース
   yomi: わかやまぶるーす
@@ -1160,6 +1333,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 和歌山
 - id: inochi-no-blues
   title: 生命のブルース
   yomi: いのちのぶるーす
@@ -1167,6 +1342,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: usoyo-konya-mo
   title: うそよ今夜も
   yomi: うそよこんやも
@@ -1174,6 +1350,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kaerenai-futari
   title: 帰れない二人
   yomi: かえれないふたり
@@ -1181,6 +1358,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: jidai
   title: 時代
   yomi: じだい
@@ -1188,6 +1366,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: minato-no-yoko
   title: 港のヨーコヨコハマヨコスカ
   yomi: みなとのようこよこはまよこすか
@@ -1196,6 +1375,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 神奈川
 - id: kinku
   title: 禁区
   yomi: きんく
@@ -1203,6 +1384,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: omoibito
   title: 想いびと
   yomi: おもいびと
@@ -1211,6 +1393,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: tanjo
   title: 誕生
   yomi: たんじょう
@@ -1219,6 +1402,7 @@
   themes:
   - 祝
   reviewed: true
+  places: []
 - id: sakura-chiru
   title: サクラ、散ル
   yomi: さくらちる
@@ -1227,6 +1411,7 @@
   themes:
   - 桜
   reviewed: true
+  places: []
 - id: furusato-e
   title: 故郷へ…
   yomi: ふるさとへ
@@ -1236,6 +1421,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: katte-ni-sinbad
   title: 勝手にシンドバッド
   yomi: かってにしんどばっど
@@ -1244,6 +1430,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: shitetsu-ensen
   title: 私鉄沿線
   yomi: してつえんせん
@@ -1251,6 +1438,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: aishite-aishite
   title: 愛して愛して愛しちゃったのよ
   yomi: あいしてあいしてあいしちゃったのよ
@@ -1259,6 +1447,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: inochi-no-hana-yo
   title: 命の花よ
   yomi: いのちのはなよ
@@ -1266,6 +1455,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: otomeza-gu
   title: 乙女座宮
   yomi: おとめざぐう
@@ -1274,6 +1464,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: gion-kouta
   title: 祇園小唄
   yomi: ぎおんこうた
@@ -1282,6 +1473,8 @@
   themes:
   - 故郷
   reviewed: true
+  places:
+  - 京都
 - id: fortune-cookie
   title: 恋するフォーチュンクッキー
   yomi: こいするふぉーちゅんくっきー
@@ -1290,6 +1483,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ichigo-hakusho
   title: 「いちご白書」をもう一度
   yomi: いちごはくしょをもういちど
@@ -1297,6 +1491,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: manatsu-no-yoru
   title: 真夏の夜の夢
   yomi: まなつのよるのゆめ
@@ -1305,6 +1500,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: dancing-hero
   title: ダンシング・ヒーロー
   yomi: だんしんぐひーろー
@@ -1312,6 +1508,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: akita-ondo
   title: 秋田音頭
   yomi: あきたおんど
@@ -1322,6 +1519,8 @@
   - 祭
   - 故郷
   reviewed: true
+  places:
+  - 秋田
 - id: suhada
   title: 素肌
   yomi: すはだ
@@ -1329,6 +1528,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: futari-no-island
   title: ふたりの愛ランド
   yomi: ふたりのあいらんど
@@ -1337,6 +1537,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: yue-liang
   title: 月亮代表我的心（永遠の月）
   yomi: げつりょうだいひょうがてきしん
@@ -1346,6 +1547,7 @@
   themes:
   - 月
   reviewed: true
+  places: []
 - id: katte-ni-shiyagare
   title: 勝手にしやがれ
   yomi: かってにしやがれ
@@ -1353,6 +1555,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ayako-no-okuni-jiman
   title: あや子のお国自慢だよ〜
   yomi: あやこのおくにじまんだよ
@@ -1362,6 +1565,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: ganbarona-tohoku
   title: がんばろな東北
   yomi: がんばろなとうほく
@@ -1370,6 +1574,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: mata-au-hi-made
   title: また逢う日まで
   yomi: またあうひまで
@@ -1377,6 +1582,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: nagisa-etcetera
   title: 渚にまつわるエトセトラ
   yomi: なぎさにまつわるえとせとら
@@ -1385,6 +1591,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: chiisana-kane-no-ne
   title: 小さな鐘の音〜ラ・カンパネラ〜
   yomi: ちいさなかねのね
@@ -1394,6 +1601,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: umekawa-chubei
   title: 梅川忠兵衛
   yomi: うめかわちゅうべえ
@@ -1402,6 +1610,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: manjushage
   title: 曼珠沙華
   yomi: まんじゅしゃげ
@@ -1410,6 +1619,7 @@
   - 秋
   themes: []
   reviewed: true
+  places: []
 - id: kita-no-umiake
   title: 北の海明け
   yomi: きたのうみあけ
@@ -1418,6 +1628,7 @@
   - 冬
   themes: []
   reviewed: true
+  places: []
 - id: nirinso
   title: 二輪草
   yomi: にりんそう
@@ -1425,6 +1636,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: dare-yori-mo-kimi-wo
   title: 誰よりも君を愛す
   yomi: だれよりもきみをあいす
@@ -1433,6 +1645,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: kiso-no-koiuta
   title: 木曾の恋唄
   yomi: きそのこいうた
@@ -1442,6 +1655,8 @@
   - 恋
   - 故郷
   reviewed: true
+  places:
+  - 長野
 - id: shinayaka-ni-utatte
   title: しなやかに歌って
   yomi: しなやかにうたって
@@ -1449,6 +1664,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: sayonara
   title: さよなら
   yomi: さよなら
@@ -1456,6 +1672,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: toki-no-sugiyuku
   title: 時の過ぎゆくままに
   yomi: ときのすぎゆくままに
@@ -1463,6 +1680,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: naniwa-koishigure
   title: 浪花恋しぐれ
   yomi: なにわこいしぐれ
@@ -1472,6 +1690,8 @@
   - 恋
   - 故郷
   reviewed: true
+  places:
+  - 大阪
 - id: yoake-no-blues
   title: 夜明けのブルース
   yomi: よあけのぶるーす
@@ -1479,6 +1699,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kita-no-yado-kara
   title: 北の宿から
   yomi: きたのやどから
@@ -1487,6 +1708,7 @@
   - 冬
   themes: []
   reviewed: true
+  places: []
 - id: konpira-ichidan
   title: 金毘羅一段
   yomi: こんぴらいちだん
@@ -1494,6 +1716,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ii-hi-tabidachi
   title: いい日旅立ち
   yomi: いいひたびだち
@@ -1501,6 +1724,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: futari-de-osake-wo
   title: 二人でお酒を
   yomi: ふたりでおさけを
@@ -1509,6 +1733,7 @@
   themes:
   - 酒
   reviewed: true
+  places: []
 - id: koi-no-shizuku
   title: 恋のしずく
   yomi: こいのしずく
@@ -1517,6 +1742,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: aisuru-tte-kowai
   title: 愛するってこわい
   yomi: あいするってこわい
@@ -1525,6 +1751,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: hitoe
   title: 一恵
   yomi: ひとえ
@@ -1532,6 +1759,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: murasaki-ujo
   title: むらさき雨情
   yomi: むらさきうじょう
@@ -1539,6 +1767,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: koi-no-machi-sapporo
   title: 恋の町札幌
   yomi: こいのまちさっぽろ
@@ -1548,6 +1777,8 @@
   - 恋
   - 故郷
   reviewed: true
+  places:
+  - 北海道
 - id: amayozake
   title: 雨夜酒
   yomi: あまよさけ
@@ -1556,6 +1787,7 @@
   themes:
   - 酒
   reviewed: false
+  places: []
 - id: sadamegawa
   title: さだめ川
   yomi: さだめがわ
@@ -1563,6 +1795,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ano-hi-ni-kaeritai
   title: あの日にかえりたい
   yomi: あのひにかえりたい
@@ -1570,6 +1803,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: sakura-no-gotoku
   title: 桜の如く
   yomi: さくらのごとく
@@ -1579,6 +1813,7 @@
   themes:
   - 桜
   reviewed: true
+  places: []
 - id: kaze-tachinu
   title: 風立ちぬ
   yomi: かぜたちぬ
@@ -1587,6 +1822,7 @@
   - 秋
   themes: []
   reviewed: true
+  places: []
 - id: koshi-no-miyako
   title: こしの都
   yomi: こしのみやこ
@@ -1595,6 +1831,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: okaeri-ga-omamori
   title: おかえりがおまもり
   yomi: おかえりがおまもり
@@ -1602,6 +1839,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: tokko-no-haha
   title: 特攻の母〜ホタル〜
   yomi: とっこうのはは
@@ -1611,6 +1849,7 @@
   themes:
   - 母
   reviewed: true
+  places: []
 - id: tsugaru-kaikyo
   title: 津軽海峡・冬景色
   yomi: つがるかいきょうふゆげしき
@@ -1620,6 +1859,8 @@
   themes:
   - 雪
   reviewed: true
+  places:
+  - 青森
 - id: konoyo-no-hana
   title: この世の花
   yomi: このよのはな
@@ -1627,6 +1868,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: aitaina-ano-hito-ni
   title: 逢いたいなァあの人に
   yomi: あいたいなあのひとに
@@ -1634,6 +1876,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: omoidesan-konnichiwa
   title: 思い出さん今日は
   yomi: おもいでさんこんにちは
@@ -1641,6 +1884,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: sayonara-wa-dance
   title: さよならはダンスの後に
   yomi: さよならはだんすのあとに
@@ -1648,6 +1892,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: chiaki-naomi-medley
   title: ちあきなおみ名曲メドレー
   yomi: ちあきなおみめいきょくめどれー
@@ -1655,6 +1900,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: kenka-yasubei
   title: 喧嘩安兵衛 前伝
   yomi: けんかやすべえぜんでん
@@ -1662,6 +1908,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: yumen-naka
   title: 夢ん中
   yomi: ゆめんなか
@@ -1669,6 +1916,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: hotaru-no-chochin
   title: 蛍の提灯
   yomi: ほたるのちょうちん
@@ -1677,6 +1925,7 @@
   - 夏
   themes: []
   reviewed: true
+  places: []
 - id: yuki-moete
   title: 雪燃えて
   yomi: ゆきもえて
@@ -1686,6 +1935,7 @@
   themes:
   - 雪
   reviewed: true
+  places: []
 - id: kyo-no-niwakaame
   title: 京のにわか雨
   yomi: きょうのにわかあめ
@@ -1693,6 +1943,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 京都
 - id: futari-wa-wakai
   title: 二人は若い
   yomi: ふたりはわかい
@@ -1700,6 +1952,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: 1812-overture
   title: 1812 Overture
   yomi: 1812 Overture
@@ -1707,6 +1960,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: last-dance
   title: ラストダンスは私に
   yomi: らすとだんすはわたしに
@@ -1714,6 +1968,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: jinsei-shimijimi
   title: 人生しみじみ
   yomi: じんせいしみじみ
@@ -1721,6 +1976,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: white-suit-theme
   title: 白いスーツのテーマ
   yomi: しろいすーつのてーま
@@ -1728,6 +1984,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ai-no-sazanami
   title: 愛のさざなみ
   yomi: あいのさざなみ
@@ -1736,6 +1993,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: yuki-koya
   title: 雪荒野
   yomi: ゆきこうや
@@ -1745,6 +2003,7 @@
   themes:
   - 雪
   reviewed: true
+  places: []
 - id: koibotaru
   title: 恋蛍〜瀧の白糸より〜
   yomi: こいぼたる
@@ -1754,6 +2013,7 @@
   themes:
   - 恋
   reviewed: true
+  places: []
 - id: fusetsu-nagaretabi
   title: 風雪流れ旅
   yomi: ふうせつながれたび
@@ -1763,6 +2023,7 @@
   themes:
   - 雪
   reviewed: true
+  places: []
 - id: furusato-shoka
   title: 故郷
   yomi: ふるさと
@@ -1771,6 +2032,7 @@
   themes:
   - 故郷
   reviewed: true
+  places: []
 - id: kono-michi
   title: この道
   yomi: このみち
@@ -1778,6 +2040,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: mari-to-tonosama
   title: 毬と殿様
   yomi: まりととのさま
@@ -1785,6 +2048,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: miagete-goran
   title: 見上げてごらん夜の星を
   yomi: みあげてごらんよるのほしを
@@ -1792,6 +2056,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: tsubasa-wo-kudasai
   title: 翼をください
   yomi: つばさをください
@@ -1799,6 +2064,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: renai-circulation
   title: 恋愛サーキュレーション
   yomi: れんあいさーきゅれーしょん
@@ -1806,6 +2072,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: yagiri-no-watashi
   title: 矢切の渡し
   yomi: やぎりのわたし
@@ -1813,6 +2080,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 千葉
 - id: tokyo-night-club
   title: 東京ナイト・クラブ
   yomi: とうきょうないとくらぶ
@@ -1820,6 +2089,8 @@
   season: []
   themes: []
   reviewed: true
+  places:
+  - 東京
 - id: ryuhyo-koiuta
   title: 流氷恋唄
   yomi: りゅうひょうこいうた
@@ -1829,6 +2100,7 @@
   themes:
   - 雪
   reviewed: true
+  places: []
 - id: ue-wo-muite
   title: 上を向いて歩こう
   yomi: うえをむいてあるこう
@@ -1836,6 +2108,7 @@
   season: []
   themes: []
   reviewed: true
+  places: []
 - id: ranman-hanazukushi
   title: 爛漫!花づくし句会
   yomi: らんまんはなづくしくかい
@@ -1844,3 +2117,4 @@
   - 春
   themes: []
   reviewed: true
+  places: []

@@ -79,3 +79,11 @@ def test_daily_survives_flash_failure(env, monkeypatch):
     monkeypatch.setattr(run, "fetch_flash_page", boom)
     run.daily("2026-11-24")
     assert status.data()["sources"]["flash"]["consecutive_failures"] == 1
+
+
+def test_daily_recomputes_stale_pick_for_today(env):
+    from pipeline.model import Pick
+    save(env / "picks.json", [Pick("2026-11-24", "冬美のうた", "おすすめ", ["old"])])
+    run.daily("2026-11-24")
+    p = [x for x in load(env / "picks.json", Pick) if x.date == "2026-11-24"]
+    assert len(p) == 1 and p[0].theme_title != "冬美のうた" and p[0].clip_ids != ["old"]

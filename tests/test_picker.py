@@ -103,3 +103,8 @@ def test_movable_dates():
 def test_default_theme_name(d):
     clips = [mk("2020-01-01", ["hirari"], n=str(i)) for i in range(4)]
     assert P("2027-07-07", clips, d=d).theme_title == "冬美、歌がある"
+
+
+def test_default_reason_is_meaningful(d):
+    clips = [mk("2020-01-01", ["hirari"], n=str(i)) for i in range(4)]
+    assert P("2027-07-07", clips, d=d).reason == "いろいろな年の冬美さん"

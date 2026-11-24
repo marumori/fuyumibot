@@ -267,3 +267,13 @@ Home page order and content:
 5. 週刊FLASH — articles from the smart-flash.jp 坂本冬美 tag (`/tag/坂本冬美/`, pages 1–N) from this month-day in past years (±3 days if none): title (linked), issue, and 「記事に出てくる曲」; each song links to our newest video of it when the list has one, otherwise 「映像なし」. The WordPress API returns 403, so the public tag pages (allowed by robots.txt) are read; article text is read in memory for song names only and never stored.
 6. 新しい映像 — removed.
 The calendar's day view shows the same three kinds (videos, letters, FLASH articles).
+
+## 16. Owner feedback (2026-11-25, round 2)
+
+- Colors: blue + pink from the official site fuyumi-fc.com (sky #7FC6F2, pink #FFAEC5). Text/buttons use deepened shades for contrast: blue #2C6DB4 (5.3:1 on white), pink #C2306A (5.35:1). The official pastels are decoration only (bars, borders, backgrounds).
+- 今日のおすすめ: default theme 「冬美、歌がある」, reason 「いろいろな年の冬美さん」; today's and tomorrow's picks are recomputed on every daily run.
+- Theme buttons under the playlist (テーマを選ぶ): 季節 (春夏秋冬), 気持ち (恋・お酒・お祝い・母・お祭り・ふるさと・桜・雪・月のうた), ふるさと (prefectures, from `places` in songs.yaml). Tapping one swaps the playlist; 「今日のおすすめに戻す」 restores it. Up to 8 clips per theme, YouTube first, shuffled per day.
+- 「N曲つづけて聴く」 plays any platform: YouTube clips advance by themselves; Bilibili/X clips need 「次の曲へ」.
+- この頃の映像 / 冬美便り / 週刊FLASH show **that exact month-day only** (no ±3 days). Empty → 「この日の○○は、まだありません。」
+- 週刊FLASH items also show 「○○さんとの共演映像」 for people tagged/mentioned in the article.
+- Open: u-fuyumi.net 掲示板 (fan forum). Listing pages give only relative dates; exact dates need each topic page (~1,800). Waiting for the owner's decision on how to use it.

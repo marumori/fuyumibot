@@ -1439,7 +1439,7 @@
     "has_video": true,
     "id": "BV1RYLA63Eg8",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-18T16:35:37Z",
     "url": "https://www.bilibili.com/video/BV1RYLA63Eg8"
    }
   ],
@@ -2812,7 +2812,7 @@
     "has_video": true,
     "id": "BV1cFWg64EGR",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-11-10T08:49:41Z",
     "url": "https://www.bilibili.com/video/BV1cFWg64EGR"
    },
    {
@@ -2946,11 +2946,13 @@
     "has_video": true,
     "id": "BV14qWU61EaV",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-11-11T16:42:04Z",
     "url": "https://www.bilibili.com/video/BV14qWU61EaV"
    }
   ],
-  "tags": [],
+  "tags": [
+   "歌謡浪曲"
+  ],
   "title_raw": "[人生歌 坂本冬美名場面集＋名曲・名演集！] 梅川忠兵衛(歌謡浪曲) w/二葉百合子 20210814",
   "verified": {
    "broadcaster": "BS朝日",
@@ -4317,7 +4319,7 @@
     "has_video": true,
     "id": "BV1nFWg64Ei8",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-11-10T08:50:25Z",
     "url": "https://www.bilibili.com/video/BV1nFWg64Ei8"
    },
    {
@@ -5587,7 +5589,7 @@
     "has_video": true,
     "id": "BV1DtWU6DE8u",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-11-11T16:50:26Z",
     "url": "https://www.bilibili.com/video/BV1DtWU6DE8u"
    }
   ],
@@ -6712,7 +6714,7 @@
     "has_video": true,
     "id": "BV1FFWg64EyF",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-11-10T08:50:02Z",
     "url": "https://www.bilibili.com/video/BV1FFWg64EyF"
    },
    {
@@ -9388,6 +9390,30 @@
   "broadcast_date": "2024-10-12",
   "date_source": "title",
   "hidden": false,
+  "id": "2024-10-12-yozakura-oshichi-427130",
+  "performers": [],
+  "program": null,
+  "songs": [
+   "yozakura-oshichi"
+  ],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1xDWu6YEFM",
+    "platform": "bilibili",
+    "uploaded_at": "2026-11-10T08:59:23Z",
+    "url": "https://www.bilibili.com/video/BV1xDWu6YEFM"
+   }
+  ],
+  "tags": [],
+  "title_raw": "夜桜お七　20241012",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2024-10-12",
+  "date_source": "title",
+  "hidden": false,
   "id": "2024-10-12-yozakura-oshichi-f06288",
   "performers": [],
   "program": "人生歌 坂本冬美名場面集+名曲・名演集！",
@@ -11500,6 +11526,31 @@
   ],
   "tags": [],
   "title_raw": "[新BS日本のうた たっぷり静岡] （無曲名） アグネス・チャン＆坂本冬美＆三山ひろし 20250529",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2025-05-29",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2025-05-29-talk-c19e43",
+  "performers": [
+   "坂本冬美",
+   "三山ひろし"
+  ],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV11NVa6KEQV",
+    "platform": "bilibili",
+    "uploaded_at": "2026-05-29T15:27:45Z",
+    "url": "https://www.bilibili.com/video/BV11NVa6KEQV"
+   }
+  ],
+  "tags": [],
+  "title_raw": "たっぷり静岡　陳美齡 坂本冬美  三山ひろし  20250529",
   "verified": null
  },
  {
@@ -14631,7 +14682,7 @@
     "has_video": true,
     "id": "BV1jSLV63E4q",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-16T17:32:00Z",
     "url": "https://www.bilibili.com/video/BV1jSLV63E4q"
    }
   ],
@@ -14665,7 +14716,7 @@
     "has_video": true,
     "id": "BV1pX5B6HEjJ",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-15T17:38:07Z",
     "url": "https://www.bilibili.com/video/BV1pX5B6HEjJ"
    }
   ],
@@ -14699,7 +14750,7 @@
     "has_video": true,
     "id": "BV1kX5B6HErh",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-15T17:35:23Z",
     "url": "https://www.bilibili.com/video/BV1kX5B6HErh"
    }
   ],
@@ -14755,7 +14806,7 @@
     "has_video": true,
     "id": "BV1ae5B6eEwZ",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-15T17:20:42Z",
     "url": "https://www.bilibili.com/video/BV1ae5B6eEwZ"
    }
   ],
@@ -14789,7 +14840,7 @@
     "has_video": true,
     "id": "BV18q5B6aE2f",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-15T17:27:17Z",
     "url": "https://www.bilibili.com/video/BV18q5B6aE2f"
    }
   ],
@@ -14895,7 +14946,7 @@
     "has_video": true,
     "id": "BV1ZVVD6kEZe",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-31T18:31:55Z",
     "url": "https://www.bilibili.com/video/BV1ZVVD6kEZe"
    }
   ],
@@ -14985,7 +15036,7 @@
     "has_video": true,
     "id": "BV1cuVD6jErH",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-31T18:27:35Z",
     "url": "https://www.bilibili.com/video/BV1cuVD6jErH"
    }
   ],
@@ -15019,7 +15070,7 @@
     "has_video": true,
     "id": "BV1fGVD6VE6d",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-31T18:37:33Z",
     "url": "https://www.bilibili.com/video/BV1fGVD6VE6d"
    }
   ],
@@ -15057,6 +15108,28 @@
   "broadcast_date": "2026-05-31",
   "date_source": "title",
   "hidden": false,
+  "id": "2026-05-31-talk-29e5b1",
+  "performers": [],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV11zVD6REUK",
+    "platform": "bilibili",
+    "uploaded_at": "2026-05-31T17:02:11Z",
+    "url": "https://www.bilibili.com/video/BV11zVD6REUK"
+   }
+  ],
+  "tags": [],
+  "title_raw": "内田有紀的建物日記 20260531",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-05-31",
+  "date_source": "title",
+  "hidden": false,
   "id": "2026-05-31-tooi-mukashi-no-koi-no-uta-7ef6dc",
   "performers": [
    "坂本冬美"
@@ -15079,7 +15152,7 @@
     "has_video": true,
     "id": "BV1FGVD65EL7",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-05-31T18:42:50Z",
     "url": "https://www.bilibili.com/video/BV1FGVD65EL7"
    }
   ],
@@ -15478,7 +15551,7 @@
     "has_video": true,
     "id": "BV154EJ6wEou",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-06-06T15:26:42Z",
     "url": "https://www.bilibili.com/video/BV154EJ6wEou"
    },
    {
@@ -15574,7 +15647,7 @@
     "has_video": true,
     "id": "BV1jsEJ6YELJ",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-06-06T15:32:30Z",
     "url": "https://www.bilibili.com/video/BV1jsEJ6YELJ"
    }
   ],
@@ -15663,7 +15736,7 @@
     "has_video": true,
     "id": "BV1wsjV6HE4V",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-06-16T14:28:15Z",
     "url": "https://www.bilibili.com/video/BV1wsjV6HE4V"
    }
   ],
@@ -15698,6 +15771,30 @@
   "verified": null
  },
  {
+  "broadcast_date": "2026-06-13",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-06-13-tooi-mukashi-no-koi-no-uta-a2c75a",
+  "performers": [],
+  "program": null,
+  "songs": [
+   "tooi-mukashi-no-koi-no-uta"
+  ],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1wsjV6HEdJ",
+    "platform": "bilibili",
+    "uploaded_at": "2026-06-16T14:27:10Z",
+    "url": "https://www.bilibili.com/video/BV1wsjV6HEdJ"
+   }
+  ],
+  "tags": [],
+  "title_raw": "遠い昔の恋の歌　坂本冬美　20260613\u0003",
+  "verified": null
+ },
+ {
   "broadcast_date": "2026-06-21",
   "date_source": "title",
   "hidden": false,
@@ -15723,7 +15820,7 @@
     "has_video": true,
     "id": "BV1AM7F6SEFZ",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-06-21T16:02:11Z",
     "url": "https://www.bilibili.com/video/BV1AM7F6SEFZ"
    }
   ],
@@ -15779,6 +15876,30 @@
   ],
   "tags": [],
   "title_raw": "[恋がしたい] （無曲名） 坂本冬美 20260621",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-06-21",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-06-21-talk-a3de72",
+  "performers": [
+   "坂本冬美"
+  ],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1jZjZ6qEpD",
+    "platform": "bilibili",
+    "uploaded_at": "2026-06-21T17:56:52Z",
+    "url": "https://www.bilibili.com/video/BV1jZjZ6qEpD"
+   }
+  ],
+  "tags": [],
+  "title_raw": "唱歌！青春best song 坂本冬美 20260621",
   "verified": null
  },
  {
@@ -15863,6 +15984,30 @@
   "broadcast_date": "2026-07-04",
   "date_source": "title",
   "hidden": false,
+  "id": "2026-07-04-talk-28f8e3",
+  "performers": [
+   "内田有紀"
+  ],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1jgMP6hEqo",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-04T15:11:20Z",
+    "url": "https://www.bilibili.com/video/BV1jgMP6hEqo"
+   }
+  ],
+  "tags": [],
+  "title_raw": "新美の巨人たち 葉山加地邸×内田有紀 20260704",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-07-04",
+  "date_source": "title",
+  "hidden": false,
   "id": "2026-07-04-talk-61ac43",
   "performers": [],
   "program": "CM",
@@ -15908,7 +16053,7 @@
  {
   "broadcast_date": "2026-07-05",
   "date_source": "title",
-  "hidden": true,
+  "hidden": false,
   "id": "2026-07-05-aishite-aishite-7ce3ee",
   "performers": [
    "藤あや子"
@@ -15925,6 +16070,14 @@
     "platform": "x",
     "uploaded_at": "2026-07-05T17:32:00Z",
     "url": "https://x.com/jounotakeuchi/status/2073822297128124561"
+   },
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1KATm6wE8N",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-05T17:33:11Z",
+    "url": "https://www.bilibili.com/video/BV1KATm6wE8N"
    }
   ],
   "tags": [],
@@ -15934,7 +16087,7 @@
  {
   "broadcast_date": "2026-07-05",
   "date_source": "title",
-  "hidden": true,
+  "hidden": false,
   "id": "2026-07-05-gion-kouta-bddbc6",
   "performers": [
    "藤あや子",
@@ -15952,6 +16105,14 @@
     "platform": "x",
     "uploaded_at": "2026-07-05T17:55:00Z",
     "url": "https://x.com/jounotakeuchi/status/2073828203047817601"
+   },
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1RxTm6LE4f",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-05T17:56:34Z",
+    "url": "https://www.bilibili.com/video/BV1RxTm6LE4f"
    }
   ],
   "tags": [],
@@ -15961,7 +16122,7 @@
  {
   "broadcast_date": "2026-07-05",
   "date_source": "title",
-  "hidden": true,
+  "hidden": false,
   "id": "2026-07-05-inochi-no-hana-yo-0b5f96",
   "performers": [
    "藤あや子"
@@ -15978,6 +16139,14 @@
     "platform": "x",
     "uploaded_at": "2026-07-05T17:46:00Z",
     "url": "https://x.com/jounotakeuchi/status/2073825785790820480"
+   },
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1dpTm67E27",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-05T17:46:13Z",
+    "url": "https://www.bilibili.com/video/BV1dpTm67E27"
    }
   ],
   "tags": [],
@@ -15987,7 +16156,7 @@
  {
   "broadcast_date": "2026-07-05",
   "date_source": "title",
-  "hidden": true,
+  "hidden": false,
   "id": "2026-07-05-otomeza-gu-5401b0",
   "performers": [
    "藤あや子",
@@ -16005,6 +16174,14 @@
     "platform": "x",
     "uploaded_at": "2026-07-05T17:47:00Z",
     "url": "https://x.com/jounotakeuchi/status/2073826163332632964"
+   },
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1opTm67Eg6",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-05T17:49:17Z",
+    "url": "https://www.bilibili.com/video/BV1opTm67Eg6"
    }
   ],
   "tags": [],
@@ -16014,7 +16191,7 @@
  {
   "broadcast_date": "2026-07-05",
   "date_source": "title",
-  "hidden": true,
+  "hidden": false,
   "id": "2026-07-05-umineko-321cf9",
   "performers": [
    "藤あや子"
@@ -16031,6 +16208,14 @@
     "platform": "x",
     "uploaded_at": "2026-07-05T17:53:00Z",
     "url": "https://x.com/jounotakeuchi/status/2073827567023563196"
+   },
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1RxTm6LE4X",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-05T17:56:29Z",
+    "url": "https://www.bilibili.com/video/BV1RxTm6LE4X"
    }
   ],
   "tags": [],
@@ -16112,6 +16297,28 @@
   "broadcast_date": "2026-07-11",
   "date_source": "title",
   "hidden": false,
+  "id": "2026-07-11-talk-b67ce9",
+  "performers": [],
+  "program": "冬美",
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1xbNP6qEFz",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-11T21:50:13Z",
+    "url": "https://www.bilibili.com/video/BV1xbNP6qEFz"
+   }
+  ],
+  "tags": [],
+  "title_raw": "[冬美] 人生歌 20260711",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-07-11",
+  "date_source": "title",
+  "hidden": false,
   "id": "2026-07-11-wakare-no-yokan-016fd7",
   "performers": [
    "坂本冬美",
@@ -16152,6 +16359,28 @@
   "verified": null
  },
  {
+  "broadcast_date": "2026-07-12",
+  "date_source": "post_time",
+  "hidden": false,
+  "id": "2026-07-12-talk-d80f6a",
+  "performers": [],
+  "program": "CM",
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1GRNP6SE8G",
+    "platform": "bilibili",
+    "uploaded_at": "2026-07-11T20:33:36Z",
+    "url": "https://www.bilibili.com/video/BV1GRNP6SE8G"
+   }
+  ],
+  "tags": [],
+  "title_raw": "[CM] 40周年記念recital 坂本冬美 SPECIAL〜今日から明日へ 2026",
+  "verified": null
+ },
+ {
   "broadcast_date": "2026-07-21",
   "date_source": "title",
   "hidden": false,
@@ -16178,7 +16407,7 @@
     "has_video": true,
     "id": "BV1AeKY6DEfg",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-07-21T14:28:08Z",
     "url": "https://www.bilibili.com/video/BV1AeKY6DEfg"
    }
   ],
@@ -16440,7 +16669,7 @@
     "has_video": true,
     "id": "BV1dqgM6LEte",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-08-14T17:05:39Z",
     "url": "https://www.bilibili.com/video/BV1dqgM6LEte"
    },
    {
@@ -16478,6 +16707,30 @@
   ],
   "tags": [],
   "title_raw": "[イントロクイズ] （無曲名） 坂本冬美 20260814",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-08-14",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-08-14-talk-456e43",
+  "performers": [],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1ovgM6mEvS",
+    "platform": "bilibili",
+    "uploaded_at": "2026-08-14T17:07:11Z",
+    "url": "https://www.bilibili.com/video/BV1ovgM6mEvS"
+   }
+  ],
+  "tags": [
+   "cut"
+  ],
+  "title_raw": "昭和时代经典 冬美cut 20260814",
   "verified": null
  },
  {
@@ -16582,7 +16835,7 @@
     "has_video": true,
     "id": "BV19sbL6GEG7",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-09-05T14:05:53Z",
     "url": "https://www.bilibili.com/video/BV19sbL6GEG7"
    },
    {
@@ -16657,7 +16910,7 @@
     "has_video": true,
     "id": "BV1RHbL65EUL",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-09-05T14:35:51Z",
     "url": "https://www.bilibili.com/video/BV1RHbL65EUL"
    },
    {
@@ -16693,6 +16946,14 @@
     "platform": "x",
     "uploaded_at": "2026-09-06T06:58:00Z",
     "url": "https://x.com/jounotakeuchi/status/2096493148323414042"
+   },
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1iGbp6eE97",
+    "platform": "bilibili",
+    "uploaded_at": "2026-09-06T08:58:56Z",
+    "url": "https://www.bilibili.com/video/BV1iGbp6eE97"
    }
   ],
   "tags": [],
@@ -16772,6 +17033,55 @@
   ],
   "tags": [],
   "title_raw": "[トーク] 40周年記念リサイタル 坂本冬美 SPECIAL〜今日から明日へ  坂本冬美 20260905",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-09-05",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-09-05-talk-0f5798",
+  "performers": [],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV18hbs6FEnF",
+    "platform": "bilibili",
+    "uploaded_at": "2026-09-06T11:26:38Z",
+    "url": "https://www.bilibili.com/video/BV18hbs6FEnF"
+   }
+  ],
+  "tags": [],
+  "title_raw": "美彩 人生歌 20260905",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-09-06",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-09-06-suki-ni-natta-hito-02dc17",
+  "performers": [
+   "藤あや子",
+   "坂本冬美"
+  ],
+  "program": null,
+  "songs": [
+   "suki-ni-natta-hito"
+  ],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1dGbp6eEra",
+    "platform": "bilibili",
+    "uploaded_at": "2026-09-06T08:58:42Z",
+    "url": "https://www.bilibili.com/video/BV1dGbp6eEra"
+   }
+  ],
+  "tags": [],
+  "title_raw": "好きになった人 藤あや子　坂本冬美 20260906",
   "verified": null
  },
  {
@@ -16932,6 +17242,52 @@
   "verified": null
  },
  {
+  "broadcast_date": "2026-10-10",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-10-10-talk-97248b",
+  "performers": [
+   "坂本冬美"
+  ],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1rTpJ6UEKW",
+    "platform": "bilibili",
+    "uploaded_at": "2026-10-11T08:03:51Z",
+    "url": "https://www.bilibili.com/video/BV1rTpJ6UEKW"
+   }
+  ],
+  "tags": [],
+  "title_raw": "坂本冬美 20261010",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-10-17",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-10-17-talk-f4b95c",
+  "performers": [],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV18inu6wEwV",
+    "platform": "bilibili",
+    "uploaded_at": "2026-10-18T08:08:53Z",
+    "url": "https://www.bilibili.com/video/BV18inu6wEwV"
+   }
+  ],
+  "tags": [],
+  "title_raw": "新美の巨人たち【重要文化財【神戸女学院】×内田有紀】20261017",
+  "verified": null
+ },
+ {
   "broadcast_date": "2026-10-18",
   "date_source": "title",
   "hidden": false,
@@ -16957,7 +17313,7 @@
     "has_video": true,
     "id": "BV14rnn6tEZb",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-10-19T08:09:02Z",
     "url": "https://www.bilibili.com/video/BV14rnn6tEZb"
    }
   ],
@@ -17060,6 +17416,28 @@
   ],
   "tags": [],
   "title_raw": "【CM】40周年記念リサイタル 坂本冬美 SPECIAL〜今日から明日へ 20261031",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-10-31",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-10-31-talk-cb1c0e",
+  "performers": [],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1orWb6gEpf",
+    "platform": "bilibili",
+    "uploaded_at": "2026-11-09T17:16:34Z",
+    "url": "https://www.bilibili.com/video/BV1orWb6gEpf"
+   }
+  ],
+  "tags": [],
+  "title_raw": "冬美特集 人生歌　20261031",
   "verified": null
  },
  {
@@ -17414,6 +17792,28 @@
   }
  },
  {
+  "broadcast_date": "2026-11-09",
+  "date_source": "post_time",
+  "hidden": false,
+  "id": "2026-11-09-talk-483054",
+  "performers": [],
+  "program": "新聞",
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV184WW6LEtD",
+    "platform": "bilibili",
+    "uploaded_at": "2026-11-08T19:06:43Z",
+    "url": "https://www.bilibili.com/video/BV184WW6LEtD"
+   }
+  ],
+  "tags": [],
+  "title_raw": "[新聞] 40周年記念recital 坂本冬美SPECIAL～今日から明日へ～ in東京",
+  "verified": null
+ },
+ {
   "broadcast_date": "2026-11-12",
   "date_source": "post_time",
   "hidden": false,
@@ -17515,6 +17915,28 @@
   "broadcast_date": "2026-11-13",
   "date_source": "title",
   "hidden": false,
+  "id": "2026-11-13-talk-85173d",
+  "performers": [],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1bRWB6pEML",
+    "platform": "bilibili",
+    "uploaded_at": "2026-11-13T12:49:06Z",
+    "url": "https://www.bilibili.com/video/BV1bRWB6pEML"
+   }
+  ],
+  "tags": [],
+  "title_raw": "坂本冬美出道40週年～7首希望大家更了解的歌曲～20261113",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-11-13",
+  "date_source": "title",
+  "hidden": false,
   "id": "2026-11-13-yozakura-oshichi-28c14b",
   "performers": [],
   "program": "坂本冬美40周年〜みんなにもっと知ってほしい曲7選〜",
@@ -17566,6 +17988,57 @@
   "broadcast_date": "2026-11-15",
   "date_source": "title",
   "hidden": false,
+  "id": "2026-11-15-naniwa-koishigure-5b9115",
+  "performers": [
+   "岡千秋",
+   "藤あや子"
+  ],
+  "program": null,
+  "songs": [
+   "naniwa-koishigure"
+  ],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1C2sp6iESX",
+    "platform": "bilibili",
+    "uploaded_at": "2026-11-15T18:09:38Z",
+    "url": "https://www.bilibili.com/video/BV1C2sp6iESX"
+   }
+  ],
+  "tags": [],
+  "title_raw": "浪花恋しぐれ　岡千秋　藤あや子　20261115",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-11-15",
+  "date_source": "title",
+  "hidden": false,
+  "id": "2026-11-15-talk-e87c03",
+  "performers": [
+   "藤あや子"
+  ],
+  "program": null,
+  "songs": [],
+  "sources": [
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1C2sp6iE2q",
+    "platform": "bilibili",
+    "uploaded_at": "2026-11-15T18:09:09Z",
+    "url": "https://www.bilibili.com/video/BV1C2sp6iE2q"
+   }
+  ],
+  "tags": [],
+  "title_raw": "秋桜　藤あや子　20261115",
+  "verified": null
+ },
+ {
+  "broadcast_date": "2026-11-15",
+  "date_source": "title",
+  "hidden": false,
   "id": "2026-11-15-yuki-moete-d459f9",
   "performers": [
    "五木ひろし",
@@ -17583,6 +18056,14 @@
     "platform": "x",
     "uploaded_at": "2026-11-15T18:07:00Z",
     "url": "https://x.com/jounotakeuchi/status/2122028666612060161"
+   },
+   {
+    "alive": true,
+    "has_video": true,
+    "id": "BV1C2sp6iEgf",
+    "platform": "bilibili",
+    "uploaded_at": "2026-11-15T18:09:30Z",
+    "url": "https://www.bilibili.com/video/BV1C2sp6iEgf"
    }
   ],
   "tags": [],
@@ -17615,7 +18096,7 @@
     "has_video": true,
     "id": "BV1szWZ6NEDE",
     "platform": "bilibili",
-    "uploaded_at": null,
+    "uploaded_at": "2026-11-15T21:34:18Z",
     "url": "https://www.bilibili.com/video/BV1szWZ6NEDE"
    }
   ],

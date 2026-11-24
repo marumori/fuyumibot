@@ -58,3 +58,9 @@ def test_required_readings(d):
 def test_non_songs_absent(d):
     for bad in ["My", "SWEET", "LIVE", "Dancing", "Electro", "乙女座", "新曲紹介"]:
         assert not any(s["title"] == bad for s in d.songs), bad
+
+
+def test_song_places(d):
+    assert d.song("noto-wa-iirankaine")["places"] == ["石川"]
+    assert d.song("amagigoe")["places"] == ["静岡"]
+    assert all("places" in s for s in d.songs)

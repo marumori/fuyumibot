@@ -92,6 +92,39 @@ await test("play button calls playVideo inside the tap", async () => {
   await p.ctx.close();
 });
 
+await test("theme buttons switch the playlist", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  await p.getByText("テーマを選ぶ").waitFor();
+  for (const g of ["季節", "気持ち"]) assert.ok(await p.getByText(g, { exact: true }).first().isVisible(), g);
+  await p.getByRole("button", { name: "お祭りのうた" }).click();
+  assert.equal(await p.locator(".theme").textContent(), "お祭りのうた");
+  assert.ok(await p.getByRole("button", { name: /2曲つづけて聴く/ }).isVisible());
+  await p.getByRole("button", { name: "今日のおすすめに戻す" }).click();
+  assert.equal(await p.locator(".theme").textContent(), "大みそかのうた");
+  await p.ctx.close();
+});
+
+await test("mixed playlist: next button moves from YouTube to Bilibili", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  await p.getByRole("button", { name: "お祭りのうた" }).click();
+  await p.waitForFunction(() => window.__ytPlayer);
+  await p.getByRole("button", { name: /2曲つづけて聴く/ }).click();
+  await p.getByRole("button", { name: /次の曲へ/ }).click();
+  assert.ok(await p.getByText("（2/2）").isVisible());
+  const src = await p.locator("#queue iframe").first().getAttribute("src");
+  assert.match(src, /player\.bilibili\.com/);
+  await p.ctx.close();
+});
+
+await test("FLASH: co-star videos", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  await p.getByText("M!LKさんとの共演映像").waitFor();
+  await p.ctx.close();
+});
+
 await test("FLASH article: mentioned songs link to our video, others are plain", async () => {
   const p = await page();
   await p.goto(BASE + "/");

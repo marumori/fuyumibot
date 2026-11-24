@@ -4,6 +4,7 @@ from __future__ import annotations
 import html
 import json
 import os
+import random
 import shutil
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -15,6 +16,11 @@ from .model import Appearance, Clip, FlashArticle, Letter, Pick, load
 
 TEMPLATE = Path(__file__).parent / "templates" / "clip.html"
 RERUN = {"再放送", "VTR", "VTR出演"}
+MOODS = [("恋", "恋のうた"), ("酒", "お酒のうた"), ("祝", "お祝いのうた"), ("母", "母のうた"), ("祭", "お祭りのうた"),
+         ("故郷", "ふるさとのうた"), ("桜", "桜のうた"), ("雪", "雪のうた"), ("月", "月のうた")]
+PREFS = ("北海道 青森 岩手 宮城 秋田 山形 福島 茨城 栃木 群馬 埼玉 千葉 東京 神奈川 新潟 富山 石川 福井 山梨 長野 岐阜 静岡 愛知 三重 "
+         "滋賀 京都 大阪 兵庫 奈良 和歌山 鳥取 島根 岡山 広島 山口 徳島 香川 愛媛 高知 福岡 佐賀 長崎 熊本 大分 宮崎 鹿児島 沖縄").split()
+THEME_SIZE = 8
 
 
 def site_url() -> str:
@@ -82,18 +88,38 @@ class Builder:
         return out
 
     def flash_item(self, a: FlashArticle) -> dict:
+        people = list(dict.fromkeys([*a.people, *(a.mentions or {}).get("people", [])]))
+        with_people = [{"name": p, "clips": cl} for p in people if p != "坂本冬美"
+                       and (cl := self.cards([c for c in self.clips if p in c.performers], 3))]
         return {"date_label": jp.format_date(a.date), "year_label": jp.year_label(int(a.date[:4])), "title": a.title,
                 "url": a.url, "issue": a.issue, "people": a.people,
-                "songs": self.song_links((a.mentions or {}).get("songs"))}
+                "songs": self.song_links((a.mentions or {}).get("songs")), "with_people": with_people}
+
+    def themes(self) -> list[dict]:
+        """Theme playlists the viewer can switch to: 季節 / 気持ち / ふるさと. YouTube clips first (they play in a row)."""
+        rng = random.Random(self.today)
+
+        def pick(pred):
+            pool = [c for c in self.clips if any(pred(self.d.song(s)) for s in c.songs if s in self.d._song_by_id)]
+            pool.sort(key=lambda c: c.id)
+            rng.shuffle(pool)
+            pool.sort(key=lambda c: c.youtube() is None)
+            return [self.card(c) for c in pool[:THEME_SIZE]]
+
+        groups = [("季節", [(s, s, lambda x, s=s: s in x.get("season", [])) for s in "春夏秋冬"]),
+                  ("気持ち", [(k, label, lambda x, k=k: k in x.get("themes", [])) for k, label in MOODS]),
+                  ("ふるさと", [(p, p, lambda x, p=p: p in x.get("places", [])) for p in PREFS])]
+        out = []
+        for label, defs in groups:
+            themes = [{"key": k, "label": lab, "clips": cl} for k, lab, pred in defs if (cl := pick(pred))]
+            if themes:
+                out.append({"label": label, "themes": themes})
+        return out
 
     def this_day(self, items, date_of) -> tuple[list, bool]:
-        """Items from today's month-day in past years (newest first); else from ±3 days."""
-        t = date.fromisoformat(self.today)
+        """Items from today's month-day in past years, newest first (that day only)."""
         exact = [i for i in items if date_of(i)[5:] == self.today[5:] and date_of(i) < self.today]
-        if exact:
-            return sorted(exact, key=date_of, reverse=True), True
-        near = {(t + timedelta(days=k)).isoformat()[5:] for k in range(-3, 4)}
-        return sorted((i for i in items if date_of(i)[5:] in near and date_of(i) < self.today), key=date_of, reverse=True), False
+        return sorted(exact, key=date_of, reverse=True), True
 
     # ---- sections ----------------------------------------------------------------------
     def appearances(self) -> list[dict]:
@@ -121,13 +147,7 @@ class Builder:
         return out
 
     def on_this_day(self) -> dict:
-        t = date.fromisoformat(self.today)
-        exact = [c for c in self.clips if c.broadcast_date[5:] == self.today[5:] and c.broadcast_date < self.today]
-        if exact:
-            chosen, is_exact = exact, True
-        else:
-            near = {(t + timedelta(days=k)).isoformat()[5:] for k in range(-3, 4)}
-            chosen, is_exact = [c for c in self.clips if c.broadcast_date[5:] in near and c.broadcast_date < self.today], False
+        chosen, is_exact = self.this_day(self.clips, lambda c: c.broadcast_date)
         years: dict[int, list] = {}
         for c in chosen:
             years.setdefault(int(c.broadcast_date[:4]), []).append(c)
@@ -216,6 +236,7 @@ def build_all(data_dir, out_dir, today: str, now: str | None = None) -> None:
     _write(od / "today.json", b.today_json())
     cal, days = b.days()
     _write(od / "calendar.json", cal)
+    _write(od / "themes.json", b.themes())
     shutil.rmtree(od / "days", ignore_errors=True)
     for md, v in days.items():
         _write(od / "days" / f"{md}.json", v)
