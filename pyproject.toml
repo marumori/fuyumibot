@@ -1,0 +1,12 @@
+[project]
+name = "fuyumi-digest"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["requests", "beautifulsoup4", "pykakasi", "pyyaml", "pytest"]
+
+[tool.setuptools]
+packages = ["pipeline", "pipeline.sources"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["ui: browser tests"]
