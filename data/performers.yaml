@@ -271,6 +271,9 @@
 - name: 坂本冬休み
   aliases: []
   unit: false
+- name: 森山愛子
+  aliases: []
+  unit: false
 - name: 森口博子
   aliases: []
   unit: false
@@ -314,6 +317,9 @@
   aliases: []
   unit: true
 - name: 出演者全員
+  aliases: []
+  unit: true
+- name: ベイビーブー
   aliases: []
   unit: true
 - name: LE VELVETS
