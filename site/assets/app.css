@@ -96,8 +96,10 @@ footer a { color: var(--muted); }
 /* calendar */
 .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.8rem; }
 .tabs .btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
-.monthbar { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.5rem; align-items: center; margin-bottom: 0.8rem; }
-.monthbar .label { font-size: 1.3rem; font-weight: 700; text-align: center; padding: 0 0.4rem; }
+.monthbar { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; align-items: center; margin-bottom: 0.6rem; }
+.monthbar .label { grid-column: 1 / -1; font-size: 1.4rem; font-weight: 700; text-align: center; }
+.tabs .btn + .btn, .monthbar .btn + .btn, .btn-row .btn + .btn { margin-top: 0; }
+.monthbar .btn, .tabs .btn { padding: 0.4rem 0.3rem; white-space: nowrap; font-size: 0.95rem; }
 .grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
 .grid .dow { text-align: center; font-size: 0.8rem; color: var(--muted); }
 .grid button { min-height: 56px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text);

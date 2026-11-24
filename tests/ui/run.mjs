@@ -173,6 +173,55 @@ await test("noindex everywhere", async () => {
   await p.ctx.close();
 });
 
+
+await test("calendar: list of days with content, tap shows years", async () => {
+  const p = await page();
+  await p.goto(BASE + "/calendar.html");
+  const row = p.getByRole("button", { name: /12月31日（映像6本）/ });
+  await row.waitFor();
+  assert.ok(await p.getByRole("button", { name: /12月29日（冬美便り1件）/ }).isVisible());
+  assert.ok(await p.getByRole("button", { name: /12月22日（週刊FLASH 対談）/ }).isVisible());
+  await row.click();
+  await p.getByText("12月31日の冬美").waitFor();
+  const labels = await p.locator("#day .year").allTextContents();
+  assert.deepEqual(labels.slice(0, 2), ["2025年（令和7年）", "2024年（令和6年）"]);
+  await p.ctx.close();
+});
+
+await test("calendar: grid toggle, big cells, month buttons", async () => {
+  const p = await page();
+  await p.goto(BASE + "/calendar.html");
+  await p.getByRole("button", { name: "カレンダー表示" }).click();
+  const cell = p.locator(".grid button.has").first();
+  await cell.waitFor();
+  const h = await cell.evaluate((e) => e.getBoundingClientRect().height);
+  assert.ok(h >= 55.5, String(h));
+  await p.getByRole("button", { name: /前の月/ }).click();
+  assert.ok(await p.getByText("2026年11月").isVisible());
+  await p.getByRole("button", { name: "今日" }).click();
+  assert.ok(await p.getByText("2026年12月").isVisible());
+  await p.ctx.close();
+});
+
+await test("songs: gojuon sections, jump, song page", async () => {
+  const p = await page();
+  await p.goto(BASE + "/songs.html");
+  await p.getByText("「あばれ太鼓」").waitFor();
+  const titles = await p.locator(".song-title").allTextContents();
+  assert.ok(titles.indexOf("「あばれ太鼓」") < titles.indexOf("「祝い酒」"), titles.join(","));
+  assert.ok(titles.indexOf("「祝い酒」") < titles.indexOf("「夜桜お七」"));
+  assert.ok(await p.getByText("いわいざけ").isVisible());
+  await p.getByRole("link", { name: "や", exact: true }).click();
+  await p.waitForTimeout(300);
+  const top = await p.locator("#gyo-や").evaluate((e) => e.getBoundingClientRect().top);
+  assert.ok(top < 200, String(top));
+  await p.getByText("「夜桜お七」").click();
+  await p.getByText("この曲の映像").waitFor();
+  assert.ok(await p.locator("a.card").count() >= 1);
+  assert.ok(await p.getByText("← 戻る").isVisible());
+  await p.ctx.close();
+});
+
 await browser.close();
 console.log(failed ? `${failed} failed` : "all passed");
 process.exit(failed ? 1 : 0);
