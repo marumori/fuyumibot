@@ -1,0 +1,178 @@
+// Browser checks. Usage: node tests/ui/run.mjs <baseUrl>   (exit code 1 on any failure)
+import { createRequire } from "node:module";
+const { chromium, devices } = createRequire(import.meta.url)("playwright");
+import assert from "node:assert/strict";
+
+const BASE = process.argv[2];
+const only = process.argv[3];
+const browser = await chromium.launch();
+let failed = 0;
+
+const YT_STUB = `
+window.__yt = { calls: [], syncPlay: false };
+window.YT = { PlayerState: { ENDED: 0, PLAYING: 1 }, Player: function (el, opts) {
+  const self = this; window.__ytPlayer = this; this.opts = opts;
+  this.playVideo = () => { window.__yt.calls.push("playVideo"); window.__yt.syncPlay = !!window.__inClick; };
+  this.loadVideoById = (id) => window.__yt.calls.push("load:" + id);
+  this.cueVideoById = (id) => window.__yt.calls.push("cue:" + id);
+  setTimeout(() => opts.events && opts.events.onReady && opts.events.onReady({ target: self }), 10);
+}};
+setTimeout(() => window.onYouTubeIframeAPIReady && window.onYouTubeIframeAPIReady(), 20);`;
+
+async function page(device = "iPhone 13", extra = {}) {
+  const ctx = await browser.newContext({ ...devices[device], ...extra });
+  await ctx.route("https://www.youtube.com/iframe_api", (r) => r.fulfill({ contentType: "text/javascript", body: YT_STUB }));
+  await ctx.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.abort());
+  await ctx.route(/i\.ytimg\.com/, (r) => r.abort());
+  await ctx.route(/player\.bilibili\.com/, (r) => r.fulfill({ contentType: "text/html", body: "<html>bili</html>" }));
+  await ctx.addInitScript(() => { Date.now = ((n) => () => n)(new Date("2026-12-31T08:00:00+09:00").getTime()); });
+  const p = await ctx.newPage();
+  p.ctx = ctx;
+  return p;
+}
+
+async function test(name, fn) {
+  if (only && !name.includes(only)) return;
+  try { await fn(); console.log("ok   " + name); }
+  catch (e) { failed++; console.log("FAIL " + name + "\n     " + String(e.message).split("\n").slice(0, 6).join("\n     ")); }
+}
+
+for (const device of ["iPhone 13", "Pixel 7"]) {
+  await test(`[${device}] home sections and labels`, async () => {
+    const p = await page(device);
+    await p.goto(BASE + "/");
+    await p.getByText("今日のおすすめ").first().waitFor();
+    for (const t of ["今日のおすすめ", "大みそかのうた", "4曲つづけて聴く", "あの年の今日", "今日の出演", "冬美便り", "週刊FLASH 対談（火曜発売）", "新しい映像", "非公式ファンサイト", "カレンダー", "曲名でさがす", "使い方"])
+      assert.ok(await p.getByText(t).first().isVisible(), t);
+    assert.ok(await p.getByText("「夜桜お七」").first().isVisible());
+    assert.ok(await p.getByText("2025年（令和7年）").first().isVisible());
+    await p.ctx.close();
+  });
+
+  await test(`[${device}] tap targets at least 56px`, async () => {
+    const p = await page(device);
+    await p.goto(BASE + "/");
+    await p.getByText("4曲つづけて聴く").waitFor();
+    const small = await p.$$eval("main a, main button", (els) => els.filter((e) => e.offsetParent && e.getBoundingClientRect().height < 55.5).map((e) => e.textContent.trim().slice(0, 30)));
+    assert.deepEqual(small, []);
+    await p.ctx.close();
+  });
+
+  await test(`[${device}] 200% text: no horizontal scroll`, async () => {
+    const p = await page(device);
+    await p.goto(BASE + "/");
+    await p.getByText("4曲つづけて聴く").waitFor();
+    await p.addStyleTag({ content: "html{font-size:250% !important}" });
+    const [sw, iw] = await p.evaluate(() => [document.documentElement.scrollWidth, window.innerWidth]);
+    assert.ok(sw <= iw, `${sw} > ${iw}`);
+    await p.ctx.close();
+  });
+}
+
+await test("play button calls playVideo inside the tap", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  const btn = p.getByRole("button", { name: /4曲つづけて聴く/ });
+  await btn.waitFor();
+  await p.waitForFunction(() => window.__ytPlayer);
+  await p.waitForTimeout(50);
+  await p.evaluate(() => document.addEventListener("click", () => {}, true));
+  await p.evaluate(() => { const b = [...document.querySelectorAll("button")].find((x) => x.textContent.includes("4曲つづけて聴く"));
+    b.addEventListener("click", () => { window.__inClick = true; }, { capture: true }); });
+  await btn.click();
+  const yt = await p.evaluate(() => window.__yt);
+  assert.ok(yt.calls.includes("playVideo"), JSON.stringify(yt));
+  assert.equal(yt.syncPlay, true);
+  await p.evaluate(() => window.__ytPlayer.opts.events.onStateChange({ data: 0 }));
+  const calls = await p.evaluate(() => window.__yt.calls);
+  assert.ok(calls.some((c) => c.startsWith("load:")), JSON.stringify(calls));
+  assert.ok(await p.getByText("（2/4）").isVisible());
+  await p.ctx.close();
+});
+
+await test("TV card before broadcast", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  await p.getByText("今日の出演").waitFor();
+  assert.ok(await p.getByText("19:20").first().isVisible());
+  assert.ok(await p.getByText("第77回NHK紅白歌合戦").first().isVisible());
+  await p.ctx.close();
+});
+
+await test("LINE banner shown inside LINE", async () => {
+  const p = await page("iPhone 13", { userAgent: devices["iPhone 13"].userAgent + " Line/13.20.0" });
+  await p.goto(BASE + "/");
+  await p.locator("#line-banner").waitFor();
+  assert.match(await p.locator("#open-external").getAttribute("href"), /openExternalBrowser=1/);
+  await p.ctx.close();
+});
+
+await test("no LINE banner in Safari", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  await p.getByText("今日のおすすめ").first().waitFor();
+  assert.equal(await p.locator("#line-banner").count(), 0);
+  await p.ctx.close();
+});
+
+await test("clip page: share buttons and verified badge", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  const href = await p.locator("a.card", { hasText: "夜桜お七" }).first().getAttribute("href");
+  await p.goto(BASE + href);
+  await p.getByText("LINEで送る").waitFor();
+  const line = await p.locator("#share-line").getAttribute("href");
+  assert.match(line, /^https:\/\/line\.me\/R\/share\?text=/);
+  assert.match(decodeURIComponent(line), /openExternalBrowser=1/);
+  assert.match(await p.locator("#share-x").getAttribute("href"), /^https:\/\/x\.com\/intent\/post\?/);
+  assert.ok(await p.getByText("✓ 放送日確認済み").first().isVisible());
+  assert.ok(await p.getByText("← 戻る").isVisible());
+  await p.ctx.close();
+});
+
+await test("clip page: X fallback after timeout", async () => {
+  const p = await page();
+  await p.ctx.route(/platform\.twitter\.com/, (r) => r.abort());
+  await p.goto(BASE + "/");
+  const href = await p.locator("a.card", { hasText: "雪深深" }).first().getAttribute("href");
+  await p.goto(BASE + href);
+  await p.getByText("Xで見る").waitFor({ timeout: 8000 });
+  assert.match(await p.getByText("Xで見る").getAttribute("href"), /^\/go\.html\?to=https%3A%2F%2Fx\.com/);
+  await p.ctx.close();
+});
+
+await test("clip page: bilibili embed without danmaku", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  const href = await p.locator("a.card", { hasText: "お祭りマンボ" }).first().getAttribute("href");
+  await p.goto(BASE + href);
+  const src = await p.locator("iframe").first().getAttribute("src");
+  assert.match(src, /player\.bilibili\.com\/player\.html\?bvid=BV1szWZ6NEDE.*danmaku=0.*autoplay=0/);
+  await p.ctx.close();
+});
+
+await test("go page: same-tab notice and refuses unknown hosts", async () => {
+  const p = await page();
+  await p.goto(BASE + "/go.html?to=" + encodeURIComponent("https://x.com/jounotakeuchi/status/1"));
+  assert.ok(await p.getByText("X（旧ツイッター）のページへ移動します").isVisible());
+  assert.equal(await p.getByText("移動する").getAttribute("href"), "https://x.com/jounotakeuchi/status/1");
+  assert.equal(await p.getByText("移動する").getAttribute("target"), null);
+  await p.goto(BASE + "/go.html?to=" + encodeURIComponent("https://evil.example/"));
+  assert.equal(await p.getByText("移動する").count(), 0);
+  await p.ctx.close();
+});
+
+await test("noindex everywhere", async () => {
+  const p = await page();
+  for (const path of ["/", "/usage.html", "/go.html"]) {
+    await p.goto(BASE + path);
+    assert.equal(await p.locator('meta[name="robots"]').getAttribute("content"), "noindex,nofollow", path);
+  }
+  const r = await p.goto(BASE + "/robots.txt");
+  assert.match(await r.text(), /Disallow: \//);
+  await p.ctx.close();
+});
+
+await browser.close();
+console.log(failed ? `${failed} failed` : "all passed");
+process.exit(failed ? 1 : 0);

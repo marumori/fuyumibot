@@ -1,0 +1,10 @@
+{
+  "name": "今日の冬美",
+  "short_name": "今日の冬美",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#A3002B",
+  "lang": "ja",
+  "icons": [{ "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }]
+}
