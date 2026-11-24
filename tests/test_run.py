@@ -28,6 +28,9 @@ def env(tmp_path, monkeypatch):
     from pipeline.model import FlashArticle
     monkeypatch.setattr(run, "fetch_flash_page", lambda n=1: ([FlashArticle("2026-11-21", "対談", "https://smart-flash.jp/e/1/", "", ["大竹しのぶ"])], 8))
     monkeypatch.setattr(run, "fetch_flash_text", lambda url: "「夜桜お七」の話")
+    from pipeline.model import ForumTopic
+    monkeypatch.setattr(run, "fetch_forum_listing", lambda n=1: ([ForumTopic("はやウタ", "https://u-fuyumi.net/forums/topic/h")], 61))
+    monkeypatch.setattr(run, "fetch_forum_date", lambda url: "2026-11-16")
     return tmp_path
 
 
@@ -87,3 +90,22 @@ def test_daily_recomputes_stale_pick_for_today(env):
     run.daily("2026-11-24")
     p = [x for x in load(env / "picks.json", Pick) if x.date == "2026-11-24"]
     assert len(p) == 1 and p[0].theme_title != "冬美のうた" and p[0].clip_ids != ["old"]
+
+
+def test_daily_reads_forum_and_confirms_behind_the_scenes(env, monkeypatch):
+    from pipeline.model import ForumTopic
+    monkeypatch.setattr(run, "fetch_youtube", lambda: [RawUpload("youtube", "NEW2", "https://www.youtube.com/watch?v=NEW2", "[はやウタ] ひらり　坂本冬美 20261116", "2026-11-17T01:00:00Z")])
+    monkeypatch.setattr(run, "fetch_bk_tv", lambda y: [])
+    run.daily("2026-11-24")
+    [t] = load(env / "forum_topics.json", ForumTopic)
+    assert t.date == "2026-11-16"
+    c = next(c for c in load(env / "clips.json", Clip) if any(s.id == "NEW2" for s in c.sources))
+    assert c.verified["source"] == "fan_forum"
+
+
+def test_daily_survives_forum_failure(env, monkeypatch):
+    def boom(*a):
+        raise OSError("down")
+    monkeypatch.setattr(run, "fetch_forum_listing", boom)
+    run.daily("2026-11-24")
+    assert status.data()["sources"]["forum"]["consecutive_failures"] == 1

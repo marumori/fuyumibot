@@ -5,7 +5,7 @@ from tests.helpers import app, mk
 def test_alias_program_matches(d):
     c = mk("2026-01-24", ["saikai-sakaba"], program="人生歌")
     verify([c], [app("2026-01-24", "人生、歌がある", note="VTR")], d)
-    assert c.verified == {"broadcaster": "BS朝日", "program": "人生、歌がある", "note": "VTR"}
+    assert c.verified == {"broadcaster": "BS朝日", "program": "人生、歌がある", "note": "VTR", "source": "fanclub"}
 
 
 def test_substring_program_matches(d):

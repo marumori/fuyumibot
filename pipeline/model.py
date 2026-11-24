@@ -83,6 +83,14 @@ class FlashArticle:
 
 
 @dataclass
+class ForumTopic:
+    """A topic on the u-fuyumi.net fan forum. Used only behind the scenes to confirm broadcasts."""
+    title: str
+    url: str
+    date: str | None = None
+
+
+@dataclass
 class Pick:
     date: str
     theme_title: str

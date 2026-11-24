@@ -276,4 +276,4 @@ The calendar's day view shows the same three kinds (videos, letters, FLASH artic
 - 「N曲つづけて聴く」 plays any platform: YouTube clips advance by themselves; Bilibili/X clips need 「次の曲へ」.
 - この頃の映像 / 冬美便り / 週刊FLASH show **that exact month-day only** (no ±3 days). Empty → 「この日の○○は、まだありません。」
 - 週刊FLASH items also show 「○○さんとの共演映像」 for people tagged/mentioned in the article.
-- Open: u-fuyumi.net 掲示板 (fan forum). Listing pages give only relative dates; exact dates need each topic page (~1,800). Waiting for the owner's decision on how to use it.
+- u-fuyumi.net 掲示板 (fan forum; owner decision: behind the scenes only, to confirm TV broadcasts). Stored: topic title, link, first-post date (`data/forum_topics.json`); never member names or post text; nothing shown on the site except 「ファンの方の情報で確認しました」 on a clip confirmed this way. A clip with no fan-club match gets ✓ when a topic whose title matches the program was posted 3 days before to 1 day after the broadcast. Listing pages: 61 × 31 topics; dates are read gently (150 per history run, 20 per daily run, 2 s apart).

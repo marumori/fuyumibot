@@ -3,7 +3,9 @@
   const main = document.getElementById("main");
   const c = JSON.parse(document.getElementById("clip-data").textContent);
   const verified = c.verified ? `<span class="badge">✓ 放送日確認済み</span>` +
-    (c.verified_info ? `<p class="muted">ファンクラブの記録：${F.esc(c.verified_info.broadcaster)}「${F.esc(c.verified_info.program)}」</p>` : "") : "";
+    (c.verified_info ? (c.verified_info.source === "fan_forum"
+      ? `<p class="muted">ファンの方の情報で確認しました</p>`
+      : `<p class="muted">ファンクラブの記録：${F.esc(c.verified_info.broadcaster)}「${F.esc(c.verified_info.program)}」</p>`) : "") : "";
   const dateNote = c.date_source === "post_time" ? `<p class="muted">※放送日は投稿日からの推定です</p>` : "";
   const others = c.sources.filter((s) => s.platform !== c.source.platform)
     .map((s) => `<a class="btn" href="${F.esc(F.goHref(s.url))}">${F.esc(F.siteLabel(s.url))}で見る</a>`).join("");

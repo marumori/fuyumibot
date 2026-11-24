@@ -13,9 +13,9 @@ from .dictionary import Dictionaries
 from .factcheck import verify
 from .linking import flash_from_letters, mentions
 from .merge import merge
-from .model import Appearance, Clip, FlashArticle, FlashIssue, Letter, Pick, load, save
+from .model import Appearance, Clip, FlashArticle, FlashIssue, ForumTopic, Letter, Pick, load, save
 from .seed_import import import_seed
-from .sources import RawUpload, SourceError, bilibili, fanclub, flash, sheet, to_clip, xembed, youtube
+from .sources import RawUpload, SourceError, bilibili, fanclub, flash, forum, sheet, to_clip, xembed, youtube
 
 DATA = Path("data")
 JST = timezone(timedelta(hours=9))
@@ -29,6 +29,8 @@ fetch_letters = fanclub.fetch_letters
 fetch_x = xembed.fetch
 fetch_flash_page = flash.fetch_tag_page
 fetch_flash_text = flash.fetch_article_text
+fetch_forum_listing = forum.fetch_listing
+fetch_forum_date = forum.fetch_topic_date
 
 
 def read_sheet(key: str, headers: list[str]) -> list[dict]:
@@ -108,6 +110,22 @@ def _read_flash_mentions(articles: list[FlashArticle], d, limit: int) -> None:
             print(f"FLASH article {a.url}: {e}")
 
 
+def _store_topics(topics: list[ForumTopic], fetched: list[ForumTopic]) -> list[ForumTopic]:
+    by_url = {t.url: t for t in topics}
+    for t in fetched:
+        if t.url not in by_url:
+            by_url[t.url] = t
+    return list(by_url.values())
+
+
+def _read_topic_dates(topics: list[ForumTopic], limit: int) -> None:
+    for t in [t for t in topics if t.date is None][:limit]:
+        try:
+            t.date = fetch_forum_date(t.url)
+        except Exception as e:  # noqa: BLE001 — try again on a later run
+            print(f"forum topic {t.url}: {e}")
+
+
 def daily(today: str | None = None) -> None:
     today = today or _today()
     picker.SPECIAL_DAYS = DATA / "special_days.yaml"
@@ -120,6 +138,7 @@ def daily(today: str | None = None) -> None:
     letters = load(DATA / "letters.json", Letter)
     flash = load(DATA / "flash.json", FlashIssue)
     articles = load(DATA / "flash_articles.json", FlashArticle)
+    topics = load(DATA / "forum_topics.json", ForumTopic)
     picks = load(DATA / "picks.json", Pick)
 
     # 1. owner's answers and links from the sheet
@@ -176,9 +195,13 @@ def daily(today: str | None = None) -> None:
     if got is not None:
         articles = _store_flash(articles, got)
     _read_flash_mentions(articles, d, limit=10)
+    got = status.guard("forum", lambda: fetch_forum_listing(1)[0], 0)
+    if got is not None:
+        topics = _store_topics(topics, got)
+    _read_topic_dates(topics, limit=20)
 
     # 4. derive
-    verify(clips, apps, d)
+    verify(clips, apps, d, forum=topics)
     pick_rows = status.guard("sheet_pick", lambda: read_sheet("SHEET_PICK_CSV", sheet.PICK_HEADERS), 0) or []
     overrides = sheet.overrides(pick_rows, clips)
     for day in (today, (date.fromisoformat(today) + timedelta(days=1)).isoformat()):
@@ -195,6 +218,7 @@ def daily(today: str | None = None) -> None:
     save(DATA / "letters.json", letters)
     save(DATA / "flash.json", flash)
     save(DATA / "flash_articles.json", articles)
+    save(DATA / "forum_topics.json", sorted(topics, key=lambda t: (t.date or "", t.url)))
     save(DATA / "picks.json", sorted(picks, key=lambda p: p.date)[-400:])
     review.save(DATA / "review.json")
     status.save()
@@ -263,6 +287,21 @@ def import_flash_history(max_articles: int = 40) -> None:
     print(f"{len(articles)} FLASH articles, {left} still to read")
 
 
+def import_forum_history(max_topics: int = 150) -> None:
+    """All forum listing pages, then the post date of up to `max_topics` topics per run (2 s apart)."""
+    topics = load(DATA / "forum_topics.json", ForumTopic)
+    first, last = fetch_forum_listing(1)
+    topics = _store_topics(topics, first)
+    for n in range(2, last + 1):
+        try:
+            topics = _store_topics(topics, fetch_forum_listing(n)[0])
+        except Exception as e:  # noqa: BLE001
+            print(f"forum page {n}: {e}")
+    _read_topic_dates(topics, limit=max_topics)
+    save(DATA / "forum_topics.json", sorted(topics, key=lambda t: (t.date or "", t.url)))
+    print(f"{len(topics)} forum topics, {sum(t.date is None for t in topics)} dates still to read")
+
+
 def cmd_import_seed() -> None:
     d = Dictionaries.load(DATA)
     review.load(DATA / "review.json")
@@ -295,7 +334,7 @@ def cmd_import_backcatalogue() -> None:
 def main(argv=None) -> None:
     cmds = {"daily": daily, "weekly": weekly, "import-seed": cmd_import_seed,
             "import-backcatalogue": cmd_import_backcatalogue, "import-fanclub-history": import_fanclub_history,
-            "import-flash-history": import_flash_history}
+            "import-flash-history": import_flash_history, "import-forum-history": import_forum_history}
     ap = argparse.ArgumentParser()
     ap.add_argument("command", choices=list(cmds))
     a = ap.parse_args(argv)
