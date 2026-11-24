@@ -1,0 +1,57 @@
+name: daily
+on:
+  schedule:
+    - cron: "0 20 * * *"   # 05:00 JST
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: site
+  cancel-in-progress: false
+env:
+  TZ: Asia/Tokyo
+  SITE_URL: ${{ vars.SITE_URL }}
+  SHEET_ADD_CSV: ${{ secrets.SHEET_ADD_CSV }}
+  SHEET_PICK_CSV: ${{ secrets.SHEET_PICK_CSV }}
+  SHEET_REVIEW_CSV: ${{ secrets.SHEET_REVIEW_CSV }}
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests beautifulsoup4 pykakasi pyyaml pytest
+      - name: Unit tests
+        run: python -m pytest -q -m "not ui"
+      - name: Update data and build
+        run: python -m pipeline.run daily
+      - name: Commit changes (only when something changed)
+        run: |
+          git config user.name "fuyumi-bot"
+          git config user.email "fuyumi-bot@users.noreply.github.com"
+          git add -A data site
+          if git diff --quiet HEAD -- data site; then
+            echo "no changes"
+          else
+            git commit -m "data: daily update $(date +%F)"
+            git push
+          fi
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy site --project-name=fuyumi --branch=main
+      - name: Alert on repeated source failures
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ALERTS=$(python -c "from pipeline import status; status.PATH='data/status.json'; status.load(); print(', '.join(status.needs_alert()))")
+          if [ -n "$ALERTS" ]; then
+            BODY="3日以上つづけて取得に失敗しています: $ALERTS （data/status.json を確認してください）"
+            NUM=$(gh issue list --state open --search "データ取得エラー in:title" --json number -q '.[0].number')
+            if [ -n "$NUM" ]; then gh issue comment "$NUM" --body "$BODY"; else gh issue create --title "データ取得エラー" --body "$BODY"; fi
+          fi

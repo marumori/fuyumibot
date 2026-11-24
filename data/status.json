@@ -1,0 +1,88 @@
+{
+ "cursors": {
+  "fc_history_done": [
+   "letter:2025:10",
+   "letter:2025:11",
+   "letter:2025:12",
+   "letter:2025:5",
+   "letter:2025:6",
+   "letter:2025:7",
+   "letter:2025:8",
+   "letter:2025:9",
+   "letter:2026:1",
+   "letter:2026:10",
+   "letter:2026:11",
+   "letter:2026:2",
+   "letter:2026:3",
+   "letter:2026:4",
+   "letter:2026:5",
+   "letter:2026:6",
+   "letter:2026:7",
+   "letter:2026:8",
+   "letter:2026:9",
+   "tv:2006",
+   "tv:2007",
+   "tv:2008",
+   "tv:2009",
+   "tv:2010",
+   "tv:2011",
+   "tv:2012",
+   "tv:2013",
+   "tv:2014",
+   "tv:2015",
+   "tv:2016",
+   "tv:2017",
+   "tv:2018",
+   "tv:2019",
+   "tv:2020",
+   "tv:2021",
+   "tv:2022",
+   "tv:2023",
+   "tv:2024",
+   "tv:2025",
+   "tv:2026"
+  ]
+ },
+ "sources": {
+  "bilibili": {
+   "consecutive_failures": 2,
+   "last_error": "2026-11-25 04:43 SourceError: bilibili http 412",
+   "last_ok": null
+  },
+  "fc_bk_tv": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:43"
+  },
+  "fc_letters": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:43"
+  },
+  "fc_schedule": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:43"
+  },
+  "sheet_add": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:43"
+  },
+  "sheet_pick": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:43"
+  },
+  "sheet_review": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:43"
+  },
+  "youtube": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:43"
+  }
+ }
+}

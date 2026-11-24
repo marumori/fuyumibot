@@ -858,7 +858,11 @@
   ],
   "tags": [],
   "title_raw": "[ぴったんこカン・カン] （無曲名） 20081209",
-  "verified": null
+  "verified": {
+   "broadcaster": "TBS",
+   "note": "",
+   "program": "ぴったんこカン・カン"
+  }
  },
  {
   "broadcast_date": "2009-04-14",
@@ -969,7 +973,11 @@
   ],
   "tags": [],
   "title_raw": "[新堂本兄弟] （無曲名） 坂本冬美 20100606",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "新堂本兄弟"
+  }
  },
  {
   "broadcast_date": "2010-12-04",
@@ -1023,7 +1031,11 @@
   ],
   "tags": [],
   "title_raw": "[ボクらの時代] （無曲名） 坂本冬美＆伍代夏子＆藤あや子 20120102",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "ボクらの時代"
+  }
  },
  {
   "broadcast_date": "2012-08-28",
@@ -1047,7 +1059,11 @@
   ],
   "tags": [],
   "title_raw": "[歌謡コンサート 愛のドラマチック歌謡] もしも明日が… 20120828",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK",
+   "note": "",
+   "program": "歌謡コンサート"
+  }
  },
  {
   "broadcast_date": "2013-02-05",
@@ -1693,7 +1709,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌がある] もう一度逢いたい 坂本冬美＆八代亜紀 20160330",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "日本の名曲 人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2016-04-29",
@@ -1745,7 +1765,11 @@
    "原宿冬美ちゃん"
   ],
   "title_raw": "[メレンゲの気持ち] 原宿冬美ちゃん 坂本冬美 20160430",
-  "verified": null
+  "verified": {
+   "broadcaster": "日本テレビ",
+   "note": "",
+   "program": "メレンゲの気持ち"
+  }
  },
  {
   "broadcast_date": "2016-08-14",
@@ -1899,7 +1923,11 @@
   ],
   "tags": [],
   "title_raw": "[木曜8時のコンサート、新BS日本のうた] 伊勢佐木町ブルース 藤あや子＆坂本冬美 20180527",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BSプレミアム",
+   "note": "",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2018-08-02",
@@ -2272,7 +2300,11 @@
   ],
   "tags": [],
   "title_raw": "[痛快TV スカッとジャパン] （無曲名） 20191111",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "痛快TV スカッとジャパン"
+  }
  },
  {
   "broadcast_date": "2020-01-08",
@@ -2350,7 +2382,11 @@
   ],
   "tags": [],
   "title_raw": "[演歌の花道] まだ君に恋してる 坂本冬美 20201013",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレビ東京",
+   "note": "",
+   "program": "演歌の花道"
+  }
  },
  {
   "broadcast_date": "2020-10-18",
@@ -2658,7 +2694,11 @@
    "八代亜紀デビュー50年！名曲だらけの永久保存版！"
   ],
   "title_raw": "[新BS日本のうた] 八代亜紀デビュー50年!名曲だらけの永久保存版! 八代亜紀＆坂本冬美＆藤あや子 20210207",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS",
+   "note": "",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2021-04-24",
@@ -2786,7 +2826,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌 坂本冬美名場面集＋名曲・名演集！] また君に恋してる 坂本冬美 20210605",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2021-06-27",
@@ -2908,7 +2952,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌 坂本冬美名場面集＋名曲・名演集！] 梅川忠兵衛(歌謡浪曲) w/二葉百合子 20210814",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2021-09-18",
@@ -3123,7 +3171,11 @@
   ],
   "tags": [],
   "title_raw": "[子供たちに残したい美しい日本のうた特別企画] 故郷、この道、毬と殿様、見上げてごらん夜の星を 坂本冬美＆南こうせつ＆福田こうへい 20211226",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "子供たちに残したい美しい日本のうた特別企画"
+  }
  },
  {
   "broadcast_date": "2021-12-26",
@@ -3158,7 +3210,11 @@
   ],
   "tags": [],
   "title_raw": "[子供たちに残したい美しい日本のうた特別企画] 翼をください 坂本冬美＆村方乃々佳 20211226",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "子供たちに残したい美しい日本のうた特別企画"
+  }
  },
  {
   "broadcast_date": "2022-02-07",
@@ -3483,7 +3539,11 @@
   ],
   "tags": [],
   "title_raw": "[新BS日本のうた] 一度だけなら 坂本冬美 20220717",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSプレミアム",
+   "note": "",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2022-07-17",
@@ -3509,7 +3569,11 @@
   ],
   "tags": [],
   "title_raw": "[新BS日本のうた] 酔中花 坂本冬美 20220717",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSプレミアム",
+   "note": "",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2022-07-22",
@@ -3630,7 +3694,11 @@
   ],
   "tags": [],
   "title_raw": "[徹子の部屋] （無曲名） 20220725",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ朝日",
+   "note": "",
+   "program": "徹子の部屋"
+  }
  },
  {
   "broadcast_date": "2022-08-30",
@@ -3739,7 +3807,11 @@
   ],
   "tags": [],
   "title_raw": "[うたコン] （無曲名） 坂本冬美 20221101",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "うたコン"
+  }
  },
  {
   "broadcast_date": "2022-11-03",
@@ -4117,7 +4189,11 @@
   ],
   "tags": [],
   "title_raw": "[よーいドン] （無曲名） 20221219",
-  "verified": null
+  "verified": {
+   "broadcaster": "関西テレビ",
+   "note": "",
+   "program": "よ〜いドン！"
+  }
  },
  {
   "broadcast_date": "2022-12-19",
@@ -4139,7 +4215,11 @@
   ],
   "tags": [],
   "title_raw": "[よーいドン] （無曲名） 20221219",
-  "verified": null
+  "verified": {
+   "broadcaster": "関西テレビ",
+   "note": "",
+   "program": "よ〜いドン！"
+  }
  },
  {
   "broadcast_date": "2022-12-26",
@@ -4697,7 +4777,11 @@
   ],
   "tags": [],
   "title_raw": "[半世紀ロック] （無曲名） 20230325",
-  "verified": null
+  "verified": {
+   "broadcaster": "東海テレビ",
+   "note": "",
+   "program": "半世紀ロック"
+  }
  },
  {
   "broadcast_date": "2023-03-26",
@@ -5470,7 +5554,11 @@
   ],
   "tags": [],
   "title_raw": "[うたコン] 栞のテーマ 坂本冬美 20230711",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "うたコン"
+  }
  },
  {
   "broadcast_date": "2023-07-29",
@@ -5669,7 +5757,11 @@
   ],
   "tags": [],
   "title_raw": "[おんがく交差点] （無曲名） 20230902",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレ東",
+   "note": "",
+   "program": "おんがく交差点"
+  }
  },
  {
   "broadcast_date": "2023-09-02",
@@ -5920,7 +6012,11 @@
   ],
   "tags": [],
   "title_raw": "[ヒルナンデス] （無曲名） 20231020",
-  "verified": null
+  "verified": {
+   "broadcaster": "日本テレビ",
+   "note": "",
+   "program": "ヒルナンデス！"
+  }
  },
  {
   "broadcast_date": "2023-10-20",
@@ -6305,7 +6401,11 @@
   ],
   "tags": [],
   "title_raw": "[徹子の部屋] （無曲名） 20231114",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ朝日",
+   "note": "",
+   "program": "徹子の部屋"
+  }
  },
  {
   "broadcast_date": "2023-11-21",
@@ -6381,7 +6481,11 @@
   ],
   "tags": [],
   "title_raw": "[うたコン] （無曲名） 坂本冬美 20231205",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "うたコン"
+  }
  },
  {
   "broadcast_date": "2023-12-07",
@@ -6622,7 +6726,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌 坂本冬美名場面集＋名曲・名演集！] 祝い酒 坂本冬美 w/大塚宝 20240101",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+  }
  },
  {
   "broadcast_date": "2024-01-01",
@@ -6648,7 +6756,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] 再会酒場 坂本冬美 20240101",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+  }
  },
  {
   "broadcast_date": "2024-01-04",
@@ -6829,7 +6941,11 @@
   ],
   "tags": [],
   "title_raw": "[徹子の部屋] 再会酒場(セリフ入り)、また君に恋してる、夜桜お七 坂本冬美 20240116",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ朝日",
+   "note": "",
+   "program": "徹子の部屋"
+  }
  },
  {
   "broadcast_date": "2024-01-17",
@@ -6906,7 +7022,11 @@
   ],
   "tags": [],
   "title_raw": "[徹子の部屋コンサート] 男の火祭り 坂本冬美＆LE VELVETS 20240122",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ朝日",
+   "note": "",
+   "program": "徹子の部屋"
+  }
  },
  {
   "broadcast_date": "2024-02-03",
@@ -6956,7 +7076,11 @@
   ],
   "tags": [],
   "title_raw": "[MUSIC FAIR] シングルベッド 坂本冬美 20240203",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "MUSIC FAIR"
+  }
  },
  {
   "broadcast_date": "2024-02-04",
@@ -7100,7 +7224,11 @@
    "満月のお七さん〜〜"
   ],
   "title_raw": "[ニッポンの歌ヂカラ] 満月のお七さん〜〜 坂本冬美 20240217",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ東京",
+   "note": "",
+   "program": "ニッポンの歌ヂカラ"
+  }
  },
  {
   "broadcast_date": "2024-02-17",
@@ -7276,7 +7404,11 @@
   ],
   "tags": [],
   "title_raw": "[歌のサンセット] ほろ酔い満月 20240223",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ東京",
+   "note": "",
+   "program": "歌のサンセット"
+  }
  },
  {
   "broadcast_date": "2024-02-24",
@@ -7310,7 +7442,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] ほろ酔い満月 坂本冬美 20240224",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-02-24",
@@ -7336,7 +7472,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] 竜二 坂本冬美 20240224",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-02-24",
@@ -7358,7 +7498,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] （無曲名） 20240224",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-02-26",
@@ -7428,7 +7572,11 @@
   ],
   "tags": [],
   "title_raw": "[うた恋!音楽会] ほろよい満月 坂本冬美 20240227",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS-TBS",
+   "note": "",
+   "program": "名曲をあなたに うた恋！音楽会"
+  }
  },
  {
   "broadcast_date": "2024-02-28",
@@ -7462,7 +7610,11 @@
   ],
   "tags": [],
   "title_raw": "[昭和歌謡パレード] ほろよい満月 坂本冬美 20240228",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSフジ",
+   "note": "",
+   "program": "昭和歌謡パレード"
+  }
  },
  {
   "broadcast_date": "2024-02-28",
@@ -7488,7 +7640,11 @@
   ],
   "tags": [],
   "title_raw": "[昭和歌謡パレード] また君に恋して 坂本冬美 20240228",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSフジ",
+   "note": "",
+   "program": "昭和歌謡パレード"
+  }
  },
  {
   "broadcast_date": "2024-03-03",
@@ -7512,7 +7668,11 @@
   ],
   "tags": [],
   "title_raw": "[新BS日本のうた] ほろ酔いダンス 20240303",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BSP4K",
+   "note": "再放送",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2024-03-03",
@@ -7560,7 +7720,11 @@
   ],
   "tags": [],
   "title_raw": "[うたコン] （無曲名） 20240305",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "うたコン"
+  }
  },
  {
   "broadcast_date": "2024-03-06",
@@ -7608,7 +7772,11 @@
   ],
   "tags": [],
   "title_raw": "[徳光和夫の名曲にっぽん] ほろ酔い満月 20240308",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレ東",
+   "note": "",
+   "program": "徳光和夫の名曲にっぽん"
+  }
  },
  {
   "broadcast_date": "2024-03-08",
@@ -7635,7 +7803,11 @@
   ],
   "tags": [],
   "title_raw": "[徳光和夫の名曲にっぽん] L-O-V-E 坂本冬美＆山内恵介 20240308",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレ東",
+   "note": "",
+   "program": "徳光和夫の名曲にっぽん"
+  }
  },
  {
   "broadcast_date": "2024-03-08",
@@ -7659,7 +7831,11 @@
   ],
   "tags": [],
   "title_raw": "[徳光和夫の名曲にっぽん] 朧月夜に死にましょう 20240308",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレ東",
+   "note": "",
+   "program": "徳光和夫の名曲にっぽん"
+  }
  },
  {
   "broadcast_date": "2024-03-08",
@@ -7683,7 +7859,11 @@
   ],
   "tags": [],
   "title_raw": "[徳光和夫の名曲にっぽん] 夜桜お七 20240308",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレ東",
+   "note": "",
+   "program": "徳光和夫の名曲にっぽん"
+  }
  },
  {
   "broadcast_date": "2024-03-10",
@@ -7783,7 +7963,11 @@
   ],
   "tags": [],
   "title_raw": "[徳光和夫の名曲にっぽん] 淋しがり 坂本冬美 20240315",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレ東",
+   "note": "",
+   "program": "徳光和夫の名曲にっぽん"
+  }
  },
  {
   "broadcast_date": "2024-03-15",
@@ -7809,7 +7993,11 @@
   ],
   "tags": [],
   "title_raw": "[ヒルナンデス] 夜桜お七 坂本冬美 20240315",
-  "verified": null
+  "verified": {
+   "broadcaster": "日本テレビ",
+   "note": "生放送",
+   "program": "ヒルナンデス！"
+  }
  },
  {
   "broadcast_date": "2024-03-18",
@@ -7990,7 +8178,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] 祝い酒 坂本冬美 w/大塚宝 20240330",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+  }
  },
  {
   "broadcast_date": "2024-03-30",
@@ -8015,7 +8207,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] （無曲名） Eric Martin＆坂本冬美 20240330",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+  }
  },
  {
   "broadcast_date": "2024-03-31",
@@ -8041,7 +8237,11 @@
   ],
   "tags": [],
   "title_raw": "[新BS日本のうた] ほろ酔い満月 坂本冬美 20240331",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS",
+   "note": "",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2024-03-31",
@@ -8211,7 +8411,11 @@
   ],
   "tags": [],
   "title_raw": "[はやウタ] ほろ酔い満月 坂本冬美 20240415",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "",
+   "program": "はやウタ"
+  }
  },
  {
   "broadcast_date": "2024-04-16",
@@ -8354,7 +8558,11 @@
   ],
   "tags": [],
   "title_raw": "[FNS鬼レンチャン歌謡祭] （無曲名） 坂本冬美＆坂本冬休み 20240529",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "生放送",
+   "program": "FNS鬼レンチャン歌謡祭"
+  }
  },
  {
   "broadcast_date": "2024-05-29",
@@ -8379,7 +8587,11 @@
   ],
   "tags": [],
   "title_raw": "[FNS鬼レンチャン歌謡祭] （無曲名） 坂本冬美＆坂本冬休み 20240529",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "生放送",
+   "program": "FNS鬼レンチャン歌謡祭"
+  }
  },
  {
   "broadcast_date": "2024-06-01",
@@ -8406,7 +8618,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] 望郷 坂本冬美＆森進一 20240601",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-06-01",
@@ -8440,7 +8656,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] ほろ酔い満月 坂本冬美 20240601",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-06-01",
@@ -8576,7 +8796,11 @@
   ],
   "tags": [],
   "title_raw": "[歌える] 岸壁の母、帰れない二人 坂本冬美 20240622",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS",
+   "note": "",
+   "program": "歌える！青春のベストヒット！〜昭和が僕らの青春だった〜"
+  }
  },
  {
   "broadcast_date": "2024-06-22",
@@ -8608,7 +8832,11 @@
   ],
   "tags": [],
   "title_raw": "[Music Fair] ひまわりの約束 20240622",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "MUSIC FAIR"
+  }
  },
  {
   "broadcast_date": "2024-06-22",
@@ -8635,7 +8863,11 @@
   ],
   "tags": [],
   "title_raw": "[Music Fair] 恋の予感 平原綾香＆坂本冬美 20240622",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "MUSIC FAIR"
+  }
  },
  {
   "broadcast_date": "2024-06-22",
@@ -8657,7 +8889,11 @@
   ],
   "tags": [],
   "title_raw": "[Music Fair] （無曲名） 20240622",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "MUSIC FAIR"
+  }
  },
  {
   "broadcast_date": "2024-06-23",
@@ -8727,7 +8963,11 @@
   ],
   "tags": [],
   "title_raw": "[新BS日本のうた] （無曲名） 20240623",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS",
+   "note": "",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2024-06-23",
@@ -8749,7 +8989,11 @@
   ],
   "tags": [],
   "title_raw": "[新BS日本のうた] （無曲名） 20240623",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS",
+   "note": "",
+   "program": "新・BS日本のうた"
+  }
  },
  {
   "broadcast_date": "2024-06-26",
@@ -8775,7 +9019,11 @@
   ],
   "tags": [],
   "title_raw": "[ノンストップ] 想いびと 坂本冬美 20240626",
-  "verified": null
+  "verified": {
+   "broadcaster": "フジテレビ",
+   "note": "",
+   "program": "ノンストップ！"
+  }
  },
  {
   "broadcast_date": "2024-06-27",
@@ -8894,7 +9142,11 @@
   ],
   "tags": [],
   "title_raw": "[グッドモーニング] （無曲名） 坂本冬美 20240801",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ朝日",
+   "note": "",
+   "program": "グッド！モーニング"
+  }
  },
  {
   "broadcast_date": "2024-08-04",
@@ -8945,7 +9197,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] ほろ酔い満月、恋の予感 坂本冬美 20240810",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-08-10",
@@ -8969,7 +9225,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] （無曲名） 吉幾三 20240810",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-08-11",
@@ -9089,7 +9349,11 @@
   ],
   "tags": [],
   "title_raw": "[よーいドン] （無曲名） 坂本冬美＆五木ひろし 20240826",
-  "verified": null
+  "verified": {
+   "broadcaster": "関西テレビ",
+   "note": "生放送",
+   "program": "よ〜いドン！"
+  }
  },
  {
   "broadcast_date": "2024-10-12",
@@ -9114,7 +9378,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] （無曲名） 藤あや子＆坂本冬美 20241012",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-10-12",
@@ -9138,7 +9406,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌 坂本冬美名場面集＋名曲・名演集！] 夜桜お七 20241012",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2024-10-13",
@@ -9199,7 +9471,11 @@
   ],
   "tags": [],
   "title_raw": "[洋子の演歌一直線] ほろ酔い満月、恋の予感 坂本冬美 20241013",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ東京",
+   "note": "",
+   "program": "洋子の演歌一直線"
+  }
  },
  {
   "broadcast_date": "2024-10-14",
@@ -9981,7 +10257,11 @@
   ],
   "tags": [],
   "title_raw": "[演歌フェス] 矢切の渡し、東京ナイト・クラブ、雪深深、雪の花 辰巳ゆうと＆大川栄策＆大月みやこ＆藤あや子 20241228",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS/BSP4K",
+   "note": "",
+   "program": "演歌フェス2024"
+  }
  },
  {
   "broadcast_date": "2024-12-31",
@@ -11190,7 +11470,11 @@
   ],
   "tags": [],
   "title_raw": "[YOUは何しに日本へ] （無曲名） 坂本冬美 20250526",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ東京",
+   "note": "",
+   "program": "YOUは何しに日本へ?"
+  }
  },
  {
   "broadcast_date": "2025-05-29",
@@ -11289,7 +11573,11 @@
   ],
   "tags": [],
   "title_raw": "[うたコン] （無曲名） ちあきなおみ＆坂本冬美 20250610",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "うたコン"
+  }
  },
  {
   "broadcast_date": "2025-06-10",
@@ -11313,7 +11601,11 @@
   ],
   "tags": [],
   "title_raw": "[うたコン] （無曲名） 坂本冬美 20250610",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "うたコン"
+  }
  },
  {
   "broadcast_date": "2025-06-14",
@@ -11716,7 +12008,11 @@
   ],
   "tags": [],
   "title_raw": "[ベストカップル] 男の火祭り 20250629",
-  "verified": null
+  "verified": {
+   "broadcaster": "歌謡ポップスチャンネル",
+   "note": "",
+   "program": "五木ひろしデビュー60周年特別公演 「五木ひろし＆坂本冬美ベストカップルコンサート〜華やいで 艶やかに〜"
+  }
  },
  {
   "broadcast_date": "2025-07-05",
@@ -12141,7 +12437,11 @@
   ],
   "tags": [],
   "title_raw": "[よ~いドン] （無曲名） 坂本冬美＆一路真輝 20250826",
-  "verified": null
+  "verified": {
+   "broadcaster": "関西テレビ",
+   "note": "生放送",
+   "program": "よ〜いドン！"
+  }
  },
  {
   "broadcast_date": "2025-09-09",
@@ -12620,7 +12920,11 @@
   ],
   "tags": [],
   "title_raw": "[旬感LIVE とれたてっ！] （無曲名） 坂本冬美 20251020",
-  "verified": null
+  "verified": {
+   "broadcaster": "関西テレビ",
+   "note": "",
+   "program": "旬感LIVE とれたてっ！"
+  }
  },
  {
   "broadcast_date": "2025-11-01",
@@ -12879,7 +13183,11 @@
   ],
   "tags": [],
   "title_raw": "[演歌フェス2025] また君に恋してる、浪花魂、夜桜お七、千本桜 坂本冬美＆小林幸子 20251227",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS・BSP4K",
+   "note": "",
+   "program": "演歌フェス2025"
+  }
  },
  {
   "broadcast_date": "2025-12-27",
@@ -12905,7 +13213,11 @@
   ],
   "tags": [],
   "title_raw": "[演歌フェス2025] 浪花魂 坂本冬美 20251227",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS・BSP4K",
+   "note": "",
+   "program": "演歌フェス2025"
+  }
  },
  {
   "broadcast_date": "2025-12-27",
@@ -12932,7 +13244,11 @@
   ],
   "tags": [],
   "title_raw": "[演歌フェス2025] おんな港町 坂本冬美＆長山洋子 20251227",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS・BSP4K",
+   "note": "",
+   "program": "演歌フェス2025"
+  }
  },
  {
   "broadcast_date": "2025-12-27",
@@ -12959,7 +13275,11 @@
   ],
   "tags": [],
   "title_raw": "[演歌フェス2025] 千本桜 坂本冬美＆小林幸子 20251227",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS・BSP4K",
+   "note": "",
+   "program": "演歌フェス2025"
+  }
  },
  {
   "broadcast_date": "2025-12-27",
@@ -12987,7 +13307,11 @@
   ],
   "tags": [],
   "title_raw": "[演歌フェス2025] 夜桜お七 千本桜 坂本冬美＆小林幸子 20251227",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK BS・BSP4K",
+   "note": "",
+   "program": "演歌フェス2025"
+  }
  },
  {
   "broadcast_date": "2025-12-31",
@@ -13022,7 +13346,11 @@
   ],
   "tags": [],
   "title_raw": "[紅白] 花は咲く、上を向いて歩こう 坂本冬美 20251231",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "第76回 NHK紅白歌合戦"
+  }
  },
  {
   "broadcast_date": "2025-12-31",
@@ -13048,7 +13376,11 @@
   ],
   "tags": [],
   "title_raw": "[第58回年忘れ] 祝い酒 坂本冬美 20251231",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ東京",
+   "note": "",
+   "program": "第58回年忘れにっぽんの歌<6時間スペシャル！>"
+  }
  },
  {
   "broadcast_date": "2025-12-31",
@@ -13082,7 +13414,11 @@
   ],
   "tags": [],
   "title_raw": "[第58回年忘れ] また君に恋してる 坂本冬美 20251231",
-  "verified": null
+  "verified": {
+   "broadcaster": "テレビ東京",
+   "note": "",
+   "program": "第58回年忘れにっぽんの歌<6時間スペシャル！>"
+  }
  },
  {
   "broadcast_date": "2025-12-31",
@@ -13134,7 +13470,11 @@
   ],
   "tags": [],
   "title_raw": "[紅白] 夜桜お七 坂本冬美＆M!LK 20251231",
-  "verified": null
+  "verified": {
+   "broadcaster": "NHK総合",
+   "note": "生放送",
+   "program": "第76回 NHK紅白歌合戦"
+  }
  },
  {
   "broadcast_date": "2026-01-03",
@@ -13661,7 +14001,11 @@
    "LIVE CHALLENGE"
   ],
   "title_raw": "[人生歌] LIVE CHALLENGE 坂本冬美 20260321",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2026-03-21",
@@ -13689,7 +14033,11 @@
    "新曲紹介"
   ],
   "title_raw": "[人生歌] 新曲紹介 遠い昔の恋の歌 坂本冬美 20260321",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2026-03-21",
@@ -15194,7 +15542,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] （無曲名） 坂本冬美 20260606",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2026-06-06",
@@ -16174,7 +16526,11 @@
   ],
   "tags": [],
   "title_raw": "[よ〜いドン] （無曲名） 坂本冬美 20260903",
-  "verified": null
+  "verified": {
+   "broadcaster": "関西テレビ放送",
+   "note": "生放送",
+   "program": "よ〜いドン！"
+  }
  },
  {
   "broadcast_date": "2026-09-05",
@@ -16240,7 +16596,11 @@
   ],
   "tags": [],
   "title_raw": "[人生歌] ひらり 坂本冬美 20260905",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2026-09-05",
@@ -16726,7 +17086,11 @@
    "オープニングテーマ"
   ],
   "title_raw": "[人生歌] オープニングテーマ 坂本冬美 20261031",
-  "verified": null
+  "verified": {
+   "broadcaster": "BS朝日",
+   "note": "",
+   "program": "人生、歌がある"
+  }
  },
  {
   "broadcast_date": "2026-11-01",
@@ -17043,7 +17407,11 @@
   ],
   "tags": [],
   "title_raw": "[徳光リクエスト] さよならはダンスの後に 坂本冬美 20261106",
-  "verified": null
+  "verified": {
+   "broadcaster": "BSテレ東",
+   "note": "",
+   "program": "徳光和夫の名曲にっぽん"
+  }
  },
  {
   "broadcast_date": "2026-11-12",
