@@ -42,7 +42,7 @@ for (const device of ["iPhone 13", "Pixel 7"]) {
     const p = await page(device);
     await p.goto(BASE + "/");
     await p.getByText("今日のおすすめ").first().waitFor();
-    for (const t of ["今日のおすすめ", "大みそかのうた", "4曲つづけて聴く", "この頃の映像", "今日の出演", "冬美便り", "大みそかの便り",
+    for (const t of ["今日のおすすめ", "大みそかのうた", "4曲つづけて聴く", "あの年の今日", "テレビの映像", "今日の出演", "冬美便り", "大みそかの便り",
                      "週刊FLASH", "紅白の舞台裏を語る", "記事に出てくる曲", "非公式ファンサイト", "カレンダー", "曲名でさがす", "使い方"])
       assert.ok(await p.getByText(t).first().isVisible(), t);
     assert.equal(await p.getByText("新しい映像").count(), 0);
@@ -92,11 +92,40 @@ await test("play button calls playVideo inside the tap", async () => {
   await p.ctx.close();
 });
 
+await test("home order: あの年の今日 first, with 冬美便り, 週刊FLASH, テレビの映像 inside", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  await p.getByText("今日のおすすめ").first().waitFor();
+  const h2 = await p.locator("main h2").allTextContents();
+  assert.deepEqual(h2.slice(0, 3), ["あの年の今日", "今日の出演", "今日のおすすめ"]);
+  const h3 = await p.locator("#otd h3").allTextContents();
+  assert.deepEqual(h3, ["冬美便り", "週刊FLASH", "テレビの映像"]);
+  await p.ctx.close();
+});
+
+await test("theme panel is compact and does not jump to the top", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  const open = p.getByRole("button", { name: /テーマを選ぶ/ });
+  await open.waitFor();
+  assert.equal(await p.getByRole("button", { name: "お祭りのうた" }).isVisible(), false);
+  await open.scrollIntoViewIfNeeded();
+  await open.click();
+  await p.getByRole("tab", { name: "気持ち" }).click();
+  assert.equal(await p.getByRole("button", { name: "春のうた" }).isVisible(), false);
+  await p.getByRole("button", { name: "お祭りのうた" }).click();
+  await p.waitForTimeout(400);
+  const [top, h, y] = await p.evaluate(() => [document.getElementById("queue").getBoundingClientRect().top, innerHeight, scrollY]);
+  assert.ok(y > 300 && top > -50 && top < h, `queue top ${top}, scrollY ${y}`);
+  assert.equal(await p.getByRole("button", { name: "お祭りのうた" }).isVisible(), false);
+  await p.ctx.close();
+});
+
 await test("theme buttons switch the playlist", async () => {
   const p = await page();
   await p.goto(BASE + "/");
-  await p.getByText("テーマを選ぶ").waitFor();
-  for (const g of ["季節", "気持ち"]) assert.ok(await p.getByText(g, { exact: true }).first().isVisible(), g);
+  await p.getByRole("button", { name: /テーマを選ぶ/ }).click();
+  await p.getByRole("tab", { name: "気持ち" }).click();
   await p.getByRole("button", { name: "お祭りのうた" }).click();
   assert.equal(await p.locator(".theme").textContent(), "お祭りのうた");
   assert.ok(await p.getByRole("button", { name: /2曲つづけて聴く/ }).isVisible());
@@ -108,6 +137,8 @@ await test("theme buttons switch the playlist", async () => {
 await test("mixed playlist: next button moves from YouTube to Bilibili", async () => {
   const p = await page();
   await p.goto(BASE + "/");
+  await p.getByRole("button", { name: /テーマを選ぶ/ }).click();
+  await p.getByRole("tab", { name: "気持ち" }).click();
   await p.getByRole("button", { name: "お祭りのうた" }).click();
   await p.waitForFunction(() => window.__ytPlayer);
   await p.getByRole("button", { name: /2曲つづけて聴く/ }).click();

@@ -108,3 +108,11 @@ def test_default_theme_name(d):
 def test_default_reason_is_meaningful(d):
     clips = [mk("2020-01-01", ["hirari"], n=str(i)) for i in range(4)]
     assert P("2027-07-07", clips, d=d).reason == "いろいろな年の冬美さん"
+
+
+def test_pick_only_fuyumi_clips(d):
+    clips = [mk("2020-01-01", ["hirari"], n=str(i)) for i in range(3)] + \
+            [mk("2020-01-02", ["hirari"], performers=["藤あや子"], n=f"o{i}") for i in range(5)]
+    p = P("2027-07-07", clips, d=d)
+    by = {c.id: c for c in clips}
+    assert all("坂本冬美" in by[i].performers for i in p.clip_ids)

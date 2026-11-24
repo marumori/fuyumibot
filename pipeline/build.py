@@ -42,7 +42,7 @@ class Builder:
         self.today = today
         self.now = now or datetime.now().strftime("%Y-%m-%dT%H:%M")
         all_clips = load(data_dir / "clips.json", Clip)
-        self.clips = [c for c in all_clips if not c.hidden and c.best_source()]
+        self.clips = [c for c in all_clips if not c.hidden and c.best_source() and self.d.is_fuyumi(c.performers)]
         self.apps = load(data_dir / "appearances.json", Appearance)
         self.letters = sorted(load(data_dir / "letters.json", Letter), key=lambda x: x.date, reverse=True)
         self.flash = sorted(load(data_dir / "flash_articles.json", FlashArticle), key=lambda a: a.date, reverse=True)

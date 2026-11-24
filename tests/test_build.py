@@ -18,9 +18,11 @@ def site(tmp_path, d):
     b = mk("2024-12-31", ["iwaizake"], n="b")
     c = mk("2024-12-31", [], program="人生歌", n="c", yt=False, date_source="post_time")
     h = mk("2023-12-31", ["hirari"], n="h", hidden=True)
+    other = mk("2025-12-31", ["kokoro-no-ito"], performers=["藤あや子"], n="other")
+    noname = mk("2025-12-31", ["hanagatami"], performers=[], n="noname")
     tv = mk("2026-11-16", ["hirari"], program="はやウタ", n="tv")
     tv.sources[0].uploaded_at = "2026-11-17T00:00:00Z"
-    save(data / "clips.json", [a, b, c, h, tv])
+    save(data / "clips.json", [a, b, c, h, tv, other, noname])
     save(data / "appearances.json", [Appearance("2026-12-31", "19:20〜23:45", "NHK総合", "第77回NHK紅白歌合戦", "TV", ""),
                                      Appearance("2026-11-16", "", "NHK総合", "はやウタ", "TV", "")])
     save(data / "letters.json", [Letter("2026-12-29", "紅白リハーサル", "https://fuyumi-fc.com/letter/index.php?y=2026&m=12#post1",
@@ -155,3 +157,11 @@ def test_review_json_limited(site):
     out, _ = site
     r = J(out / "data/review.json")
     assert set(r[0]) == {"種類", "対象", "内容"}
+
+
+def test_only_clips_naming_fuyumi(site):
+    out, cl = site
+    everything = "".join(p.read_text("utf-8") for p in (out / "data").rglob("*.json"))
+    assert cl["a"].id in everything
+    assert "kokoro-no-ito" not in everything and "心の糸" not in everything
+    assert "花筐" not in everything

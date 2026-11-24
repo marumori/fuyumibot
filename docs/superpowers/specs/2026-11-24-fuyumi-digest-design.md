@@ -277,3 +277,10 @@ The calendar's day view shows the same three kinds (videos, letters, FLASH artic
 - この頃の映像 / 冬美便り / 週刊FLASH show **that exact month-day only** (no ±3 days). Empty → 「この日の○○は、まだありません。」
 - 週刊FLASH items also show 「○○さんとの共演映像」 for people tagged/mentioned in the article.
 - u-fuyumi.net 掲示板 (fan forum; owner decision: behind the scenes only, to confirm TV broadcasts). Stored: topic title, link, first-post date (`data/forum_topics.json`); never member names or post text; nothing shown on the site except 「ファンの方の情報で確認しました」 on a clip confirmed this way. A clip with no fan-club match gets ✓ when a topic whose title matches the program was posted 3 days before to 1 day after the broadcast. Listing pages: 61 × 31 topics; dates are read gently (150 per history run, 20 per daily run, 2 s apart).
+
+## 17. Owner feedback (2026-11-25, round 3)
+
+- Only clips whose title names 坂本冬美 (alone or with others) are shown anywhere (playlists, themes, calendar, songs, clip pages). Units count only when `with_fuyumi: true` in performers.yaml — currently just あやふゆ; 演歌三人娘 / 演歌5人娘 / 艶歌四人姫 / 四人姫 / 二葉組 / 出演者全員 await the owner's confirmation. Titles naming nobody are not shown.
+- Home order: あの年の今日 first (with 冬美便り → 週刊FLASH → テレビの映像 inside), then 今日の出演, then 今日のおすすめ.
+- テーマを選ぶ is one button that opens a panel with tabs (季節 / 気持ち / ふるさと); choosing a theme closes the panel and keeps the playlist in view.
+- The daily pick may use any platform (YouTube first), matching the any-platform playlist.

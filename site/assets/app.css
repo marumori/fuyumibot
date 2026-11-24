@@ -129,3 +129,9 @@ footer a { color: var(--muted); }
 .chips .btn { min-height: 56px; padding: 0.3rem; font-size: 0.95rem; margin: 0; }
 .chips .btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 .empty { color: var(--muted); padding: 0.4rem 0; }
+
+#otd h3 { font-size: 1.15rem; margin: 1.2rem 0 0.2rem; padding-top: 0.8rem; border-top: 2px dashed var(--line); }
+#otd h3:first-of-type { border-top: 0; padding-top: 0; margin-top: 0.6rem; }
+.themes { border: 2px solid var(--sky); border-radius: 14px; padding: 0.6rem; margin: 0.6rem 0; }
+.tabs .btn[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); }
+#theme-open, #theme-reset { margin: 0.6rem 0 0; }

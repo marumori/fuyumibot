@@ -47,6 +47,7 @@ def _choose(day: str, pool: list[Clip]) -> list[str]:
     rng = random.Random(day)
     pool = sorted(pool, key=lambda c: c.id)
     rng.shuffle(pool)
+    pool.sort(key=lambda c: c.youtube() is None)   # YouTube first: it plays on by itself
     return [c.id for c in pool[: min(5, max(3, min(4, len(pool))))]]
 
 
@@ -57,7 +58,8 @@ def pick(day: str, clips: list[Clip], appearances: list[Appearance], letters: li
         return Pick(day, o["theme"], "今日の選曲", list(o["clip_ids"]))
     since = (date.fromisoformat(day) - timedelta(days=30)).isoformat()
     recent = {i for p in history if since <= p.date < day for i in p.clip_ids}
-    ok = [c for c in clips if not c.hidden and c.youtube() and c.id not in recent]
+    ok = [c for c in clips if not c.hidden and c.best_source() and c.id not in recent
+          and (d is None or d.is_fuyumi(c.performers))]
 
     def songs_in(ids):
         return [c for c in ok if set(c.songs) & set(ids)]

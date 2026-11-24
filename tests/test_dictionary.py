@@ -64,3 +64,11 @@ def test_song_places(d):
     assert d.song("noto-wa-iirankaine")["places"] == ["石川"]
     assert d.song("amagigoe")["places"] == ["静岡"]
     assert all("places" in s for s in d.songs)
+
+
+def test_fuyumi_clip_rule(d):
+    assert d.is_fuyumi(["坂本冬美"])
+    assert d.is_fuyumi(["五木ひろし", "坂本冬美"])
+    assert d.is_fuyumi(["あやふゆ"])
+    assert not d.is_fuyumi(["藤あや子"])
+    assert not d.is_fuyumi([])

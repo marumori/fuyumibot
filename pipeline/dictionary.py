@@ -48,6 +48,7 @@ class Dictionaries:
         for p in self.programs:
             for form in [p["name"], *p.get("aliases", [])]:
                 self._prog[_key(form)] = p["name"]
+        self._with_fuyumi = {p["name"] for p in self.performers if p.get("with_fuyumi")}
         self._captions = sorted((normalize(c) for c in self.captions), key=len, reverse=True)
 
     def song(self, sid: str) -> dict:
@@ -91,6 +92,10 @@ class Dictionaries:
             rest = stripped[: -len(hit)]
             rest = rest[:-2] if rest.endswith(("w/", "W/")) else rest
         return found, rest.strip(" ＆、")
+
+    def is_fuyumi(self, performers: list[str]) -> bool:
+        """Shown on the site only when the title names 坂本冬美 (alone or with others, or a unit that includes her)."""
+        return any(p in self._with_fuyumi for p in performers)
 
     def program(self, name: str | None) -> str | None:
         if not name:
