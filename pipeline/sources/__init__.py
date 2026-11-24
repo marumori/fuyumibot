@@ -24,6 +24,7 @@ class RawUpload:
     url: str
     title: str
     uploaded_at: str | None
+    has_video: bool = True
 
 
 def _jst_date(iso: str | None) -> str:
@@ -37,7 +38,7 @@ def to_clip(raw: RawUpload, d: Dictionaries) -> Clip:
     date, ds = (p.date, "title") if p.date else (_jst_date(raw.uploaded_at), "post_time")
     c = Clip(id="", broadcast_date=date, date_source=ds, program=p.program, songs=p.songs,
              performers=p.performers, title_raw=raw.title,
-             sources=[Source(raw.platform, raw.id, raw.url, raw.uploaded_at)], tags=list(p.tags))
+             sources=[Source(raw.platform, raw.id, raw.url, raw.uploaded_at, raw.has_video)], tags=list(p.tags))
     c.id = clip_id(c)
     if not p.ok:
         review.add("title_unparsed", c.id, f"{raw.title} → 読めなかった部分: {p.leftover or '日付'}")
