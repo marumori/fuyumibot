@@ -18,6 +18,8 @@ def _url(vid: str) -> str:
 
 def parse_feed(xml: str) -> list[RawUpload]:
     root = ET.fromstring(xml)
+    if not root.findall("a:entry", NS):
+        raise SourceError("youtube feed has no entries")
     out = []
     for e in root.findall("a:entry", NS):
         vid = e.findtext("yt:videoId", namespaces=NS)

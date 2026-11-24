@@ -49,25 +49,25 @@ def test_persisted(tmp_path):
 
 def test_liveness_hides_clip_with_only_dead_source():
     c = mk("2020-01-01", ["hirari"])
-    liveness.check([c], {"youtube": lambda s: False})
+    liveness.check([c], {"youtube": lambda s: False}, sleep=0)
     assert c.sources[0].alive is False and c.hidden
 
 
 def test_liveness_falls_back_to_bilibili():
     c = mk("2020-01-01", ["hirari"])
     c.sources.append(Source("bilibili", "BV1", "u"))
-    liveness.check([c], {"youtube": lambda s: False, "bilibili": lambda s: True})
+    liveness.check([c], {"youtube": lambda s: False, "bilibili": lambda s: True}, sleep=0)
     assert not c.hidden and c.best_source().platform == "bilibili"
 
 
 def test_liveness_unknown_result_keeps_state():
     c = mk("2020-01-01", ["hirari"])
-    liveness.check([c], {"youtube": lambda s: None})
+    liveness.check([c], {"youtube": lambda s: None}, sleep=0)
     assert c.sources[0].alive and not c.hidden
 
 
 def test_liveness_limit_and_offset():
     clips = [mk("2020-01-01", ["hirari"], n=str(i)) for i in range(5)]
     seen = []
-    nxt = liveness.check(clips, {"youtube": lambda s: seen.append(s.id) or True}, limit=2, offset=4)
+    nxt = liveness.check(clips, {"youtube": lambda s: seen.append(s.id) or True}, limit=2, offset=4, sleep=0)
     assert len(seen) == 2 and nxt == 1

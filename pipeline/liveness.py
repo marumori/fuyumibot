@@ -1,6 +1,7 @@
 """Weekly check that each upload still exists; dead sources fall back, clips with none are hidden."""
 from __future__ import annotations
 
+import time
 from typing import Callable
 
 from . import http
@@ -25,14 +26,18 @@ def bilibili_alive(s: Source) -> bool | None:
 
 
 def x_alive(s: Source) -> bool | None:
-    return xembed.fetch(s.id) is not None
+    return xembed.status(s.id)
 
 
 DEFAULT_CHECKERS: dict[str, Callable[[Source], bool | None]] = {
     "youtube": youtube_alive, "bilibili": bilibili_alive, "x": x_alive}
 
 
-def check(clips: list[Clip], checkers=None, limit: int = 300, offset: int = 0) -> int:
+AUTO = "auto_hidden"      # hidden by this check; unhidden again when a source comes back
+OWNER = "owner_hidden"    # hidden by the owner's answer; never unhidden automatically
+
+
+def check(clips: list[Clip], checkers=None, limit: int = 300, offset: int = 0, sleep: float = 1.0) -> int:
     """Check up to `limit` sources starting at `offset` (wrapping). Returns the next offset.
     A checker returning None means "unknown" and leaves the source as it was."""
     checkers = checkers or DEFAULT_CHECKERS
@@ -51,7 +56,14 @@ def check(clips: list[Clip], checkers=None, limit: int = 300, offset: int = 0) -
             alive = None
         if alive is not None:
             s.alive = alive
+        if sleep:
+            time.sleep(sleep)
     for c in {id(c): c for c, _ in window}.values():
-        if not any(s.alive and s.has_video for s in c.sources):
+        playable = any(s.alive and s.has_video for s in c.sources)
+        if not playable and not c.hidden:
             c.hidden = True
+            c.tags.append(AUTO)
+        elif playable and AUTO in c.tags and OWNER not in c.tags:
+            c.hidden = False
+            c.tags.remove(AUTO)
     return (offset + len(window)) % len(pairs)

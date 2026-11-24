@@ -15,7 +15,7 @@ from .linking import flash_from_letters, mentions
 from .merge import merge
 from .model import Appearance, Clip, FlashIssue, Letter, Pick, load, save
 from .seed_import import import_seed
-from .sources import RawUpload, bilibili, fanclub, sheet, to_clip, xembed, youtube
+from .sources import RawUpload, SourceError, bilibili, fanclub, sheet, to_clip, xembed, youtube
 
 DATA = Path("data")
 JST = timezone(timedelta(hours=9))
@@ -108,9 +108,22 @@ def daily(today: str | None = None) -> None:
     known = {(s.platform, s.id) for c in clips for s in c.sources}
     links = status.guard("sheet_add", lambda: read_sheet("SHEET_ADD_CSV", sheet.ADD_HEADERS), 0) or []
     raws = []
-    for platform, vid, url in sheet.links_to_sources(links):
-        if (platform, vid) not in known and (raw := fetch_link(platform, vid, url)):
-            raws.append(raw)
+    new_links = [lk for lk in sheet.links_to_sources(links) if lk[:2] not in known]
+    partial: list[RawUpload] = []
+
+    def _fetch_links():
+        got, errors = [], []
+        for platform, vid, url in new_links:
+            try:
+                if raw := fetch_link(platform, vid, url):
+                    got.append(raw)
+            except Exception as e:  # noqa: BLE001 — one bad link must not stop the daily update
+                errors.append(f"{url}: {e}")
+        if errors:
+            partial.extend(got)
+            raise SourceError("; ".join(errors)[:500])
+        return got
+    raws += status.guard("sheet_links", _fetch_links, 0) or partial
 
     # 2. automatic sources
     raws += status.guard("youtube", fetch_youtube, 0) or []
@@ -124,8 +137,7 @@ def daily(today: str | None = None) -> None:
     year = int(today[:4])
     prev = [a for a in by_key.values() if a.date.startswith(str(year))]
     got = status.guard("fc_bk_tv", lambda: fetch_bk_tv(year), len(prev))
-    if got is not None:
-        by_key = {k: a for k, a in by_key.items() if not a.date.startswith(str(year)) or a.date > today}
+    if got is not None:  # add-only: the backnumber lags the schedule page by days
         by_key.update({_app_key(a): a for a in got})
     apps = sorted(by_key.values(), key=_app_key)
     months = [(year, int(today[5:7]))]

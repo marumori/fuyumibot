@@ -45,44 +45,49 @@
  },
  "sources": {
   "bilibili": {
-   "consecutive_failures": 2,
-   "last_error": "2026-11-25 04:43 SourceError: bilibili http 412",
+   "consecutive_failures": 3,
+   "last_error": "2026-11-25 04:48 SourceError: bilibili http 412",
    "last_ok": null
   },
   "fc_bk_tv": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-25 04:43"
+   "last_ok": "2026-11-25 04:48"
   },
   "fc_letters": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-25 04:43"
+   "last_ok": "2026-11-25 04:48"
   },
   "fc_schedule": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-25 04:43"
+   "last_ok": "2026-11-25 04:48"
   },
   "sheet_add": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-25 04:43"
+   "last_ok": "2026-11-25 04:48"
+  },
+  "sheet_links": {
+   "consecutive_failures": 0,
+   "last_error": null,
+   "last_ok": "2026-11-25 04:48"
   },
   "sheet_pick": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-25 04:43"
+   "last_ok": "2026-11-25 04:48"
   },
   "sheet_review": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-25 04:43"
+   "last_ok": "2026-11-25 04:48"
   },
   "youtube": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-25 04:43"
+   "last_ok": "2026-11-25 04:48"
   }
  }
 }

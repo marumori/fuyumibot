@@ -86,9 +86,14 @@ def apply_answers(rows: list[dict], clips: list[Clip], d: Dictionaries) -> dict[
         if kind == "reading_unreviewed":
             readings[ref] = ans
         elif c and kind == "no_video" and ans in ("表示", "はい"):
+            for s in c.sources:  # the owner checked: there is a video after all
+                s.has_video = True
             c.hidden = False
+            c.tags = [t for t in c.tags if t not in ("owner_hidden", "auto_hidden")]
         elif c and kind == "no_video" and ans in ("非表示", "いいえ"):
             c.hidden = True
+            if "owner_hidden" not in c.tags:
+                c.tags.append("owner_hidden")
         elif c and kind == "date_post_time":
             day = _date(ans)
             if day:

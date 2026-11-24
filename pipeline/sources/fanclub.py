@@ -67,10 +67,14 @@ def _appearances(html: str, box_class: str, body_class: str) -> list[Appearance]
 
 
 def parse_schedule(html: str) -> list[Appearance]:
+    if "schemainbox" not in html:
+        raise SourceError("schedule page has no entries (page changed?)")
     return _appearances(html, "schemainbox", "schemain")
 
 
 def parse_bk_tv(html: str) -> list[Appearance]:
+    if "infomainbox" not in html:
+        raise SourceError("TV backnumber page has no entries (page changed?)")
     return _appearances(html, "infomainbox", "infomain")
 
 
