@@ -73,6 +73,16 @@ class FlashIssue:
 
 
 @dataclass
+class FlashArticle:
+    date: str
+    title: str
+    url: str
+    issue: str = ""
+    people: list[str] = field(default_factory=list)
+    mentions: dict | None = None   # None until the article text has been read
+
+
+@dataclass
 class Pick:
     date: str
     theme_title: str

@@ -11,22 +11,24 @@
 
 ## 2. Cloudflare Pages（サイトを公開する場所）
 1. https://dash.cloudflare.com でアカウントを作ります（無料）。
-2. 「Workers & Pages → 作成 → Pages → 直接アップロード」でプロジェクト名を **fuyumi** にして作ります。
-   サイトのアドレスは `https://fuyumi.pages.dev` のようになります。
-3. 「マイプロフィール → APIトークン → トークンを作成 → Cloudflare Pages の編集」でトークンを作ります。
-4. アカウントID（ダッシュボード右側に表示）を控えます。
+2. 「Workers & Pages → 作成 → Pages → Gitに接続」で GitHub の **marumori/fuyumibot** を選びます。
+3. 設定は次の通りです。
+   - 本番ブランチ: `main`
+   - フレームワーク プリセット: なし
+   - ビルドコマンド: 空欄（入力が必要なら `exit 0`）
+   - ビルドの出力ディレクトリ: `site`
+4. 「保存してデプロイ」を押します。これ以降、GitHub に更新が入るたびに自動で公開されます。
+   Cloudflare のトークンを GitHub に登録する必要はありません。
 
 ## 3. GitHub に設定を登録する
 リポジトリの「Settings → Secrets and variables → Actions」で登録します。
 
 | 種類 | 名前 | 中身 |
 |---|---|---|
-| Secret | `CF_API_TOKEN` | 2-3 のトークン |
-| Secret | `CF_ACCOUNT_ID` | 2-4 のアカウントID |
 | Secret | `SHEET_ADD_CSV` | 4 の「追加」シートのCSVのURL |
 | Secret | `SHEET_PICK_CSV` | 4 の「おすすめ」シートのCSVのURL |
 | Secret | `SHEET_REVIEW_CSV` | 4 の「確認」シートのCSVのURL |
-| Variable | `SITE_URL` | `https://fuyumi.pages.dev`（自分のアドレス） |
+| Variable | `SITE_URL` | Cloudflare で決まったアドレス（例 `https://fuyumibot.pages.dev`） |
 
 ## 4. Googleスプレッドシート（管理人が使うのはここだけ）
 1. 新しいスプレッドシートを作り、`docs/sheet-template.md` の通りに「追加」「おすすめ」「確認」の3つのシートを作ります。
@@ -43,6 +45,10 @@ YouTube の自動取得は、新しい15本までしか見られません。過�
 ## 6. ファンクラブの過去の記録を取り込む（数日に分けて自動）
 `python -m pipeline.run import-fanclub-history` を数回実行すると、2006年からのテレビ出演記録と冬美便り（題名とリンクだけ）が入ります。
 相手のサイトに負担をかけないよう、1回40ページまでにしています。
+
+## 6b. 週刊FLASHの記事を取り込む（1回だけ）
+`python -m pipeline.run import-flash-history` で、smart-flash.jp の「坂本冬美」タグの記事一覧（題名・日付・リンク）と、記事に出てくる曲名を取り込みます。
+記事の本文は保存しません。1回40記事まで読みます。残りは毎日の自動更新でも少しずつ読みます。
 
 ## 7. 削除依頼の連絡先
 `site/config.js` の `contactUrl` に、連絡先（Googleフォームのアドレスなど）を入れてください。個人のメールアドレスは載せない方が安全です。

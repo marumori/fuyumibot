@@ -42,8 +42,10 @@ for (const device of ["iPhone 13", "Pixel 7"]) {
     const p = await page(device);
     await p.goto(BASE + "/");
     await p.getByText("今日のおすすめ").first().waitFor();
-    for (const t of ["今日のおすすめ", "大みそかのうた", "4曲つづけて聴く", "あの年の今日", "今日の出演", "冬美便り", "週刊FLASH 対談（火曜発売）", "新しい映像", "非公式ファンサイト", "カレンダー", "曲名でさがす", "使い方"])
+    for (const t of ["今日のおすすめ", "大みそかのうた", "4曲つづけて聴く", "この頃の映像", "今日の出演", "冬美便り", "大みそかの便り",
+                     "週刊FLASH", "紅白の舞台裏を語る", "記事に出てくる曲", "非公式ファンサイト", "カレンダー", "曲名でさがす", "使い方"])
       assert.ok(await p.getByText(t).first().isVisible(), t);
+    assert.equal(await p.getByText("新しい映像").count(), 0);
     assert.ok(await p.getByText("「夜桜お七」").first().isVisible());
     assert.ok(await p.getByText("2025年（令和7年）").first().isVisible());
     await p.ctx.close();
@@ -87,6 +89,25 @@ await test("play button calls playVideo inside the tap", async () => {
   const calls = await p.evaluate(() => window.__yt.calls);
   assert.ok(calls.some((c) => c.startsWith("load:")), JSON.stringify(calls));
   assert.ok(await p.getByText("（2/4）").isVisible());
+  await p.ctx.close();
+});
+
+await test("FLASH article: mentioned songs link to our video, others are plain", async () => {
+  const p = await page();
+  await p.goto(BASE + "/");
+  await p.getByText("記事に出てくる曲").waitFor();
+  const linked = p.locator("#flash a", { hasText: "「夜桜お七」" });
+  assert.match(await linked.first().getAttribute("href"), /^\/v\//);
+  assert.equal(await p.locator("#flash a", { hasText: "「千本桜」" }).count(), 0);
+  assert.ok(await p.locator("#flash", { hasText: "「千本桜」" }).isVisible());
+  assert.match(await p.locator("#flash a", { hasText: "紅白の舞台裏を語る" }).getAttribute("href"), /^\/go\.html\?to=https%3A%2F%2Fsmart-flash\.jp/);
+  await p.ctx.close();
+});
+
+await test("go page allows FLASH", async () => {
+  const p = await page();
+  await p.goto(BASE + "/go.html?to=" + encodeURIComponent("https://smart-flash.jp/entertainment/entertainment-news/1/"));
+  assert.ok(await p.getByText("週刊FLASHのページへ移動します").isVisible());
   await p.ctx.close();
 });
 
@@ -177,10 +198,10 @@ await test("noindex everywhere", async () => {
 await test("calendar: list of days with content, tap shows years", async () => {
   const p = await page();
   await p.goto(BASE + "/calendar.html");
-  const row = p.getByRole("button", { name: /12月31日（映像6本）/ });
+  const row = p.getByRole("button", { name: /12月31日（映像6本・冬美便り1件・週刊FLASH1件）/ });
   await row.waitFor();
   assert.ok(await p.getByRole("button", { name: /12月29日（冬美便り1件）/ }).isVisible());
-  assert.ok(await p.getByRole("button", { name: /12月22日（週刊FLASH 対談）/ }).isVisible());
+  assert.ok(await p.getByRole("button", { name: /12月22日（週刊FLASH1件）/ }).isVisible());
   await row.click();
   await p.getByText("12月31日の冬美").waitFor();
   const labels = await p.locator("#day .year").allTextContents();

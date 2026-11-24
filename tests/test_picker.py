@@ -98,3 +98,8 @@ def test_movable_dates():
     assert movable("mothers_day", 2027) == "2027-05-09"
     assert movable("respect_aged_day", 2027) == "2027-09-20"
     assert movable("chushu", 2026) == "2026-09-25"
+
+
+def test_default_theme_name(d):
+    clips = [mk("2020-01-01", ["hirari"], n=str(i)) for i in range(4)]
+    assert P("2027-07-07", clips, d=d).theme_title == "冬美、歌がある"

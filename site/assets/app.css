@@ -78,6 +78,8 @@ a { color: var(--accent); }
 .list a.row { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; min-height: 56px; padding: 0.5rem 0;
   color: inherit; text-decoration: none; }
 .list .arrow { color: var(--accent); font-weight: 700; white-space: nowrap; }
+.list span.row { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; min-height: 56px; padding: 0.5rem 0; }
+.sub { color: var(--muted); font-size: 0.9rem; margin: -0.3rem 0 0.4rem; }
 
 .tv .when { font-size: 1.2rem; font-weight: 700; }
 .tv .prog { font-size: 1.1rem; }

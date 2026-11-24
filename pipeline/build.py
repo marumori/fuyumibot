@@ -11,7 +11,7 @@ from pathlib import Path
 from . import jp
 from .dictionary import Dictionaries
 from .factcheck import program_matches
-from .model import Appearance, Clip, FlashIssue, Letter, Pick, dumps, load
+from .model import Appearance, Clip, FlashArticle, Letter, Pick, load
 
 TEMPLATE = Path(__file__).parent / "templates" / "clip.html"
 RERUN = {"再放送", "VTR", "VTR出演"}
@@ -39,7 +39,7 @@ class Builder:
         self.clips = [c for c in all_clips if not c.hidden and c.best_source()]
         self.apps = load(data_dir / "appearances.json", Appearance)
         self.letters = sorted(load(data_dir / "letters.json", Letter), key=lambda x: x.date, reverse=True)
-        self.flash = sorted(load(data_dir / "flash.json", FlashIssue), key=lambda f: f.issue_date, reverse=True)
+        self.flash = sorted(load(data_dir / "flash_articles.json", FlashArticle), key=lambda a: a.date, reverse=True)
         self.picks = {p.date: p for p in load(data_dir / "picks.json", Pick)}
         rp = data_dir / "review.json"
         self.review = json.loads(rp.read_text("utf-8")) if rp.exists() else []
@@ -70,8 +70,30 @@ class Builder:
         out = [c for c in self.clips if set(c.songs) & songs or any(program_matches(c.program, p, self.d) for p in progs)]
         return self.cards(out, limit)
 
-    def clips_with_performer(self, name: str, limit=3):
-        return self.cards([c for c in self.clips if name and name in c.performers], limit)
+    def song_links(self, song_ids) -> list[dict]:
+        """Each mentioned song, with our newest playable video of it when we have one."""
+        out = []
+        for sid in song_ids or []:
+            if sid not in self.d._song_by_id:
+                continue
+            have = [c for c in self.clips if sid in c.songs]
+            have.sort(key=lambda c: (c.youtube() is not None, c.broadcast_date), reverse=True)
+            out.append({"title": self.d.song(sid)["title"], "clip": self.card(have[0]) if have else None})
+        return out
+
+    def flash_item(self, a: FlashArticle) -> dict:
+        return {"date_label": jp.format_date(a.date), "year_label": jp.year_label(int(a.date[:4])), "title": a.title,
+                "url": a.url, "issue": a.issue, "people": a.people,
+                "songs": self.song_links((a.mentions or {}).get("songs"))}
+
+    def this_day(self, items, date_of) -> tuple[list, bool]:
+        """Items from today's month-day in past years (newest first); else from ±3 days."""
+        t = date.fromisoformat(self.today)
+        exact = [i for i in items if date_of(i)[5:] == self.today[5:] and date_of(i) < self.today]
+        if exact:
+            return sorted(exact, key=date_of, reverse=True), True
+        near = {(t + timedelta(days=k)).isoformat()[5:] for k in range(-3, 4)}
+        return sorted((i for i in items if date_of(i)[5:] in near and date_of(i) < self.today), key=date_of, reverse=True), False
 
     # ---- sections ----------------------------------------------------------------------
     def appearances(self) -> list[dict]:
@@ -118,17 +140,14 @@ class Builder:
         if p:
             pick = {"theme_title": p.theme_title, "reason": p.reason,
                     "clips": [self.card(self.by_id[i]) for i in p.clip_ids if i in self.by_id]}
-        letters = [dict(self.letter_item(lt), clips=self.clips_for_mentions(lt.mentions, 2))
-                   for lt in self.letters if lt.date <= self.today][:3]
-        cutoff = (date.fromisoformat(self.today) - timedelta(days=14)).isoformat()
-        f = next((f for f in self.flash if cutoff <= f.issue_date <= self.today), None)
-        flash = {"issue_label": jp.format_date(f.issue_date), "guest": f.guest, "letter_url": f.letter_url,
-                 "clips": self.clips_with_performer(f.guest, 3)} if f else None
-        new = sorted((c for c in self.clips if c.best_source().uploaded_at),
-                     key=lambda c: max(s.uploaded_at or "" for s in c.sources), reverse=True)[:6]
+        lts, l_exact = self.this_day(self.letters, lambda x: x.date)
+        letters = {"exact": l_exact, "items": [dict(self.letter_item(lt), year_label=jp.year_label(int(lt.date[:4])),
+                                                    clips=self.clips_for_mentions(lt.mentions, 2)) for lt in lts[:6]]}
+        arts, f_exact = self.this_day(self.flash, lambda a: a.date)
+        flash = {"exact": f_exact, "items": [self.flash_item(a) for a in arts[:4]]}
         return {"date": self.today, "date_label": jp.format_date(self.today)[5:].lstrip("0"),
                 "appearances": self.appearances(), "pick": pick, "on_this_day": self.on_this_day(),
-                "letters": letters, "flash": flash, "new": [self.card(c) for c in new]}
+                "letters": letters, "flash": flash}
 
     def days(self) -> tuple[dict, dict]:
         cal, days = {}, {}
@@ -136,9 +155,9 @@ class Builder:
             days.setdefault(c.broadcast_date[5:], {}).setdefault(int(c.broadcast_date[:4]), {"clips": [], "letters": [], "flash": []})["clips"].append(c)
         for lt in self.letters:
             days.setdefault(lt.date[5:], {}).setdefault(int(lt.date[:4]), {"clips": [], "letters": [], "flash": []})["letters"].append(self.letter_item(lt))
-        for f in self.flash:
-            days.setdefault(f.issue_date[5:], {}).setdefault(int(f.issue_date[:4]), {"clips": [], "letters": [], "flash": []})["flash"].append(
-                {"guest": f.guest, "letter_url": f.letter_url})
+        for a in self.flash:
+            days.setdefault(a.date[5:], {}).setdefault(int(a.date[:4]), {"clips": [], "letters": [], "flash": []})["flash"].append(
+                self.flash_item(a))
         out = {}
         for md, ys in days.items():
             cal[md] = {k: sum(len(v[k2]) for v in ys.values()) for k, k2 in (("videos", "clips"), ("letters", "letters"), ("flash", "flash"))}

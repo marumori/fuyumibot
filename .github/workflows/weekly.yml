@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: "0 21 * * 6"   # Sunday 06:00 JST
   workflow_dispatch: {}
+# Publishing: Cloudflare Pages is connected to this repo and deploys the site/ folder on every push.
 permissions:
   contents: write
 concurrency:
@@ -28,8 +29,3 @@ jobs:
           git config user.email "fuyumi-bot@users.noreply.github.com"
           git add -A data site
           if git diff --quiet HEAD -- data site; then echo "no changes"; else git commit -m "data: weekly check $(date +%F)"; git push; fi
-      - uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy site --project-name=fuyumi --branch=main

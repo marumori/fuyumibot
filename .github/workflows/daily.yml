@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: "0 20 * * *"   # 05:00 JST
   workflow_dispatch: {}
+# Publishing: Cloudflare Pages is connected to this repo and deploys the site/ folder on every push.
 permissions:
   contents: write
   issues: write
@@ -39,12 +40,6 @@ jobs:
             git commit -m "data: daily update $(date +%F)"
             git push
           fi
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy site --project-name=fuyumi --branch=main
       - name: Alert on repeated source failures
         env:
           GH_TOKEN: ${{ github.token }}

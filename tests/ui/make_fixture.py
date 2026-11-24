@@ -5,7 +5,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from pipeline import build  # noqa: E402
-from pipeline.model import Appearance, FlashIssue, Letter, Pick, Source, save  # noqa: E402
+from pipeline.model import Appearance, FlashArticle, Letter, Pick, Source, save  # noqa: E402
 from tests.helpers import mk  # noqa: E402
 
 
@@ -33,8 +33,13 @@ def make(out: Path) -> None:
     save(data / "clips.json", clips)
     save(data / "appearances.json", [Appearance("2026-12-31", "19:20〜23:45", "NHK総合", "第77回NHK紅白歌合戦", "TV", "")])
     save(data / "letters.json", [Letter("2026-12-29", "紅白リハーサル", "https://fuyumi-fc.com/letter/index.php?y=2026&m=12#post1",
+                                        {"songs": ["yozakura-oshichi"], "programs": [], "people": []}),
+                                 Letter("2025-12-31", "大みそかの便り", "https://fuyumi-fc.com/letter/index.php?y=2025&m=12#post9",
                                         {"songs": ["yozakura-oshichi"], "programs": [], "people": []})])
-    save(data / "flash.json", [FlashIssue("2026-12-22", "M!LK", "https://fuyumi-fc.com/letter/index.php?y=2026&m=12#post2")])
+    save(data / "flash_articles.json", [
+        FlashArticle("2024-12-31", "紅白の舞台裏を語る", "https://smart-flash.jp/entertainment/entertainment-news/1/",
+                     "週刊FLASH 2025年1月7日号", ["M!LK"], {"songs": ["yozakura-oshichi", "senbonzakura"], "programs": [], "people": []}),
+        FlashArticle("2026-12-22", "モゴモゴ対談", "https://smart-flash.jp/entertainment/entertainment-news/2/", "", [], None)])
     save(data / "picks.json", [Pick("2026-12-31", "大みそかのうた", "紅白・年忘れの季節", [a.id, b.id, c.id, e.id])])
     build.build_all(data, out, "2026-12-31", now="2026-12-31T08:00")
 

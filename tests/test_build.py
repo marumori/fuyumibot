@@ -3,7 +3,7 @@ import json
 import pytest
 
 from pipeline import build
-from pipeline.model import Appearance, FlashIssue, Letter, Pick, Source, save
+from pipeline.model import Appearance, FlashArticle, Letter, Pick, Source, save
 from tests.helpers import mk
 
 
@@ -24,8 +24,13 @@ def site(tmp_path, d):
     save(data / "appearances.json", [Appearance("2026-12-31", "19:20〜23:45", "NHK総合", "第77回NHK紅白歌合戦", "TV", ""),
                                      Appearance("2026-11-16", "", "NHK総合", "はやウタ", "TV", "")])
     save(data / "letters.json", [Letter("2026-12-29", "紅白リハーサル", "https://fuyumi-fc.com/letter/index.php?y=2026&m=12#post1",
+                                        {"songs": ["yozakura-oshichi"], "programs": [], "people": []}),
+                                 Letter("2025-12-31", "大みそか", "https://fuyumi-fc.com/letter/index.php?y=2025&m=12#post9",
                                         {"songs": ["yozakura-oshichi"], "programs": [], "people": []})])
-    save(data / "flash.json", [FlashIssue("2026-12-22", "M!LK", "https://fuyumi-fc.com/letter/x")])
+    save(data / "flash_articles.json", [FlashArticle("2024-12-31", "紅白の舞台裏", "https://smart-flash.jp/entertainment/1/",
+                                                     "週刊FLASH 2025年1月7日号", ["M!LK"],
+                                                     {"songs": ["yozakura-oshichi", "senbonzakura"], "programs": [], "people": []}),
+                                        FlashArticle("2026-12-22", "対談", "https://smart-flash.jp/entertainment/2/", "", [], None)])
     save(data / "picks.json", [Pick("2026-12-31", "大みそかのうた", "紅白・年忘れの季節", [a.id, b.id])])
     (data / "review.json").write_text(json.dumps([{"kind": "no_video", "ref": h.id, "detail": "動画なし", "created": "x"}]), "utf-8")
     build.build_all(data, out, "2026-12-31", now="2026-12-31T08:00")
@@ -44,9 +49,27 @@ def test_today_sections(site):
     assert [y["year"] for y in t["on_this_day"]["years"]] == [2025, 2024]
     assert t["on_this_day"]["exact"] is True
     assert t["appearances"][0]["state"] == "before" and t["appearances"][0]["start"] == "19:20"
-    assert t["letters"][0]["clips"][0]["id"] == cl["a"].id
-    assert t["flash"]["guest"] == "M!LK" and t["flash"]["clips"][0]["id"] == cl["a"].id
-    assert t["new"][0]["id"] == cl["tv"].id
+    assert "new" not in t
+
+
+def test_letters_on_this_day_past_years(site):
+    out, cl = site
+    t = J(out / "data/today.json")
+    assert t["letters"]["exact"] is True
+    assert [l["title"] for l in t["letters"]["items"]] == ["大みそか"]
+    assert t["letters"]["items"][0]["year_label"] == "2025年（令和7年）"
+    assert t["letters"]["items"][0]["clips"][0]["id"] == cl["a"].id
+
+
+def test_flash_on_this_day_with_song_links(site):
+    out, cl = site
+    f = J(out / "data/today.json")["flash"]
+    assert f["exact"] is True and len(f["items"]) == 1
+    art = f["items"][0]
+    assert art["title"] == "紅白の舞台裏" and art["issue"] == "週刊FLASH 2025年1月7日号"
+    assert [s["title"] for s in art["songs"]] == ["夜桜お七", "千本桜"]
+    assert art["songs"][0]["clip"]["id"] == cl["a"].id
+    assert art["songs"][1]["clip"] is None
 
 
 def test_hidden_excluded_everywhere(site):
@@ -91,7 +114,8 @@ def test_appearance_states(site):
 def test_calendar_and_days(site):
     out, cl = site
     cal = J(out / "data/calendar.json")
-    assert cal["12-31"]["videos"] == 3 and cal["12-29"]["letters"] == 1 and cal["12-22"]["flash"] == 1
+    assert cal["12-31"] == {"videos": 3, "letters": 1, "flash": 1}
+    assert cal["12-29"]["letters"] == 1 and cal["12-22"]["flash"] == 1
     day = J(out / "data/days/12-31.json")
     assert day["label"] == "12月31日" and [y["year_label"] for y in day["years"]][:2] == ["2025年（令和7年）", "2024年（令和6年）"]
 

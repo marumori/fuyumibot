@@ -13,9 +13,9 @@ from .dictionary import Dictionaries
 from .factcheck import verify
 from .linking import flash_from_letters, mentions
 from .merge import merge
-from .model import Appearance, Clip, FlashIssue, Letter, Pick, load, save
+from .model import Appearance, Clip, FlashArticle, FlashIssue, Letter, Pick, load, save
 from .seed_import import import_seed
-from .sources import RawUpload, SourceError, bilibili, fanclub, sheet, to_clip, xembed, youtube
+from .sources import RawUpload, SourceError, bilibili, fanclub, flash, sheet, to_clip, xembed, youtube
 
 DATA = Path("data")
 JST = timezone(timedelta(hours=9))
@@ -27,6 +27,8 @@ fetch_schedule = fanclub.fetch_schedule
 fetch_bk_tv = fanclub.fetch_bk_tv
 fetch_letters = fanclub.fetch_letters
 fetch_x = xembed.fetch
+fetch_flash_page = flash.fetch_tag_page
+fetch_flash_text = flash.fetch_article_text
 
 
 def read_sheet(key: str, headers: list[str]) -> list[dict]:
@@ -87,6 +89,25 @@ def _update_readings(updates: dict[str, str]) -> None:
     p.write_text(yaml.safe_dump(songs, allow_unicode=True, sort_keys=False, width=200), "utf-8")
 
 
+def _store_flash(articles: list[FlashArticle], fetched: list[FlashArticle]) -> list[FlashArticle]:
+    by_url = {a.url: a for a in articles}
+    for a in fetched:
+        if a.url in by_url:
+            a.mentions = by_url[a.url].mentions
+        by_url[a.url] = a
+    return sorted(by_url.values(), key=lambda a: (a.date, a.url))
+
+
+def _read_flash_mentions(articles: list[FlashArticle], d, limit: int) -> None:
+    """Read up to `limit` unread articles (newest first) to find songs; the text itself is not kept."""
+    todo = sorted((a for a in articles if a.mentions is None), key=lambda a: a.date, reverse=True)[:limit]
+    for a in todo:
+        try:
+            a.mentions = mentions(a.title + " " + fetch_flash_text(a.url), d)
+        except Exception as e:  # noqa: BLE001 — try again on a later run
+            print(f"FLASH article {a.url}: {e}")
+
+
 def daily(today: str | None = None) -> None:
     today = today or _today()
     picker.SPECIAL_DAYS = DATA / "special_days.yaml"
@@ -98,6 +119,7 @@ def daily(today: str | None = None) -> None:
     apps = load(DATA / "appearances.json", Appearance)
     letters = load(DATA / "letters.json", Letter)
     flash = load(DATA / "flash.json", FlashIssue)
+    articles = load(DATA / "flash_articles.json", FlashArticle)
     picks = load(DATA / "picks.json", Pick)
 
     # 1. owner's answers and links from the sheet
@@ -150,6 +172,11 @@ def daily(today: str | None = None) -> None:
         if got is not None:
             letters, flash = _store_letters(letters, flash, got, d)
 
+    got = status.guard("flash", lambda: fetch_flash_page(1)[0], 0)
+    if got is not None:
+        articles = _store_flash(articles, got)
+    _read_flash_mentions(articles, d, limit=10)
+
     # 4. derive
     verify(clips, apps, d)
     pick_rows = status.guard("sheet_pick", lambda: read_sheet("SHEET_PICK_CSV", sheet.PICK_HEADERS), 0) or []
@@ -168,6 +195,7 @@ def daily(today: str | None = None) -> None:
     save(DATA / "appearances.json", apps)
     save(DATA / "letters.json", letters)
     save(DATA / "flash.json", flash)
+    save(DATA / "flash_articles.json", articles)
     save(DATA / "picks.json", sorted(picks, key=lambda p: p.date)[-400:])
     review.save(DATA / "review.json")
     status.save()
@@ -219,6 +247,23 @@ def import_fanclub_history(max_requests: int = 40) -> None:
     print(f"{n} pages fetched, {len(jobs) - len(done)} remaining")
 
 
+def import_flash_history(max_articles: int = 40) -> None:
+    """All FLASH tag pages, then song mentions for up to `max_articles` articles per run."""
+    d = Dictionaries.load(DATA)
+    articles = load(DATA / "flash_articles.json", FlashArticle)
+    first, last = fetch_flash_page(1)
+    articles = _store_flash(articles, first)
+    for n in range(2, last + 1):
+        try:
+            articles = _store_flash(articles, fetch_flash_page(n)[0])
+        except Exception as e:  # noqa: BLE001
+            print(f"FLASH page {n}: {e}")
+    _read_flash_mentions(articles, d, limit=max_articles)
+    save(DATA / "flash_articles.json", articles)
+    left = sum(a.mentions is None for a in articles)
+    print(f"{len(articles)} FLASH articles, {left} still to read")
+
+
 def cmd_import_seed() -> None:
     d = Dictionaries.load(DATA)
     review.load(DATA / "review.json")
@@ -250,7 +295,8 @@ def cmd_import_backcatalogue() -> None:
 
 def main(argv=None) -> None:
     cmds = {"daily": daily, "weekly": weekly, "import-seed": cmd_import_seed,
-            "import-backcatalogue": cmd_import_backcatalogue, "import-fanclub-history": import_fanclub_history}
+            "import-backcatalogue": cmd_import_backcatalogue, "import-fanclub-history": import_fanclub_history,
+            "import-flash-history": import_flash_history}
     ap = argparse.ArgumentParser()
     ap.add_argument("command", choices=list(cmds))
     a = ap.parse_args(argv)

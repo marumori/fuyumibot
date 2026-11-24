@@ -10,7 +10,7 @@
   let mode = "list";
   const pad = (n) => String(n).padStart(2, "0");
 
-  const summary = (c) => [c.videos ? `映像${c.videos}本` : "", c.letters ? `冬美便り${c.letters}件` : "", c.flash ? "週刊FLASH 対談" : ""].filter(Boolean).join("・");
+  const summary = (c) => [c.videos ? `映像${c.videos}本` : "", c.letters ? `冬美便り${c.letters}件` : "", c.flash ? `週刊FLASH${c.flash}件` : ""].filter(Boolean).join("・");
 
   function render() {
     const days = new Date(y, m, 0).getDate();
@@ -49,8 +49,8 @@
     try { d = await F.json(`/data/days/${md}.json`); } catch (e) { dayEl.innerHTML = "<p>この日はまだありません。</p>"; return; }
     const years = d.years.map((yr) => {
       const letters = yr.letters.map((l) => `<li><a class="row" href="${F.esc(F.goHref(l.url))}"><span>冬美便り「${F.esc(l.title)}」</span><span class="arrow">読む</span></a></li>`).join("");
-      const flash = yr.flash.map((f) => `<li><a class="row" href="${F.esc(F.goHref(f.letter_url))}"><span>週刊FLASH 対談${f.guest ? `（${F.esc(f.guest)}さん）` : ""}</span><span class="arrow">読む</span></a></li>`).join("");
-      return `<p class="year">${F.esc(yr.year_label)}</p>${F.cards(yr.clips)}${letters || flash ? `<ul class="list">${letters}${flash}</ul>` : ""}`;
+      const flash = yr.flash.map(F.flashItem).join("");
+      return `<p class="year">${F.esc(yr.year_label)}</p>${F.cards(yr.clips)}${letters ? `<ul class="list">${letters}</ul>` : ""}${flash}`;
     }).join("");
     dayEl.innerHTML = `<section class="section"><h2>${F.esc(d.label)}の冬美</h2>${years}</section>`;
     dayEl.scrollIntoView({ behavior: "smooth", block: "start" });

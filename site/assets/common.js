@@ -2,13 +2,13 @@
 (function () {
   const F = (window.F = {});
   const cfg = window.FUYUMI_CONFIG || {};
-  const ALLOWED = ["x.com", "twitter.com", "fuyumi-fc.com", "www.bilibili.com", "bilibili.com", "www.youtube.com", "youtube.com", "youtu.be"];
+  const ALLOWED = ["smart-flash.jp", "x.com", "twitter.com", "fuyumi-fc.com", "www.bilibili.com", "bilibili.com", "www.youtube.com", "youtube.com", "youtu.be"];
 
   F.esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   F.json = async (url) => { const r = await fetch(url, { cache: "no-cache" }); if (!r.ok) throw new Error(url); return r.json(); };
   F.isLine = () => /\bLine\//i.test(navigator.userAgent);
 
-  const SITE_LABEL = { "x.com": "X（旧ツイッター）", "twitter.com": "X（旧ツイッター）", "fuyumi-fc.com": "坂本冬美 公式ファンクラブ",
+  const SITE_LABEL = { "smart-flash.jp": "週刊FLASH", "x.com": "X（旧ツイッター）", "twitter.com": "X（旧ツイッター）", "fuyumi-fc.com": "坂本冬美 公式ファンクラブ",
     "www.bilibili.com": "ビリビリ動画", "bilibili.com": "ビリビリ動画", "www.youtube.com": "YouTube", "youtube.com": "YouTube", "youtu.be": "YouTube" };
   F.siteLabel = (url) => { try { return SITE_LABEL[new URL(url).host] || "外部のサイト"; } catch (e) { return "外部のサイト"; } };
   F.allowed = (url) => { try { const u = new URL(url); return u.protocol === "https:" && ALLOWED.includes(u.host); } catch (e) { return false; } };
@@ -23,6 +23,16 @@
       `<span class="m">${meta}</span><br>${badge}<span class="go">${opts.go || "▶ 見る"}</span></span></a>`;
   };
   F.cards = (list, opts) => (list || []).map((c) => F.card(c, opts)).join("");
+
+  /* A FLASH article: title (to the article), issue, and the songs it mentions — linked to our video when we have one. */
+  F.flashItem = (a) => {
+    const songs = (a.songs || []).map((s) => s.clip
+      ? `<li><a class="row" href="${F.esc(s.clip.url)}"><span>「${F.esc(s.title)}」</span><span class="arrow">▶ 映像</span></a></li>`
+      : `<li><span class="row">「${F.esc(s.title)}」<span class="muted">映像なし</span></span></li>`).join("");
+    return `<a class="card nothumb" href="${F.esc(F.goHref(a.url))}"><span><span class="t">${F.esc(a.title)}</span><br>` +
+      `<span class="m">${F.esc([a.date_label, a.issue].filter(Boolean).join("・"))}</span><br><span class="go">記事を読む</span></span></a>` +
+      (songs ? `<p class="muted">記事に出てくる曲</p><ul class="list">${songs}</ul>` : "");
+  };
 
   F.lineBanner = (root) => {
     if (!F.isLine()) return;

@@ -25,6 +25,9 @@ def env(tmp_path, monkeypatch):
     monkeypatch.setattr(run, "fetch_bk_tv", lambda y: [Appearance("2026-11-16", "", "NHK総合", "はやウタ", "TV", "")])
     monkeypatch.setattr(run, "fetch_letters", lambda y, m: [])
     monkeypatch.setattr(run, "read_sheet", lambda key, headers: [])
+    from pipeline.model import FlashArticle
+    monkeypatch.setattr(run, "fetch_flash_page", lambda n=1: ([FlashArticle("2026-11-21", "対談", "https://smart-flash.jp/e/1/", "", ["大竹しのぶ"])], 8))
+    monkeypatch.setattr(run, "fetch_flash_text", lambda url: "「夜桜お七」の話")
     return tmp_path
 
 
@@ -60,3 +63,19 @@ def test_daily_sheet_x_link(env, monkeypatch):
     run.daily("2026-11-24")
     clips = load(env / "clips.json", Clip)
     assert any(s.id == "77" for c in clips for s in c.sources)
+
+
+def test_daily_reads_flash_and_song_mentions(env):
+    from pipeline.model import FlashArticle
+    run.daily("2026-11-24")
+    [a] = load(env / "flash_articles.json", FlashArticle)
+    assert a.mentions["songs"] == ["yozakura-oshichi"]
+    assert "夜桜お七" not in (env / "flash_articles.json").read_text("utf-8").replace("yozakura", "")
+
+
+def test_daily_survives_flash_failure(env, monkeypatch):
+    def boom(*a):
+        raise OSError("down")
+    monkeypatch.setattr(run, "fetch_flash_page", boom)
+    run.daily("2026-11-24")
+    assert status.data()["sources"]["flash"]["consecutive_failures"] == 1

@@ -27,29 +27,32 @@
       `<p class="muted">${F.esc(t.pick.reason)}</p><div id="queue"></div><div>${F.cards(t.pick.clips)}</div></section>`);
   }
 
+  const sub = (exact, what) => `<p class="sub">${exact ? "あの年の今日" : "この頃（前後3日）"}の${what}</p>`;
+  const byYear = (items, render) => {
+    let last = "", html = "";
+    for (const it of items) {
+      if (it.year_label !== last) { html += `<p class="year">${F.esc(it.year_label)}</p>`; last = it.year_label; }
+      html += render(it);
+    }
+    return html;
+  };
+
   const otd = t.on_this_day;
   if (otd && otd.years.length) {
-    const head = otd.exact ? "あの年の今日" : "この頃の映像";
     const body = otd.years.map((y) => `<p class="year">${F.esc(y.year_label)}</p>${F.cards(y.clips)}`).join("");
-    out.push(`<section class="section"><h2>${head}</h2>${body}</section>`);
+    out.push(`<section class="section"><h2>この頃の映像</h2>${sub(otd.exact, "映像")}${body}</section>`);
   }
 
-  if (t.letters && t.letters.length) {
-    const body = t.letters.map((l) => `<div><a class="card nothumb" href="${F.esc(F.goHref(l.url))}"><span><span class="t">${F.esc(l.title)}</span><br>` +
+  if (t.letters && t.letters.items.length) {
+    const body = byYear(t.letters.items, (l) => `<a class="card nothumb" href="${F.esc(F.goHref(l.url))}"><span><span class="t">${F.esc(l.title)}</span><br>` +
       `<span class="m">${F.esc(l.date_label)}・ファンクラブのページへ</span></span></a>` +
-      (l.clips.length ? `<p class="muted">関連する映像</p>${F.cards(l.clips)}` : "") + `</div>`).join("<hr>");
-    out.push(`<section class="section"><h2>冬美便り</h2>${body}</section>`);
+      (l.clips.length ? `<p class="muted">便りに出てくる曲の映像</p>${F.cards(l.clips)}` : ""));
+    out.push(`<section class="section"><h2>冬美便り</h2>${sub(t.letters.exact, "便り")}${body}</section>`);
   }
 
-  if (t.flash) {
-    const f = t.flash;
-    out.push(`<section class="section"><h2>週刊FLASH 対談（火曜発売）</h2>` +
-      `<p>${F.esc(f.issue_label)}${f.guest ? `　ゲスト：${F.esc(f.guest)}さん` : ""}</p>` +
-      `<a class="btn" href="${F.esc(F.goHref(f.letter_url))}">冬美さんの便りを読む</a>` +
-      (f.clips.length ? `<p class="muted" style="margin-top:.6rem">対談相手との共演映像</p>${F.cards(f.clips)}` : "") + `</section>`);
+  if (t.flash && t.flash.items.length) {
+    out.push(`<section class="section" id="flash"><h2>週刊FLASH</h2>${sub(t.flash.exact, "記事")}${byYear(t.flash.items, F.flashItem)}</section>`);
   }
-
-  if (t.new && t.new.length) out.push(`<section class="section"><h2>新しい映像</h2>${F.cards(t.new)}</section>`);
 
   out.push(`<nav class="nav" aria-label="ほかのページ"><a class="btn primary" href="/calendar.html">カレンダー</a>` +
     `<a class="btn" href="/songs.html">曲名でさがす</a><a class="btn" href="/usage.html">使い方</a></nav>`);
