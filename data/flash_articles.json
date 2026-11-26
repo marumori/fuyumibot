@@ -1988,7 +1988,20 @@
  {
   "date": "2025-04-05",
   "issue": "週刊FLASH 2025年4月15日号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "桑田佳祐",
+    "大竹しのぶ"
+   ],
+   "programs": [],
+   "songs": [
+    "buddha-no-you-ni",
+    "katte-ni-sinbad",
+    "abare-daiko",
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru"
+   ]
+  },
   "people": [
    "桑田佳祐",
    "デビュー"
@@ -1999,7 +2012,22 @@
  {
   "date": "2025-04-12",
   "issue": "週刊FLASH 2025年4月22日号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "石川さゆり",
+    "桑田佳祐"
+   ],
+   "programs": [
+    "NHK紅白歌合戦"
+   ],
+   "songs": [
+    "tsugaru-kaikyo",
+    "katte-ni-shiyagare",
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "石川さゆり",
    "NHK紅白歌合戦",
@@ -2011,7 +2039,33 @@
  {
   "date": "2025-04-19",
   "issue": "週刊FLASH 2025年4月29日・5月6日合併号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "森進一",
+    "石川さゆり",
+    "千昌夫",
+    "北島三郎",
+    "都はるみ",
+    "細川たかし",
+    "村田英雄",
+    "小林幸子",
+    "八代亜紀",
+    "五木ひろし",
+    "松田聖子",
+    "田原俊彦",
+    "桑田佳祐"
+   ],
+   "programs": [
+    "NHK紅白歌合戦"
+   ],
+   "songs": [
+    "tsugaru-kaikyo",
+    "natsu-wo-akiramete",
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "黒柳徹子",
    "NHK紅白歌合戦",
@@ -2023,7 +2077,29 @@
  {
   "date": "2025-05-17",
   "issue": "週刊FLASH 2025年5月27日号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "森進一",
+    "松原のぶえ",
+    "千昌夫",
+    "八代亜紀",
+    "細川たかし",
+    "島倉千代子",
+    "村田英雄",
+    "小林幸子",
+    "五木ひろし",
+    "石川さゆり"
+   ],
+   "programs": [
+    "NHK紅白歌合戦"
+   ],
+   "songs": [
+    "amagigoe",
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "エピソード",
    "加山雄三"
@@ -2034,7 +2110,17 @@
  {
   "date": "2025-05-31",
   "issue": "週刊FLASH 2025年6月10日号",
-  "mentions": null,
+  "mentions": {
+   "people": [],
+   "programs": [
+    "NHK紅白歌合戦"
+   ],
+   "songs": [
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "NHK紅白歌合戦",
    "YOASOBI",
@@ -2046,7 +2132,18 @@
  {
   "date": "2025-05-31",
   "issue": "週刊FLASH 2025年6月10日号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "五木ひろし"
+   ],
+   "programs": [],
+   "songs": [
+    "tsugaru-kaikyo",
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "幾田りら",
    "YOASOBI",
@@ -2058,7 +2155,20 @@
  {
   "date": "2025-06-07",
   "issue": "週刊FLASH 2025年6月17日号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "都はるみ"
+   ],
+   "programs": [
+    "NHK紅白歌合戦",
+    "年忘れにっぽんの歌"
+   ],
+   "songs": [
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "NHK紅白歌合戦",
    "昭和"
@@ -2069,7 +2179,19 @@
  {
   "date": "2025-06-14",
   "issue": "週刊FLASH 2025年6月24日・7月1日合併号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "島倉千代子"
+   ],
+   "programs": [
+    "NHK紅白歌合戦"
+   ],
+   "songs": [
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "NHK紅白歌合戦",
    "衣装"
@@ -2080,7 +2202,21 @@
  {
   "date": "2025-06-28",
   "issue": "週刊FLASH 2025年7月8日号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "伍代夏子",
+    "石川さゆり"
+   ],
+   "programs": [
+    "NHK紅白歌合戦"
+   ],
+   "songs": [
+    "noto-wa-iirankaine",
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "黒歴史",
    "石川さゆり"
@@ -2091,7 +2227,21 @@
  {
   "date": "2025-07-05",
   "issue": "週刊FLASH 2025年7月15日号",
-  "mentions": null,
+  "mentions": {
+   "people": [
+    "桑田佳祐"
+   ],
+   "programs": [
+    "NHK紅白歌合戦",
+    "年忘れにっぽんの歌"
+   ],
+   "songs": [
+    "hi-no-kuni-no-onna",
+    "yozakura-oshichi",
+    "mata-kimi-ni-koishiteru",
+    "buddha-no-you-ni"
+   ]
+  },
   "people": [
    "堺正章",
    "NHK紅白歌合戦"
@@ -2656,8 +2806,8 @@
    ]
   },
   "people": [
-   "ドレス",
-   "緊張"
+   "緊張",
+   "NHK紅白歌合戦"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第28回/「着うた」300万ダウンロードのプレッシャーで、見るも無惨なド緊張(苦笑)",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/388532/"
@@ -2683,7 +2833,7 @@
    ]
   },
   "people": [
-   "歌手",
+   "NHK",
    "NHK紅白歌合戦",
    "災害"
   ],
@@ -2707,7 +2857,7 @@
    ]
   },
   "people": [
-   "共演",
+   "トーク",
    "宝塚歌劇団"
   ],
   "title": "坂本冬美×一路真輝「私たち、怖いくらい似てる(笑)」...2人でドライブ中も “まるで漫才” トーク炸裂",
@@ -2730,9 +2880,9 @@
    ]
   },
   "people": [
-   "下積み時代",
-   "宝塚",
-   "演歌"
+   "トーク",
+   "演歌",
+   "下積み時代"
   ],
   "title": "坂本冬美×一路真輝「内弟子生活8カ月」と「宝塚音楽学校の2年」下積み生活はどっちが大変だった?",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/393110/"
@@ -2786,8 +2936,8 @@
    ]
   },
   "people": [
-   "NHK紅白歌合戦",
-   "エピソード"
+   "エピソード",
+   "NHK紅白歌合戦"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第31回/ほぼ同期の夏ちゃんは、“愛するダーリン” が見守るなかどんな気持ちで歌っていたのか",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/397370/"
@@ -2812,7 +2962,8 @@
    ]
   },
   "people": [
-   "藤あや子",
+   "NHK紅白歌合戦",
+   "エピソード",
    "五代夏子"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第32回/想像と違ったももクロちゃんの衣装に動揺(?)して、二度めの “悪夢” が",
@@ -2838,7 +2989,8 @@
    ]
   },
   "people": [
-   "鈴木梨央",
+   "寺田心",
+   "エピソード",
    "NHK紅白歌合戦"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第33回/孫を持つばぁばの気持ちがなんとなくわかった、7歳の寺田心くんと10歳の鈴木梨央ちゃんとの共演",
@@ -2891,8 +3043,8 @@
    ]
   },
   "people": [
-   "NHK紅白歌合戦",
-   "大晦日"
+   "大晦日",
+   "NHK紅白歌合戦"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第35回/『紅白』のフィナーレ『蛍の光』は、毎年歌い継がれている “定番曲”",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/404982/"
@@ -2922,9 +3074,9 @@
    ]
   },
   "people": [
-   "歌手",
    "お宝",
-   "NHK紅白歌合戦"
+   "写真",
+   "歌手"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第36回/番組終了後に石川さゆりさんの音頭で北島三郎御大を囲んで、唯一無二の豪華 “お宝撮影会”",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/406028/"
@@ -2946,7 +3098,8 @@
    ]
   },
   "people": [
-   "演歌歌手",
+   "美空ひばり",
+   "AI",
    "NHK紅白歌合戦"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第37回/AIで甦った美空ひばりさんに感動して、わたしの新曲のMVにもAI技術を導入",
@@ -2970,7 +3123,7 @@
    ]
   },
   "people": [
-   "NHK紅白歌合戦",
+   "桑田佳祐",
    "演歌歌手"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第38回/コロナの影響で史上初の無観客開催も、桑田さんからいただいた “生涯の宝物” を熱唱できた喜び",
@@ -3015,8 +3168,9 @@
    ]
   },
   "people": [
-   "コラボ",
-   "覚悟"
+   "NHK紅白歌合戦",
+   "覚悟",
+   "コラボ"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第40回/坂本冬美『紅白』史上、最大級のピンチを救ってくれた “スカパラの阿部寛” 谷中敦さんのひと言",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/412850/"
@@ -3041,8 +3195,9 @@
    ]
   },
   "people": [
-   "チャンス",
-   "NHK紅白歌合戦"
+   "出演",
+   "リハーサル",
+   "チャンス"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第41回/出演者の方に話しかける数少ないチャンスは「エンディングのリハーサル」",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/415876/"
@@ -3066,9 +3221,9 @@
    ]
   },
   "people": [
-   "中島みゆき",
    "NHK紅白歌合戦",
-   "歌手"
+   "歌手",
+   "中島みゆき"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』第42回/初めてNHKホールの外から中継出演...34年ぶりに『能登はいらんかいね』を披露",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/416966/"
@@ -3099,6 +3254,7 @@
   },
   "people": [
    "M！LK",
+   "放送",
    "NHK紅白歌合戦"
   ],
   "title": "『坂本冬美のモゴモゴ紅白』最終回/とことんド派手に決めた “スペシャル王妃バージョン” で熱唱",
@@ -3124,6 +3280,7 @@
    ]
   },
   "people": [
+   "NHK紅白歌合戦",
    "忌野清志郎",
    "目黒蓮"
   ],
@@ -3148,8 +3305,9 @@
    ]
   },
   "people": [
+   "アイナ・ジ・エンド",
    "感激",
-   "アイナ・ジ・エンド"
+   "衝撃"
   ],
   "title": "アイナ・ジ・エンドが「内弟子」希望で坂本冬美も大喜び「その発想、もう最高！」【“魂の歌姫” と感激トーク】",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/421642/"
@@ -3172,9 +3330,8 @@
    ]
   },
   "people": [
-   "トーク",
-   "NHK紅白歌合戦",
-   "アイナ・ジ・エンド"
+   "アイナ・ジ・エンド",
+   "女子"
   ],
   "title": "アイナ・ジ・エンド「ステージに上る前の呪文」に坂本冬美が感心...「歌の色」「歌の余白」めぐって女子トーク",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/422698/"
@@ -3204,8 +3361,9 @@
    ]
   },
   "people": [
-   "巨人",
-   "野口五郎"
+   "王貞治",
+   "石川さゆり",
+   "巨人"
   ],
   "title": "『坂本冬美のカバーでモゴモゴ』第2回/石川さゆり『津軽海峡・冬景色』オリジナルとは違った世界観で歌うための“アレンジ”",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/424506/"
@@ -3222,8 +3380,8 @@
    "songs": []
   },
   "people": [
-   "レコーディング",
-   "デビュー"
+   "デビュー",
+   "中森明菜"
   ],
   "title": "『坂本冬美のカバーでモゴモゴ』第3回/中森明菜『難破船』圧倒的な悲壮感と情念に満ちた歌詞を熱唱後、スタジオはしばらく緊張感が",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/425785/"
@@ -3244,9 +3402,9 @@
    ]
   },
   "people": [
-   "アルバム",
    "カバー",
-   "演歌"
+   "演歌",
+   "石崎ひゅーい"
   ],
   "title": "『坂本冬美 カバーでモゴモゴ』第4回/石崎ひゅーい『花瓶の花』わたしの大好きな韓流ドラマのような至高のラブソング",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/428008/"
@@ -3266,8 +3424,8 @@
    ]
   },
   "people": [
-   "カバー",
-   "エピソード"
+   "エピソード",
+   "秦 基博"
   ],
   "title": "『坂本冬美 カバーでモゴモゴ』第5回/秦 基博『ひまわりの約束』自分自身が歌の世界に酔いすぎず、できるだけ感情は抑え気味に “余白” を残し",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/429276/"
@@ -3288,9 +3446,9 @@
    ]
   },
   "people": [
-   "YouTube",
-   "忌野清志郎",
-   "三山ひろし"
+   "セーラー服",
+   "三山ひろし",
+   "忌野清志郎"
   ],
   "title": "『坂本冬美 カバーでモゴモゴ』第7回/ジミ・ヘンドリックス『パープル・ヘイズ』合いの手を数えながら歌っているのに、頭の中がパニックに",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/432555/"
@@ -3308,9 +3466,8 @@
    ]
   },
   "people": [
-   "CM",
    "ゴールデンボンバー",
-   "カバー"
+   "CM"
   ],
   "title": "『坂本冬美 カバーでモゴモゴ』第8回/ゴールデンボンバー『片想いでいい』この歌にトライする際は、自分の音域に合わせてキーを調整してから臨むべし！",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/435030/"
@@ -3333,8 +3490,8 @@
    ]
   },
   "people": [
-   "メッセージ",
-   "サザンオールスターズ"
+   "サザンオールスターズ",
+   "カラオケ"
   ],
   "title": "『坂本冬美 カバーでモゴモゴ』第9回/サザンオールスターズ『Oh！クラウディア』カラオケで必ず熱唱していたという弟の “天国からのメッセージ” に背中を押され",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/436379/"
@@ -3357,9 +3514,8 @@
    ]
   },
   "people": [
-   "女優",
-   "大竹しのぶ",
-   "驚愕"
+   "レジェンド",
+   "大竹しのぶ"
   ],
   "title": "大竹しのぶ「台詞は写真のように覚えられる」レジェンド女優が明かした “憑依型演技” の秘密に坂本冬美も驚愕「やっぱり “天才” です！」",
   "url": "https://smart-flash.jp/entertainment/entertainment-news/438578/"
@@ -3380,7 +3536,6 @@
    ]
   },
   "people": [
-   "演歌歌手",
    "俳優",
    "大竹しのぶ"
   ],

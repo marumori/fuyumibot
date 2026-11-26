@@ -12,13 +12,24 @@
  },
  {
   "clip_ids": [
-   "2026-07-11-wakare-no-yokan-016fd7",
-   "2026-09-05-hirari-cfcf7a",
-   "2026-06-06-jinsei-no-namikimichi-5e57a9",
-   "2020-11-14-buddha-no-you-ni-c5a9e6"
+   "2024-03-31-horoyoi-mangetsu-593a25",
+   "2024-02-27-horoyoi-mangetsu-9f264f",
+   "2024-02-28-horoyoi-mangetsu-80d5fb",
+   "2024-08-24-horoyoi-mangetsu-6d2009"
   ],
   "date": "2026-11-26",
-  "reason": "いろいろな年の冬美さん",
-  "theme_title": "冬美、歌がある"
+  "reason": "季節のうた",
+  "theme_title": "秋のうた"
+ },
+ {
+  "clip_ids": [
+   "2024-06-01-horoyoi-mangetsu-14bbf2",
+   "2024-03-18-horoyoi-mangetsu-683e7c",
+   "2024-08-10-horoyoi-mangetsu-350196",
+   "2024-03-12-horoyoi-mangetsu-209883"
+  ],
+  "date": "2026-11-27",
+  "reason": "季節のうた",
+  "theme_title": "秋のうた"
  }
 ]

@@ -861,7 +861,8 @@
   "verified": {
    "broadcaster": "TBS",
    "note": "",
-   "program": "ぴったんこカン・カン"
+   "program": "ぴったんこカン・カン",
+   "source": "fanclub"
   }
  },
  {
@@ -976,7 +977,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "新堂本兄弟"
+   "program": "新堂本兄弟",
+   "source": "fanclub"
   }
  },
  {
@@ -1034,7 +1036,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "ボクらの時代"
+   "program": "ボクらの時代",
+   "source": "fanclub"
   }
  },
  {
@@ -1062,7 +1065,8 @@
   "verified": {
    "broadcaster": "NHK",
    "note": "",
-   "program": "歌謡コンサート"
+   "program": "歌謡コンサート",
+   "source": "fanclub"
   }
  },
  {
@@ -1712,7 +1716,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "日本の名曲 人生、歌がある"
+   "program": "日本の名曲 人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -1768,7 +1773,8 @@
   "verified": {
    "broadcaster": "日本テレビ",
    "note": "",
-   "program": "メレンゲの気持ち"
+   "program": "メレンゲの気持ち",
+   "source": "fanclub"
   }
  },
  {
@@ -1926,7 +1932,8 @@
   "verified": {
    "broadcaster": "NHK BSプレミアム",
    "note": "",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -2303,7 +2310,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "痛快TV スカッとジャパン"
+   "program": "痛快TV スカッとジャパン",
+   "source": "fanclub"
   }
  },
  {
@@ -2385,7 +2393,8 @@
   "verified": {
    "broadcaster": "BSテレビ東京",
    "note": "",
-   "program": "演歌の花道"
+   "program": "演歌の花道",
+   "source": "fanclub"
   }
  },
  {
@@ -2697,7 +2706,8 @@
   "verified": {
    "broadcaster": "NHK BS",
    "note": "",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -2829,7 +2839,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -2957,7 +2968,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -3176,7 +3188,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "子供たちに残したい美しい日本のうた特別企画"
+   "program": "子供たちに残したい美しい日本のうた特別企画",
+   "source": "fanclub"
   }
  },
  {
@@ -3215,7 +3228,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "子供たちに残したい美しい日本のうた特別企画"
+   "program": "子供たちに残したい美しい日本のうた特別企画",
+   "source": "fanclub"
   }
  },
  {
@@ -3544,7 +3558,8 @@
   "verified": {
    "broadcaster": "BSプレミアム",
    "note": "",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -3574,7 +3589,8 @@
   "verified": {
    "broadcaster": "BSプレミアム",
    "note": "",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -3699,7 +3715,8 @@
   "verified": {
    "broadcaster": "テレビ朝日",
    "note": "",
-   "program": "徹子の部屋"
+   "program": "徹子の部屋",
+   "source": "fanclub"
   }
  },
  {
@@ -3812,7 +3829,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "うたコン"
+   "program": "うたコン",
+   "source": "fanclub"
   }
  },
  {
@@ -4194,7 +4212,8 @@
   "verified": {
    "broadcaster": "関西テレビ",
    "note": "",
-   "program": "よ〜いドン！"
+   "program": "よ〜いドン！",
+   "source": "fanclub"
   }
  },
  {
@@ -4220,7 +4239,8 @@
   "verified": {
    "broadcaster": "関西テレビ",
    "note": "",
-   "program": "よ〜いドン！"
+   "program": "よ〜いドン！",
+   "source": "fanclub"
   }
  },
  {
@@ -4782,7 +4802,8 @@
   "verified": {
    "broadcaster": "東海テレビ",
    "note": "",
-   "program": "半世紀ロック"
+   "program": "半世紀ロック",
+   "source": "fanclub"
   }
  },
  {
@@ -5559,7 +5580,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "うたコン"
+   "program": "うたコン",
+   "source": "fanclub"
   }
  },
  {
@@ -5595,7 +5617,12 @@
   ],
   "tags": [],
   "title_raw": "[人生歌 坂本冬美名場面集＋名曲・名演集！] ふたりの愛ランド w/田原俊彦 w/伍代夏子 20230729",
-  "verified": null
+  "verified": {
+   "broadcaster": "",
+   "note": "",
+   "program": "今夜はトシちゃんとの人生歌がある♪",
+   "source": "fan_forum"
+  }
  },
  {
   "broadcast_date": "2023-08-12",
@@ -5762,7 +5789,8 @@
   "verified": {
    "broadcaster": "BSテレ東",
    "note": "",
-   "program": "おんがく交差点"
+   "program": "おんがく交差点",
+   "source": "fanclub"
   }
  },
  {
@@ -5895,7 +5923,12 @@
   ],
   "tags": [],
   "title_raw": "[ノンストップ] （無曲名） 坂本冬美 20230929",
-  "verified": null
+  "verified": {
+   "broadcaster": "",
+   "note": "",
+   "program": "明日のノンストップ",
+   "source": "fan_forum"
+  }
  },
  {
   "broadcast_date": "2023-10-04",
@@ -6017,7 +6050,8 @@
   "verified": {
    "broadcaster": "日本テレビ",
    "note": "",
-   "program": "ヒルナンデス！"
+   "program": "ヒルナンデス！",
+   "source": "fanclub"
   }
  },
  {
@@ -6406,7 +6440,8 @@
   "verified": {
    "broadcaster": "テレビ朝日",
    "note": "",
-   "program": "徹子の部屋"
+   "program": "徹子の部屋",
+   "source": "fanclub"
   }
  },
  {
@@ -6486,7 +6521,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "うたコン"
+   "program": "うたコン",
+   "source": "fanclub"
   }
  },
  {
@@ -6731,7 +6767,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜",
+   "source": "fanclub"
   }
  },
  {
@@ -6761,7 +6798,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜",
+   "source": "fanclub"
   }
  },
  {
@@ -6946,7 +6984,8 @@
   "verified": {
    "broadcaster": "テレビ朝日",
    "note": "",
-   "program": "徹子の部屋"
+   "program": "徹子の部屋",
+   "source": "fanclub"
   }
  },
  {
@@ -7027,7 +7066,8 @@
   "verified": {
    "broadcaster": "テレビ朝日",
    "note": "",
-   "program": "徹子の部屋"
+   "program": "徹子の部屋",
+   "source": "fanclub"
   }
  },
  {
@@ -7081,7 +7121,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "MUSIC FAIR"
+   "program": "MUSIC FAIR",
+   "source": "fanclub"
   }
  },
  {
@@ -7229,7 +7270,8 @@
   "verified": {
    "broadcaster": "テレビ東京",
    "note": "",
-   "program": "ニッポンの歌ヂカラ"
+   "program": "ニッポンの歌ヂカラ",
+   "source": "fanclub"
   }
  },
  {
@@ -7409,7 +7451,8 @@
   "verified": {
    "broadcaster": "テレビ東京",
    "note": "",
-   "program": "歌のサンセット"
+   "program": "歌のサンセット",
+   "source": "fanclub"
   }
  },
  {
@@ -7447,7 +7490,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -7477,7 +7521,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -7503,7 +7548,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -7577,7 +7623,8 @@
   "verified": {
    "broadcaster": "BS-TBS",
    "note": "",
-   "program": "名曲をあなたに うた恋！音楽会"
+   "program": "名曲をあなたに うた恋！音楽会",
+   "source": "fanclub"
   }
  },
  {
@@ -7615,7 +7662,8 @@
   "verified": {
    "broadcaster": "BSフジ",
    "note": "",
-   "program": "昭和歌謡パレード"
+   "program": "昭和歌謡パレード",
+   "source": "fanclub"
   }
  },
  {
@@ -7645,7 +7693,8 @@
   "verified": {
    "broadcaster": "BSフジ",
    "note": "",
-   "program": "昭和歌謡パレード"
+   "program": "昭和歌謡パレード",
+   "source": "fanclub"
   }
  },
  {
@@ -7673,7 +7722,8 @@
   "verified": {
    "broadcaster": "NHK BSP4K",
    "note": "再放送",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -7725,7 +7775,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "うたコン"
+   "program": "うたコン",
+   "source": "fanclub"
   }
  },
  {
@@ -7777,7 +7828,8 @@
   "verified": {
    "broadcaster": "BSテレ東",
    "note": "",
-   "program": "徳光和夫の名曲にっぽん"
+   "program": "徳光和夫の名曲にっぽん",
+   "source": "fanclub"
   }
  },
  {
@@ -7808,7 +7860,8 @@
   "verified": {
    "broadcaster": "BSテレ東",
    "note": "",
-   "program": "徳光和夫の名曲にっぽん"
+   "program": "徳光和夫の名曲にっぽん",
+   "source": "fanclub"
   }
  },
  {
@@ -7836,7 +7889,8 @@
   "verified": {
    "broadcaster": "BSテレ東",
    "note": "",
-   "program": "徳光和夫の名曲にっぽん"
+   "program": "徳光和夫の名曲にっぽん",
+   "source": "fanclub"
   }
  },
  {
@@ -7864,7 +7918,8 @@
   "verified": {
    "broadcaster": "BSテレ東",
    "note": "",
-   "program": "徳光和夫の名曲にっぽん"
+   "program": "徳光和夫の名曲にっぽん",
+   "source": "fanclub"
   }
  },
  {
@@ -7968,7 +8023,8 @@
   "verified": {
    "broadcaster": "BSテレ東",
    "note": "",
-   "program": "徳光和夫の名曲にっぽん"
+   "program": "徳光和夫の名曲にっぽん",
+   "source": "fanclub"
   }
  },
  {
@@ -7998,7 +8054,8 @@
   "verified": {
    "broadcaster": "日本テレビ",
    "note": "生放送",
-   "program": "ヒルナンデス！"
+   "program": "ヒルナンデス！",
+   "source": "fanclub"
   }
  },
  {
@@ -8183,7 +8240,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜",
+   "source": "fanclub"
   }
  },
  {
@@ -8212,7 +8270,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜"
+   "program": "人生、歌がある お正月！5時間スペシャル2024〜第一夜〜",
+   "source": "fanclub"
   }
  },
  {
@@ -8242,7 +8301,8 @@
   "verified": {
    "broadcaster": "NHK BS",
    "note": "",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -8416,7 +8476,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "",
-   "program": "はやウタ"
+   "program": "はやウタ",
+   "source": "fanclub"
   }
  },
  {
@@ -8563,7 +8624,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "生放送",
-   "program": "FNS鬼レンチャン歌謡祭"
+   "program": "FNS鬼レンチャン歌謡祭",
+   "source": "fanclub"
   }
  },
  {
@@ -8592,7 +8654,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "生放送",
-   "program": "FNS鬼レンチャン歌謡祭"
+   "program": "FNS鬼レンチャン歌謡祭",
+   "source": "fanclub"
   }
  },
  {
@@ -8623,7 +8686,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -8661,7 +8725,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -8801,7 +8866,8 @@
   "verified": {
    "broadcaster": "NHK BS",
    "note": "",
-   "program": "歌える！青春のベストヒット！〜昭和が僕らの青春だった〜"
+   "program": "歌える！青春のベストヒット！〜昭和が僕らの青春だった〜",
+   "source": "fanclub"
   }
  },
  {
@@ -8837,7 +8903,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "MUSIC FAIR"
+   "program": "MUSIC FAIR",
+   "source": "fanclub"
   }
  },
  {
@@ -8868,7 +8935,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "MUSIC FAIR"
+   "program": "MUSIC FAIR",
+   "source": "fanclub"
   }
  },
  {
@@ -8894,7 +8962,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "MUSIC FAIR"
+   "program": "MUSIC FAIR",
+   "source": "fanclub"
   }
  },
  {
@@ -8968,7 +9037,8 @@
   "verified": {
    "broadcaster": "NHK BS",
    "note": "",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -8994,7 +9064,8 @@
   "verified": {
    "broadcaster": "NHK BS",
    "note": "",
-   "program": "新・BS日本のうた"
+   "program": "新・BS日本のうた",
+   "source": "fanclub"
   }
  },
  {
@@ -9024,7 +9095,8 @@
   "verified": {
    "broadcaster": "フジテレビ",
    "note": "",
-   "program": "ノンストップ！"
+   "program": "ノンストップ！",
+   "source": "fanclub"
   }
  },
  {
@@ -9147,7 +9219,8 @@
   "verified": {
    "broadcaster": "テレビ朝日",
    "note": "",
-   "program": "グッド！モーニング"
+   "program": "グッド！モーニング",
+   "source": "fanclub"
   }
  },
  {
@@ -9202,7 +9275,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -9230,7 +9304,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -9354,7 +9429,8 @@
   "verified": {
    "broadcaster": "関西テレビ",
    "note": "生放送",
-   "program": "よ〜いドン！"
+   "program": "よ〜いドン！",
+   "source": "fanclub"
   }
  },
  {
@@ -9383,7 +9459,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -9435,7 +9512,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -9500,7 +9578,8 @@
   "verified": {
    "broadcaster": "テレビ東京",
    "note": "",
-   "program": "洋子の演歌一直線"
+   "program": "洋子の演歌一直線",
+   "source": "fanclub"
   }
  },
  {
@@ -10286,7 +10365,8 @@
   "verified": {
    "broadcaster": "NHK BS/BSP4K",
    "note": "",
-   "program": "演歌フェス2024"
+   "program": "演歌フェス2024",
+   "source": "fanclub"
   }
  },
  {
@@ -11499,7 +11579,8 @@
   "verified": {
    "broadcaster": "テレビ東京",
    "note": "",
-   "program": "YOUは何しに日本へ?"
+   "program": "YOUは何しに日本へ?",
+   "source": "fanclub"
   }
  },
  {
@@ -11627,7 +11708,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "うたコン"
+   "program": "うたコン",
+   "source": "fanclub"
   }
  },
  {
@@ -11655,7 +11737,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "うたコン"
+   "program": "うたコン",
+   "source": "fanclub"
   }
  },
  {
@@ -12062,7 +12145,8 @@
   "verified": {
    "broadcaster": "歌謡ポップスチャンネル",
    "note": "",
-   "program": "五木ひろしデビュー60周年特別公演 「五木ひろし＆坂本冬美ベストカップルコンサート〜華やいで 艶やかに〜"
+   "program": "五木ひろしデビュー60周年特別公演 「五木ひろし＆坂本冬美ベストカップルコンサート〜華やいで 艶やかに〜",
+   "source": "fanclub"
   }
  },
  {
@@ -12491,7 +12575,8 @@
   "verified": {
    "broadcaster": "関西テレビ",
    "note": "生放送",
-   "program": "よ〜いドン！"
+   "program": "よ〜いドン！",
+   "source": "fanclub"
   }
  },
  {
@@ -12974,7 +13059,8 @@
   "verified": {
    "broadcaster": "関西テレビ",
    "note": "",
-   "program": "旬感LIVE とれたてっ！"
+   "program": "旬感LIVE とれたてっ！",
+   "source": "fanclub"
   }
  },
  {
@@ -13237,7 +13323,8 @@
   "verified": {
    "broadcaster": "NHK BS・BSP4K",
    "note": "",
-   "program": "演歌フェス2025"
+   "program": "演歌フェス2025",
+   "source": "fanclub"
   }
  },
  {
@@ -13267,7 +13354,8 @@
   "verified": {
    "broadcaster": "NHK BS・BSP4K",
    "note": "",
-   "program": "演歌フェス2025"
+   "program": "演歌フェス2025",
+   "source": "fanclub"
   }
  },
  {
@@ -13298,7 +13386,8 @@
   "verified": {
    "broadcaster": "NHK BS・BSP4K",
    "note": "",
-   "program": "演歌フェス2025"
+   "program": "演歌フェス2025",
+   "source": "fanclub"
   }
  },
  {
@@ -13329,7 +13418,8 @@
   "verified": {
    "broadcaster": "NHK BS・BSP4K",
    "note": "",
-   "program": "演歌フェス2025"
+   "program": "演歌フェス2025",
+   "source": "fanclub"
   }
  },
  {
@@ -13361,7 +13451,8 @@
   "verified": {
    "broadcaster": "NHK BS・BSP4K",
    "note": "",
-   "program": "演歌フェス2025"
+   "program": "演歌フェス2025",
+   "source": "fanclub"
   }
  },
  {
@@ -13400,7 +13491,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "第76回 NHK紅白歌合戦"
+   "program": "第76回 NHK紅白歌合戦",
+   "source": "fanclub"
   }
  },
  {
@@ -13430,7 +13522,8 @@
   "verified": {
    "broadcaster": "テレビ東京",
    "note": "",
-   "program": "第58回年忘れにっぽんの歌<6時間スペシャル！>"
+   "program": "第58回年忘れにっぽんの歌<6時間スペシャル！>",
+   "source": "fanclub"
   }
  },
  {
@@ -13468,7 +13561,8 @@
   "verified": {
    "broadcaster": "テレビ東京",
    "note": "",
-   "program": "第58回年忘れにっぽんの歌<6時間スペシャル！>"
+   "program": "第58回年忘れにっぽんの歌<6時間スペシャル！>",
+   "source": "fanclub"
   }
  },
  {
@@ -13524,7 +13618,8 @@
   "verified": {
    "broadcaster": "NHK総合",
    "note": "生放送",
-   "program": "第76回 NHK紅白歌合戦"
+   "program": "第76回 NHK紅白歌合戦",
+   "source": "fanclub"
   }
  },
  {
@@ -14055,7 +14150,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -14087,7 +14183,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -15618,7 +15715,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -16782,7 +16880,8 @@
   "verified": {
    "broadcaster": "関西テレビ放送",
    "note": "生放送",
-   "program": "よ〜いドン！"
+   "program": "よ〜いドン！",
+   "source": "fanclub"
   }
  },
  {
@@ -16852,7 +16951,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -17467,7 +17567,8 @@
   "verified": {
    "broadcaster": "BS朝日",
    "note": "",
-   "program": "人生、歌がある"
+   "program": "人生、歌がある",
+   "source": "fanclub"
   }
  },
  {
@@ -17788,7 +17889,8 @@
   "verified": {
    "broadcaster": "BSテレ東",
    "note": "",
-   "program": "徳光和夫の名曲にっぽん"
+   "program": "徳光和夫の名曲にっぽん",
+   "source": "fanclub"
   }
  },
  {
