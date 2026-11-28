@@ -45,59 +45,59 @@
  },
  "sources": {
   "bilibili": {
-   "consecutive_failures": 2,
+   "consecutive_failures": 0,
    "last_error": "2026-11-27 11:37 SourceError: bilibili http 412",
-   "last_ok": "2026-11-25 05:34"
+   "last_ok": "2026-11-28 11:27"
   },
   "fc_bk_tv": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   },
   "fc_letters": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   },
   "fc_schedule": {
    "consecutive_failures": 0,
    "last_error": "2026-11-26 11:36 RetryError: HTTPSConnectionPool(host='fuyumi-fc.com', port=443): Max retries exceeded with url: /schedule/index.php (Caused by ResponseError('too many 500 error responses'))",
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   },
   "flash": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   },
   "forum": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:38"
+   "last_ok": "2026-11-28 11:28"
   },
   "sheet_add": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   },
   "sheet_links": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   },
   "sheet_pick": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:38"
+   "last_ok": "2026-11-28 11:29"
   },
   "sheet_review": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   },
   "youtube": {
    "consecutive_failures": 0,
    "last_error": null,
-   "last_ok": "2026-11-27 11:37"
+   "last_ok": "2026-11-28 11:27"
   }
  }
 }
